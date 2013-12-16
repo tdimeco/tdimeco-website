@@ -1,0 +1,9 @@
+Options -Indexes +FollowSymlinks
+
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^tdimeco\.fr
+RewriteRule ^(.*)$ http://www.tdimeco.fr/$1 [R=301,L]
+
+RewriteCond $1 !^(index\.php|static/|robots\.txt)
+RewriteRule ^(.*)$ index.php?/$1 [L]
