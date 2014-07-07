@@ -27,7 +27,7 @@
 	<link rel="stylesheet/less" type="text/css" media="all" href="<?= less_url($style); ?>" />
 <?php } ?>
 
-	<script type="text/javascript" src="<?= js_url('less-1.5.0.min'); ?>"></script>
+	<script type="text/javascript" src="<?= js_url('less-1.7.3.min'); ?>"></script>
 
 </head>
 <body>
