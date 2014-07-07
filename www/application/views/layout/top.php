@@ -50,6 +50,7 @@
 				<li><a class="twitter-icon" href="https://twitter.com/thomasdimeco" title="Twitter"><span></span></a></li>
 				<li><a class="github-icon" href="https://github.com/tdimeco" title="GitHub"><span></span></a></li>
 				<li><a class="linkedin-icon" href="https://www.linkedin.com/pub/thomas-di-meco/60/329/500" title="LinkedIn"><span></span></a></li>
+				<li style="display:none;"><a href="https://plus.google.com/117221351543879699596?rel=author" title="Google+"><span></span></a></li>
 			</ol>
 		</div>
 		<div id="page-content">
