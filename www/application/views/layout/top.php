@@ -47,6 +47,7 @@
 			</ol>
 			<ol id="nav-icons">
 				<li><a class="email-icon" href="<?= site_url('about#contact'); ?>" title="Contact"><span></span></a></li>
+				<li><a class="flickr-icon" href="https://www.flickr.com/photos/tdimeco/" title="Flickr"><span></span></a></li>
 				<li><a class="twitter-icon" href="https://twitter.com/thomasdimeco" title="Twitter"><span></span></a></li>
 				<li><a class="github-icon" href="https://github.com/tdimeco" title="GitHub"><span></span></a></li>
 				<li><a class="linkedin-icon" href="https://www.linkedin.com/pub/thomas-di-meco/60/329/500" title="LinkedIn"><span></span></a></li>
