@@ -9,7 +9,7 @@
 			<span class="item-year">2014</span>
 			<span class="item-description">Conception et implémentation du générateur de code de TouchRAM, un logiciel de modélisation orienté aspects, tactile et collaboratif.</span>
 		</a></td>
-		<td><a href="https://github.com/SmartCampus">
+		<td><a href="http://smartcampus.github.io">
 			<span class="item-icon"><?= img('icon-smartcampus.png'); ?></span>
 			<span class="item-title">Smart Campus &mdash; Projet de fin d'études</span>
 			<span class="item-year">2013</span>
