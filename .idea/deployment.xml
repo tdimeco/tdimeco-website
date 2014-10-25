@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="On explicit save action (⌘S)" serverName="ftp.tdimeco.fr" createEmptyFolders="true" autoUploadExternalChanges="true">
+  <component name="PublishConfigData" autoUpload="On explicit save action" serverName="Topaz - tdimeco.fr" createEmptyFolders="true" autoUploadExternalChanges="true">
     <serverData>
-      <paths name="ftp.tdimeco.fr">
+      <paths name="Topaz - tdimeco.fr">
         <serverdata>
           <mappings>
-            <mapping deploy="/www-tdimeco" local="$PROJECT_DIR$/www/" web="/" />
+            <mapping deploy="/www" local="$PROJECT_DIR$/www/" web="/" />
           </mappings>
         </serverdata>
       </paths>
