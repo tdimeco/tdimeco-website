@@ -1,5 +1,6 @@
 {
     "node": true,
+    "jquery": true,
     "browser": true,
     "esnext": true,
     "bitwise": true,
@@ -18,8 +19,6 @@
     "trailing": true,
     "smarttabs": true,
     "globals": {
-        "angular": true,
-        "jQuery": true,
-        "$": true
+        "angular": true
     }
 }
