@@ -1,0 +1,124 @@
+//
+// Common style for common parts
+// ==============================================================
+//
+
+
+body {
+  font-weight: @tdm-font-weight;
+  background: url('../images/background.jpg') repeat;
+}
+
+#main-container {
+  > header {
+    @header-height: 50px;
+
+    height: 2 * @header-height;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+
+    h1, aside {
+      height: @header-height;
+      line-height: @header-height;
+      margin: 0;
+    }
+
+    h1 {
+      text-align: center;
+
+      a {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 36px;
+        font-weight: @tdm-font-weight;
+        color: @tdm-text-color-light;
+        .hover-to-color(@tdm-link-color-light);
+        .default-text-shadow();
+      }
+    }
+
+    aside {
+      text-align: center;
+      font-size: 2em;
+      .default-text-shadow();
+
+      ul {
+        display: inline-block;
+        vertical-align: middle;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+          float: left;
+          padding-left: 20px;
+
+          &:first-child {
+            padding-left: 0;
+          }
+
+          a {
+            .header-icon-colors();
+          }
+        }
+      }
+    }
+  }
+
+  > main {
+    color: @tdm-text-color;
+    overflow: hidden;
+  }
+
+  > footer {
+    color: @tdm-text-color-light;
+    text-align: center;
+    padding: 40px 0;
+    overflow: hidden;
+
+    a {
+      color: @tdm-link-color-light;
+      .hover-to-color(@tdm-link-color);
+      .default-text-shadow();
+    }
+  }
+}
+
+// Colors for aside icons
+.header-icon-colors () {
+  color: @tdm-text-color-light;
+  &.twitter-icon  { .hover-to-color(#5aa8df); }
+  &.flickr-icon   { .hover-to-color(#ff0083); }
+  &.linkedin-icon { .hover-to-color(#0079b7); }
+  &.github-icon   { .hover-to-color(#e89414); }
+  &.email-icon    { .hover-to-color(#1a9717); }
+}
+
+
+// For tablet and desktop
+@media (min-width: @screen-sm-min) {
+  #main-container {
+    > header {
+      @header-height: 100px;
+
+      height: @header-height;
+      margin-top: 0;
+      margin-bottom: 0;
+
+      h1, aside {
+        height: @header-height;
+        line-height: @header-height;
+      }
+
+      h1 {
+        text-align: left;
+      }
+
+      aside {
+        text-align: right;
+        font-size: 1.6em;
+      }
+    }
+  }
+}

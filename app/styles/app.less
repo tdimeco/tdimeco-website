@@ -1,8 +1,22 @@
-/**
- * Import all styles.
- */
+//
+// Application root stylesheet
+// ==============================================================
+//
 
+
+// Libraries
 @import '../../bower_components/retina.js/src/retina';
 
-@import 'main';
+// Variables
+@import '../../bower_components/bootstrap/less/variables';
+@import 'custom-bootstrap/variables';
+@import 'tdm-variables';
+
+// Mixins
+@import '../../bower_components/bootstrap/less/mixins';
+@import 'tdm-mixins';
+
+// Project styles
+@import 'common';
 @import 'home';
+@import 'about';

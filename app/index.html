@@ -1,76 +1,86 @@
 <!DOCTYPE html>
-<html class="no-js">
+<html ng-app="tdimecoApp">
 <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="content-language" content="fr">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <meta http-equiv="content-language" content="fr">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <meta name="author" content="Thomas Di'Meco">
-    <meta name="copyright" content="Thomas Di'Meco">
-    <meta name="publisher" content="Thomas Di'Meco">
-    <meta name="description" content="Site web personnel de Thomas Di'Meco">
-    <meta name="keywords" content="thomas,dimeco,di'meco,di meco">
-    <meta name="language" content="fr">
-    <meta name="robots" content="index,follow">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Thomas Di'Meco">
+  <meta name="copyright" content="Thomas Di'Meco">
+  <meta name="publisher" content="Thomas Di'Meco">
+  <meta name="description" content="Site web personnel de Thomas Di'Meco">
+  <meta name="keywords" content="thomas,dimeco,di'meco,di meco,site,personnel,personal,website">
+  <meta name="language" content="fr">
+  <meta name="robots" content="index,follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="identifier-url" content="http://www.tdimeco.fr/">
-    <meta name="google-site-verification" content="d8Qmx2YBRqQbp6lV6CoMnqyMMbggqh_kkqZ2IDxCWqc">
+  <meta name="identifier-url" content="http://www.tdimeco.fr/">
+  <meta name="google-site-verification" content="d8Qmx2YBRqQbp6lV6CoMnqyMMbggqh_kkqZ2IDxCWqc">
 
-    <title></title>
+  <title ng-bind="'Thomas Di\'Meco - ' + pageTitle">tdimeco.fr</title>
 
-    <!-- build:css({.,.tmp}) styles/vendor.css -->
-    <link rel="stylesheet" href="styles/custom-bootstrap/bootstrap.css" />
-    <!-- bower:css -->
-    <!-- endbower -->
-    <!-- endbuild -->
+  <!-- build:css({.,.tmp}) styles/vendor.css -->
+  <link rel="stylesheet" href="styles/custom-bootstrap/bootstrap.css" />
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
 
-    <!-- build:css(.tmp) styles/app.css -->
-    <link rel="stylesheet" href="styles/app.css" />
-    <!-- endbuild -->
+  <!-- build:css(.tmp) styles/app.css -->
+  <link rel="stylesheet" href="styles/app.css" />
+  <!-- endbuild -->
 
 </head>
-<body ng-app="tdimecoApp">
+<body>
 
-    <main class="container">
-        <header>
-            <ul class="nav nav-pills pull-right">
-                <li class="active"><a ng-href="#/">Home</a></li>
-                <li><a ng-href="#/about">About</a></li>
-            </ul>
-            <h3 class="text-muted">tdimeco</h3>
-        </header>
-        <div ng-view></div>
-        <footer>
-            <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-        </footer>
-    </main>
+  <div id="main-container" class="container">
+    <header class="row">
+      <h1 class="col-xs-12 col-sm-6">
+        <a href="#/" title="Page d'accueil">Thomas Di'Meco</a>
+      </h1>
+      <aside class="col-xs-12 col-sm-6">
+        <ul>
+          <li><a href="https://twitter.com/thomasdimeco" title="Twitter" class="twitter-icon"><span class="fa fa-twitter"></span></a></li>
+          <li><a href="https://www.flickr.com/photos/tdimeco/" title="Flickr" class="flickr-icon"><span class="fa fa-flickr"></span></a></li>
+          <li><a href="https://www.linkedin.com/pub/thomas-di-meco/60/329/500" title="LinkedIn" class="linkedin-icon"><span class="fa fa-linkedin"></span></a></li>
+          <li><a href="https://github.com/tdimeco" title="GitHub" class="github-icon"><span class="fa fa-github"></span></a></li>
+          <li><a href="#" title="E-Mail" class="email-icon"><span class="fa fa-envelope"></span></a></li>
+        </ul>
+      </aside>
+    </header>
+    <main ng-view></main>
+    <footer>
+      <a href="#/about">Me contacter</a>
+      &nbsp;&nbsp;&mdash;&nbsp;&nbsp;
+      <a href="#/terms">Mentions légales</a>
+    </footer>
+  </div>
 
-    <!-- build:js(.) scripts/oldieshim.js -->
-    <!--[if IE]>
-    <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
-    <script src="bower_components/es5-shim/es5-shim.js"></script>
-    <script src="bower_components/json3/lib/json3.js"></script>
-    <![endif]-->
-    <!-- endbuild -->
+  <!-- build:js(.) scripts/oldieshim.js -->
+  <!--[if IE]>
+  <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
+  <script src="bower_components/es5-shim/es5-shim.js"></script>
+  <script src="bower_components/json3/lib/json3.js"></script>
+  <![endif]-->
+  <!-- endbuild -->
 
-    <!-- build:js(.) scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <script src="bower_components/retina.js/dist/retina.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
+  <!-- build:js(.) scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="bower_components/retina.js/dist/retina.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
 
-    <!-- build:js({.tmp,app}) scripts/scripts.js -->
-    <script src="scripts/app.js"></script>
-    <script src="scripts/controllers/home.js"></script>
-    <script src="scripts/controllers/about.js"></script>
-    <!-- endbuild -->
+  <!-- build:js({.tmp,app}) scripts/scripts.js -->
+  <script src="scripts/app.js"></script>
+  <script src="scripts/controllers/home.js"></script>
+  <script src="scripts/controllers/about.js"></script>
+  <!-- endbuild -->
 
 </body>
 </html>

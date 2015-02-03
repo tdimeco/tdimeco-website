@@ -8,10 +8,13 @@
  * Controller of the tdimecoApp
  */
 angular.module('tdimecoApp')
-  .controller('HomeCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
+  .controller('HomeCtrl', function ($rootScope, $scope) {
+    $rootScope.pageTitle = 'Site web personnel';
+    $scope.items = [
+      {color: '#bbb', height: 200},
+      {color: '#999', height: 300},
+      {color: '#777', height: 100},
+      {color: '#555', height: 250},
+      {color: '#333', height: 150}
     ];
   });
