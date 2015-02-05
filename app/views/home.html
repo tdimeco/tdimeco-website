@@ -1,7 +1,12 @@
 <div id="home-container" class="container-fluid">
   <div class="row">
-    <div ng-repeat="item in items" class="item col-sm-6 col-md-4" style="background-color: {{item.color}}; height: {{item.height}}px;">
-      &nbsp;
+    <div class="item-column item-column-1 col-md-4 col-sm-6"><div class="home-item"></div></div>
+    <div class="item-column item-column-2 col-md-4 col-sm-6 hidden-xs"><div class="home-item"></div></div>
+    <div class="item-column item-column-3 col-md-4 col-sm-6 hidden-xs hidden-sm"><div class="home-item"></div></div>
+    <!--<div ng-repeat="item in homeItems" class="home-item col-sm-6 col-md-4">
+      <div class="item-container" style="background-color: {{item.color}}; height: {{item.height}}px;">
+
+      </div>-->
     </div>
   </div>
 </div>

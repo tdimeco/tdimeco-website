@@ -10,7 +10,7 @@
 angular.module('tdimecoApp')
   .controller('HomeCtrl', function ($rootScope, $scope) {
     $rootScope.pageTitle = 'Site web personnel';
-    $scope.items = [
+    $scope.homeItems = [
       {color: '#bbb', height: 200},
       {color: '#999', height: 300},
       {color: '#777', height: 100},
