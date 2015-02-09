@@ -35,6 +35,13 @@
 <body>
 
   <div id="main-container" class="container">
+    <!--[if lt IE 9]>
+      <div class="alert alert-warning alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Fermer"><span aria-hidden="true">&times;</span></button>
+        Vous utilisez une version obsolète de <strong>Internet Explorer</strong>.
+        Envisagez de le <a href="http://windows.microsoft.com/fr-fr/internet-explorer/download-ie">mettre à jour</a> pour profiter au mieux de ce site, et du web en général ! ;-)
+      </div>
+    <![endif]-->
     <header class="row">
       <h1 class="col-xs-12 col-sm-6">
         <a href="#/" title="Page d'accueil">Thomas Di'Meco</a>
@@ -58,7 +65,7 @@
   </div>
 
   <!-- build:js(.) scripts/oldieshim.js -->
-  <!--[if IE]>
+  <!--[if lt IE 9]>
   <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
   <script src="bower_components/es5-shim/es5-shim.js"></script>
   <script src="bower_components/json3/lib/json3.js"></script>
