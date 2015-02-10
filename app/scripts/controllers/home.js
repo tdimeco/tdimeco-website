@@ -1,20 +1,27 @@
-'use strict';
+//
+// Home page controller
+// ==============================================================
+//
 
-/**
- * @ngdoc function
- * @name tdimecoApp.controller:HomeCtrl
- * @description
- * # HomeCtrl
- * Controller of the tdimecoApp
- */
-angular.module('tdimecoApp')
-  .controller('HomeCtrl', function ($rootScope, $scope) {
-    $rootScope.pageTitle = 'Site web personnel';
-    $scope.homeItems = [
-      {color: '#bbb', height: 200},
-      {color: '#999', height: 300},
-      {color: '#777', height: 100},
-      {color: '#555', height: 250},
-      {color: '#333', height: 150}
-    ];
+
+(function () { 'use strict';
+
+
+  var app = angular.module('tdimecoApp');
+
+  // Route config
+  app.config(function ($routeProvider) {
+    $routeProvider.when('/', {
+      templateUrl: 'views/pages/home.html',
+      controller: 'HomeController'
+    });
   });
+
+  // Controller declaration
+  app.controller('HomeController', function ($rootScope, $scope, database) {
+    $rootScope.pageTitle = 'Site web personnel';
+    $scope.homeItems = database.getHomeItems();
+  });
+
+
+})();

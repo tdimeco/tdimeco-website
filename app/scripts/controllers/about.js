@@ -1,13 +1,26 @@
-'use strict';
+//
+// About page controller
+// ==============================================================
+//
 
-/**
- * @ngdoc function
- * @name tdimecoApp.controller:AboutCtrl
- * @description
- * # AboutCtrl
- * Controller of the tdimecoApp
- */
-angular.module('tdimecoApp')
-  .controller('AboutCtrl', function ($rootScope, $scope) {
+
+(function () { 'use strict';
+
+
+  var app = angular.module('tdimecoApp');
+
+  // Route config
+  app.config(function ($routeProvider) {
+    $routeProvider.when('/about', {
+      templateUrl: 'views/pages/about.html',
+      controller: 'AboutController'
+    });
+  });
+
+  // Controller declaration
+  app.controller('AboutController', function ($rootScope) {
     $rootScope.pageTitle = 'À propos';
   });
+
+
+})();

@@ -1,29 +1,24 @@
-'use strict';
+//
+// Angular application declaration
+// ==============================================================
+//
 
-/**
- * @ngdoc overview
- * @name tdimecoApp
- * @description
- * # tdimecoApp
- *
- * Main module of the application.
- */
-angular
-  .module('tdimecoApp', [
+
+(function () { 'use strict';
+
+
+  // App declaration
+  var app = angular.module('tdimecoApp', [
     'ngRoute',
     'ngSanitize'
-  ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/home.html',
-        controller: 'HomeCtrl'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
+  ]);
+
+  // App config
+  app.config(function ($routeProvider) {
+    $routeProvider.otherwise({
+      redirectTo: '/'
+    });
   });
+
+
+})();
