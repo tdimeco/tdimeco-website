@@ -14,6 +14,9 @@ module.exports = function (grunt) {
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
 
+  // Other dependencies
+  var modRewrite = require('connect-modrewrite');
+
   // Configurable paths for the application
   var appConfig = {
     app: require('./bower.json').appPath || 'app',
@@ -67,7 +70,7 @@ module.exports = function (grunt) {
       options: {
         port: 9000,
         // Change this to '0.0.0.0' to access the server from outside.
-        hostname: '0.0.0.0',
+        hostname: 'localhost',
         livereload: 35729
       },
       livereload: {
@@ -84,6 +87,7 @@ module.exports = function (grunt) {
                   '/styles/fonts',
                   connect.static('./bower_components/bootstrap/fonts')
               ),
+              modRewrite(['^[^\\.]*$ / [L]']),
               connect.static(appConfig.app)
             ];
           }

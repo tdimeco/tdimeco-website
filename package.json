@@ -5,6 +5,7 @@
   "description": "tdimeco.fr website",
   "dependencies": {},
   "devDependencies": {
+    "connect-modrewrite": "0.7.x",
     "grunt": "0.4.x",
     "grunt-autoprefixer": "2.2.x",
     "grunt-concurrent": "1.0.x",
@@ -16,8 +17,8 @@
     "grunt-contrib-htmlmin": "0.3.x",
     "grunt-contrib-imagemin": "0.9.x",
     "grunt-contrib-jshint": "0.11.x",
-    "grunt-contrib-uglify": "0.7.x",
     "grunt-contrib-less": "1.0.x",
+    "grunt-contrib-uglify": "0.7.x",
     "grunt-contrib-watch": "0.6.x",
     "grunt-filerev": "2.1.x",
     "grunt-google-cdn": "0.4.x",
