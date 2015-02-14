@@ -73,7 +73,7 @@ Options -MultiViews
 # You can customize what Apache returns to the client in case of an error (see
 # http://httpd.apache.org/docs/current/mod/core.html#errordocument), e.g.:
 
-ErrorDocument 404 /404.html
+# ErrorDocument 404 /404.html
 
 
 # ##############################################################################
@@ -251,8 +251,8 @@ AddDefaultCharset utf-8
 
 <IfModule mod_rewrite.c>
     RewriteCond %{HTTPS} !=on
-    RewriteCond %{HTTP_HOST} !^www\..+$ [NC]
-    RewriteRule ^ http://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+    RewriteCond %{HTTP_HOST} ^tdimeco\.fr [NC]
+    RewriteRule ^(.*)$ http://www.tdimeco.fr/$1 [R=301,L]
 </IfModule>
 
 # ------------------------------------------------------------------------------
@@ -262,6 +262,7 @@ AddDefaultCharset utf-8
 <IfModule mod_rewrite.c>
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} !index
     RewriteRule (.*) index.html [L]
 </IfModule>
 
@@ -453,7 +454,7 @@ FileETag None
     ExpiresDefault                                      "access plus 1 month"
 
   # CSS
-    ExpiresByType text/css                              "access plus 1 year"
+    ExpiresByType text/css                              "access plus 1 month"
 
   # Data interchange
     ExpiresByType application/json                      "access plus 0 seconds"
@@ -470,7 +471,7 @@ FileETag None
     ExpiresByType text/html                             "access plus 0 seconds"
 
   # JavaScript
-    ExpiresByType application/javascript                "access plus 1 year"
+    ExpiresByType application/javascript                "access plus 1 month"
 
   # Manifest files
     ExpiresByType application/x-web-app-manifest+json   "access plus 0 seconds"
