@@ -15,7 +15,8 @@
       templateUrl: 'views/components/home-item.html',
       restrict: 'E',
       scope: {
-        item: '='
+        item: '=',
+        itemOrder: '='
       }
     };
   });

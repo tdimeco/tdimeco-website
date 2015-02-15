@@ -47,8 +47,10 @@
    */
   function updateHomeItems ($cols, columnVisibilities) {
 
+    var $items = $cols.find('.home-item');
+
     // Update column classes
-    $cols.removeClass('first-column last-column');
+    $cols.removeClass('first-column last-column column-n-1 column-n-2 column-n-3');
     $cols.first().addClass('first-column');
 
     var lastVisibleIndex = 0;
@@ -61,12 +63,28 @@
     }
 
     $cols.eq(lastVisibleIndex).addClass('last-column');
+    $cols.addClass('column-n-' + (lastVisibleIndex + 1));
 
-    // DEV
-    console.log($cols.eq(0).children().length);
-    console.log($cols.eq(0).is(':visible'));
-    console.log($cols.eq(1).is(':visible'));
-    console.log($cols.eq(2).is(':visible'));
+    // Detach items
+    $items.detach();
+
+    // Put each item...
+    for (var j = 0; j < $items.length; j++) {
+
+      // ... In the smallest column
+      var smallestIndex = 0;
+      var smallestHeight = -1;
+      for (var c = 0; c <= lastVisibleIndex; c++) {
+        var columnHeight = $cols.eq(c).height();
+        if (columnHeight < smallestHeight || smallestHeight < 0) {
+          smallestHeight = columnHeight;
+          smallestIndex = c;
+        }
+      }
+
+      var $itemToPut = $items.filter('[data-order="' + j + '"]');
+      $cols.eq(smallestIndex).append($itemToPut);
+    }
   }
 
 

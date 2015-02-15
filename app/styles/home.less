@@ -5,29 +5,39 @@
 
 
 #home-container {
-  @item-column-padding: 20px;
+  @item-space: 30px;
 
-  margin-bottom: -(@item-column-padding * 1.5);
+  margin-bottom: -@item-space;
 
   .item-column {
-    padding: 0 @item-column-padding / 2;
-
-    &.first-column {
-      padding: 0 @item-column-padding 0 0;
-    }
-
-    &.last-column {
-      padding: 0 0 0 @item-column-padding;
-    }
-
-    &.first-column.last-column {
+    &.column-n-1 {
       padding: 0;
+    }
+
+    &.column-n-2 {
+      &.first-column {
+        padding: 0 (@item-space / 2) 0 0;
+      }
+      &.last-column {
+        padding: 0 0 0 (@item-space / 2);
+      }
+    }
+
+    &.column-n-3 {
+      padding: 0 (@item-space / 3);
+
+      &.first-column {
+        padding: 0 (@item-space / 3 * 2) 0 0;
+      }
+      &.last-column {
+        padding: 0 0 0 (@item-space / 3 * 2);
+      }
     }
   }
 
   .home-item {
     padding: 0;
-    margin-bottom: @item-column-padding * 1.5;
+    margin-bottom: @item-space;
 
     // DEV
     background: grey;
