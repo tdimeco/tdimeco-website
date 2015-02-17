@@ -16,6 +16,7 @@
     margin-bottom: @item-space-mobile;
     padding: 0;
     overflow: hidden;
+    position: relative;
 
     [role="img"] {
       display: block;
@@ -23,6 +24,25 @@
       background-size: cover;
       background-repeat: no-repeat;
       background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .photo-title {
+      display: block;
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: -100%;
+      text-align: center;
+      color: white;
+      background: rgba(0, 0, 0, 0.6);
+      line-height: @font-size-base * 2;
+      .default-animation();
+    }
+
+    &:hover {
+      .photo-title {
+        bottom: 0;
+      }
     }
   }
 
