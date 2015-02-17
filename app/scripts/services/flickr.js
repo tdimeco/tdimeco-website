@@ -9,7 +9,6 @@
 
   // API constants
   var FLICKR_API_KEY = 'be47079d0aa6f99ab445deb7fa5cdf97';
-  var USER_NAME      = 'tdimeco';
   var USER_ID        = '126296696@N08';
 
 
@@ -32,7 +31,9 @@
           'format'        : 'json',
           'nojsoncallback': 1,
           'api_key'       : FLICKR_API_KEY,
-          'user_id'       : USER_ID
+          'user_id'       : USER_ID,
+          'extras'        : 'url_z,path_alias',
+          'per_page'      : 500
         }
       };
 
@@ -46,8 +47,10 @@
               var p = returnedPhotos[i];
               result.push({
                 title   : p.title,
-                imageUrl: getFlickrImageURL(p.farm, p.server, p.id, p.secret, 'z'),
-                pageUrl : getFlickrPageURL(USER_NAME, p.id)
+                width   : p.width_z,  // jshint ignore:line
+                height  : p.height_z, // jshint ignore:line
+                imageUrl: p.url_z,    // jshint ignore:line
+                pageUrl : getFlickrPageURL(p.pathalias, p.id)
               });
             }
             success(result);
@@ -56,7 +59,7 @@
           }
         })
         .error(function (data) {
-          error(data.message);
+          error(data ? data.message : '');
         });
     }
 
@@ -65,21 +68,6 @@
     };
 
   });
-
-
-  /**
-   * Returns the Flickr image URL.
-   *
-   * @param farm The farm ID
-   * @param server The server ID
-   * @param id The photo ID
-   * @param secret The photo secret ID
-   * @param size The size
-   * @return String The photo URL
-   */
-  function getFlickrImageURL (farm, server, id, secret, size) {
-    return 'https://farm' + farm + '.staticflickr.com/' + server + '/' + id + '_' + secret + (size ? '_' + size : '') + '.jpg';
-  }
 
 
   /**

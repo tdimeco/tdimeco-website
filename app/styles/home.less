@@ -4,14 +4,18 @@
 //
 
 
-@item-space: 30px;
+@item-space:        30px;
+@item-space-mobile: 15px;
 
 #home-container {
+  margin-bottom: -@item-space-mobile;
+  overflow: hidden;
   .items-organizer(@item-space);
 
   .item {
+    margin-bottom: @item-space-mobile;
     padding: 0;
-    margin-bottom: 15px;
+    overflow: hidden;
 
     // DEV
     background: grey;
@@ -23,6 +27,7 @@
 // For tablet and desktop
 @media (min-width: @screen-sm-min) {
   #home-container {
+    margin-bottom: -@item-space;
     .item {
       margin-bottom: @item-space;
     }

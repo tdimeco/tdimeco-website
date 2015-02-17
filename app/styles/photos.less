@@ -4,14 +4,33 @@
 //
 
 
-@item-space: 30px;
+@item-space:        30px;
+@item-space-mobile: 15px;
 
 #photos-container {
+  margin-bottom: -@item-space-mobile;
+  overflow: hidden;
   .items-organizer(@item-space);
 
   .item {
+    margin-bottom: @item-space-mobile;
     padding: 0;
-    margin-bottom: 15px;
+    overflow: hidden;
+
+    [role="img"] {
+      display: block;
+      width: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+  }
+
+  .message {
+    margin: @item-space-mobile 0;
+    font-size: @font-size-large;
+    text-align: center;
+    color: @tdm-text-color-light;
   }
 }
 
@@ -19,8 +38,14 @@
 // For tablet and desktop
 @media (min-width: @screen-sm-min) {
   #photos-container {
+    margin-bottom: -@item-space;
+
     .item {
       margin-bottom: @item-space;
+    }
+
+    .message {
+      margin: @item-space 0;
     }
   }
 }

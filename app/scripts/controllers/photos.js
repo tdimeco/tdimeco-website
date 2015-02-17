@@ -21,15 +21,16 @@
   app.controller('PhotosController', function ($rootScope, $scope, flickr) {
 
     $rootScope.pageTitle = 'Photos';
+    $scope.message = '<i class="fa fa-circle-o-notch fa-spin"></i> Chargement des photos...';
 
     function onSuccess (data) {
       $scope.photosItems = data;
-      $scope.errorMessage = '';
+      $scope.message = '';
     }
 
-    function onError () {
+    function onError (errorMessage) {
       $scope.photosItems = [];
-      $scope.errorMessage = 'Error!';
+      $scope.message = errorMessage;
     }
 
     // Load Flickr photos
