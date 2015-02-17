@@ -1,0 +1,13 @@
+<div id="photos-container" class="container-fluid">
+  <div class="row" items-organizer>
+    <div class="item-column item-column-1 col-md-4 col-sm-6 col-xs-12">
+      <div ng-repeat="photo in photosItems" class="item" data-item-order="{{$index}}" on-repeat-end-event>
+        <a ng-href="{{photo.pageUrl}}">
+          <img ng-src="{{photo.imageUrl}}" alt="{{photo.title}}" title="{{photo.title}}" style="width:100%;height:auto;">
+        </a>
+      </div>
+    </div>
+    <div class="item-column item-column-2 col-md-4 col-sm-6 hidden-xs"></div>
+    <div class="item-column item-column-3 col-md-4 hidden-xs hidden-sm"></div>
+  </div>
+</div>

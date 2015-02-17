@@ -1,5 +1,5 @@
 //
-// On repeat end directive
+// On repeat end event directive
 // ==============================================================
 //
 
@@ -10,7 +10,7 @@
   var app = angular.module('tdimecoApp');
 
   // Directive declaration
-  app.directive('onRepeatEnd', function () {
+  app.directive('onRepeatEndEvent', function () {
     return function (scope, element, attrs) {
       if (scope.$last) {
         setTimeout(function () {

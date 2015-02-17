@@ -24,3 +24,34 @@
     text-decoration: none;
   }
 }
+
+
+.items-organizer (@item-space) {
+  margin-bottom: -@item-space;
+
+  .item-column {
+    &.column-n-1 {
+      padding: 0;
+    }
+
+    &.column-n-2 {
+      &.first-column {
+        padding: 0 (@item-space / 2) 0 0;
+      }
+      &.last-column {
+        padding: 0 0 0 (@item-space / 2);
+      }
+    }
+
+    &.column-n-3 {
+      padding: 0 (@item-space / 3);
+
+      &.first-column {
+        padding: 0 (@item-space / 3 * 2) 0 0;
+      }
+      &.last-column {
+        padding: 0 0 0 (@item-space / 3 * 2);
+      }
+    }
+  }
+}

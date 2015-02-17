@@ -1,28 +1,24 @@
 //
-// Home page style
+// Photos page style
 // ==============================================================
 //
 
 
 @item-space: 30px;
 
-#home-container {
+#photos-container {
   .items-organizer(@item-space);
 
   .item {
     padding: 0;
     margin-bottom: 15px;
-
-    // DEV
-    background: grey;
-    min-height: 10px;
   }
 }
 
 
 // For tablet and desktop
 @media (min-width: @screen-sm-min) {
-  #home-container {
+  #photos-container {
     .item {
       margin-bottom: @item-space;
     }

@@ -1,5 +1,5 @@
 //
-// Home items organizer directive
+// Items organizer directive
 // ==============================================================
 //
 
@@ -10,15 +10,15 @@
   var app = angular.module('tdimecoApp');
 
   // Directive declaration
-  app.directive('homeItemsOrganizer', function () {
+  app.directive('itemsOrganizer', function () {
     return {
       controller: function ($scope, $element, $window) {
 
         var $cols = $element.find('.item-column');
 
-        // Listener fired when all elements are available on page load
+        // Listener fired when all elements are available
         $scope.$on('onRepeatEnd', function () {
-          updateHomeItems($cols, getColumnVisibilities($cols));
+          updateItems($cols, getColumnVisibilities($cols));
         });
 
         // Listener fired on window resize
@@ -28,26 +28,25 @@
           for (var i = 0; i < newVisibilities.length; i++) {
             if (previousVisibilities[i] !== newVisibilities[i]) {
               previousVisibilities = newVisibilities;
-              updateHomeItems($cols, newVisibilities);
+              updateItems($cols, newVisibilities);
               break;
             }
           }
         });
-
       }
     };
   });
 
 
   /**
-   * Updates the home items position depending on the number of available columns.
+   * Updates the items position depending on the number of available columns.
    *
    * @param $cols A jQuery object that contains the list of columns.
    * @param columnVisibilities An array of boolean that represents the visibility state of each column.
    */
-  function updateHomeItems ($cols, columnVisibilities) {
+  function updateItems ($cols, columnVisibilities) {
 
-    var $items = $cols.find('.home-item');
+    var $items = $cols.find('.item');
 
     // Update column classes
     $cols.removeClass('first-column last-column column-n-1 column-n-2 column-n-3');
@@ -82,7 +81,7 @@
         }
       }
 
-      var $itemToPut = $items.filter('[data-order="' + j + '"]');
+      var $itemToPut = $items.filter('[data-item-order="' + j + '"]');
       $cols.eq(smallestIndex).append($itemToPut);
     }
   }
