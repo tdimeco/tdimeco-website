@@ -20,25 +20,25 @@
     /**
      * Get all public pictures for the user.
      *
-     * @param success A success callback
-     * @param error An error callback
+     * @param successCallback A success callback
+     * @param errorCallback An error callback
      */
-    function getPublicPhotos (success, error) {
+    function getPublicPhotos (successCallback, errorCallback) {
 
       var config = {
         params: {
-          'method'        : 'flickr.people.getPublicPhotos',
-          'format'        : 'json',
-          'nojsoncallback': 1,
-          'api_key'       : FLICKR_API_KEY,
-          'user_id'       : USER_ID,
-          'extras'        : 'url_z,path_alias',
-          'per_page'      : 500
+          'method'      : 'flickr.people.getPublicPhotos',
+          'format'      : 'json',
+          'jsoncallback': 'JSON_CALLBACK',
+          'api_key'     : FLICKR_API_KEY,
+          'user_id'     : USER_ID,
+          'extras'      : 'url_z,path_alias',
+          'per_page'    : 500
         }
       };
 
       // Do the request
-      $http.get('https://api.flickr.com/services/rest/', config)
+      $http.jsonp('https://api.flickr.com/services/rest/', config)
         .success(function (data) {
           if (data.stat === 'ok') {
             var returnedPhotos = data.photos.photo;
@@ -53,13 +53,13 @@
                 pageUrl : getFlickrPageURL(p.pathalias, p.id)
               });
             }
-            success(result);
+            successCallback(result);
           } else {
-            error(data.message);
+            errorCallback('Erreur Flickr : ' + data.message);
           }
         })
-        .error(function (data) {
-          error(data ? data.message : '');
+        .error(function (data, status) {
+          errorCallback('Erreur lors de la requête (Code ' + status + ')');
         });
     }
 
