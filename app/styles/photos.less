@@ -17,6 +17,7 @@
     padding: 0;
     overflow: hidden;
     position: relative;
+    box-shadow: none;
 
     [role="img"] {
       display: block;
@@ -39,7 +40,7 @@
       .default-animation();
     }
 
-    &:hover {
+    &:hover, &:focus {
       .photo-title {
         bottom: 0;
       }
@@ -62,6 +63,7 @@
 
     .item {
       margin-bottom: @item-space;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     }
 
     .message {
