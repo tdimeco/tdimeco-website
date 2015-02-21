@@ -1,5 +1,6 @@
 'use strict';
 
+
 // # Globbing
 // for performance reasons we're only matching one level down:
 // 'test/spec/{,*/}*.js'
@@ -58,7 +59,7 @@ module.exports = function (grunt) {
           livereload: '<%= connect.options.livereload %>'
         },
         files: [
-          '<%= yeoman.app %>/{,*/}*.html',
+          '<%= yeoman.app %>/{,*/,*/*/}*.html',
           '.tmp/styles/{,*/}*.css',
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
@@ -182,7 +183,7 @@ module.exports = function (grunt) {
           '<%= yeoman.dist %>/scripts/{,*/}*.js',
           '<%= yeoman.dist %>/styles/{,*/}*.css',
           '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-          '<%= yeoman.dist %>/styles/fonts/*'
+          '<%= yeoman.dist %>/fonts/*'
         ]
       }
     },
@@ -208,7 +209,7 @@ module.exports = function (grunt) {
 
     // Performs rewrites based on filerev and the useminPrepare configuration
     usemin: {
-      html: ['<%= yeoman.dist %>/{,*/}*.html'],
+      html: ['<%= yeoman.dist %>/{,*/,*/*/}*.html'],
       css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
       options: {
         assetsDirs: ['<%= yeoman.dist %>','<%= yeoman.dist %>/images']
@@ -351,8 +352,9 @@ module.exports = function (grunt) {
 
 
   grunt.registerTask('serve', 'Compile then start a connect web server', function (target) {
+
     if (target === 'dist') {
-      return grunt.task.run(['build', 'connect:dist:keepalive']);
+      return grunt.task.run(['dist', 'connect:dist:keepalive']);
     }
 
     grunt.task.run([
@@ -365,7 +367,7 @@ module.exports = function (grunt) {
     ]);
   });
 
-  grunt.registerTask('build', [
+  grunt.registerTask('dist', [
     'clean:dist',
     'wiredep',
     'useminPrepare',
@@ -382,8 +384,12 @@ module.exports = function (grunt) {
     'htmlmin'
   ]);
 
+  grunt.registerTask('test', [
+    'jshint'
+  ]);
+
   grunt.registerTask('default', [
-    'newer:jshint',
-    'build'
+    'test',
+    'dist'
   ]);
 };
