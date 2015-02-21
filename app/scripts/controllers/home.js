@@ -18,8 +18,8 @@
   });
 
   // Controller declaration
-  app.controller('HomeController', function ($rootScope, $scope, database) {
-    $rootScope.pageTitle = 'Site web personnel';
+  app.controller('HomeController', function ($scope, database) {
+    $scope.$emit('changePageTitle', 'Site web personnel');
     $scope.homeItems = database.getHomeItems();
   });
 

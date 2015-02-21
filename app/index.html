@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="tdimecoApp">
+<html ng-app="tdimecoApp" ng-controller="AppController">
 <head>
 
   <meta charset="utf-8">
@@ -34,7 +34,7 @@
   <!-- endbuild -->
 
 </head>
-<body>
+<body class="preload">
 
   <div id="main-container" class="container">
     <!--[if lt IE 9]>
@@ -46,7 +46,9 @@
     <![endif]-->
     <header class="row">
       <h1 class="col-xs-12 col-sm-6">
-        <a href="." title="Page d'accueil">Thomas Di'Meco</a>
+        <a href="." title="Page d'accueil">
+          <span class="back-icon fa fa-chevron-left" ng-class="{enabled: !isHomePage}"></span>Thomas Di'Meco
+        </a>
       </h1>
       <aside class="col-xs-12 col-sm-6">
         <ul>
@@ -88,6 +90,7 @@
   <!-- build:js({.tmp,app}) scripts/scripts.js -->
   <script src="scripts/app.js"></script>
   <!-- Controllers -->
+  <script src="scripts/controllers/app.js"></script>
   <script src="scripts/controllers/home.js"></script>
   <script src="scripts/controllers/about.js"></script>
   <script src="scripts/controllers/photos.js"></script>

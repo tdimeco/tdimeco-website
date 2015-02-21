@@ -20,7 +20,7 @@
   // Controller declaration
   app.controller('PhotosController', function ($rootScope, $scope, flickr) {
 
-    $rootScope.pageTitle = 'Photos';
+    $scope.$emit('changePageTitle', 'Photos');
     $scope.message = '<i class="fa fa-circle-o-notch fa-spin"></i> Chargement des photos...';
 
     function onSuccess (data) {

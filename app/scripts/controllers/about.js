@@ -18,8 +18,8 @@
   });
 
   // Controller declaration
-  app.controller('AboutController', function ($rootScope) {
-    $rootScope.pageTitle = 'À propos';
+  app.controller('AboutController', function ($scope) {
+    $scope.$emit('changePageTitle', 'À propos');
   });
 
 
