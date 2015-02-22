@@ -35,37 +35,40 @@
 
 </head>
 <body class="preload">
+  <div id="top-gradient">
 
-  <div id="main-container" class="container">
-    <!--[if lt IE 9]>
-      <div class="alert alert-warning alert-dismissible" role="alert">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Fermer"><span aria-hidden="true">&times;</span></button>
-        Vous utilisez une version obsolète de <strong>Internet Explorer</strong>.
-        Envisagez de le <a href="http://windows.microsoft.com/fr-fr/internet-explorer/download-ie">mettre à jour</a> pour profiter au mieux de ce site, et du web en général ! ;-)
-      </div>
-    <![endif]-->
-    <header class="row">
-      <h1 class="col-xs-12 col-sm-6">
-        <a href="." title="Page d'accueil">
-          <span class="back-icon fa fa-chevron-left" ng-class="{enabled: !isHomePage}"></span>Thomas Di'Meco
-        </a>
-      </h1>
-      <aside class="col-xs-12 col-sm-6">
-        <ul>
-          <li><a href="https://twitter.com/thomasdimeco" title="Twitter" class="twitter-icon"><span class="fa fa-twitter"></span></a></li>
-          <li><a href="https://www.flickr.com/photos/tdimeco/" title="Flickr" class="flickr-icon"><span class="fa fa-flickr"></span></a></li>
-          <li><a href="https://www.linkedin.com/pub/thomas-di-meco/60/329/500" title="LinkedIn" class="linkedin-icon"><span class="fa fa-linkedin"></span></a></li>
-          <li><a href="https://github.com/tdimeco" title="GitHub" class="github-icon"><span class="fa fa-github"></span></a></li>
-          <li><a href="about#contact" title="E-Mail" class="email-icon"><span class="fa fa-envelope"></span></a></li>
-        </ul>
-      </aside>
-    </header>
-    <main ng-view></main>
-    <footer>
-      <a href="about#contact">Me contacter</a>
-      &nbsp;&nbsp;&mdash;&nbsp;&nbsp;
-      <a href="terms">Mentions légales</a>
-    </footer>
+    <div id="main-container" class="container">
+      <!--[if lt IE 9]>
+        <div class="alert alert-warning alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Fermer"><span aria-hidden="true">&times;</span></button>
+          Vous utilisez une version obsolète de <strong>Internet Explorer</strong>.
+          Envisagez de le <a href="http://windows.microsoft.com/fr-fr/internet-explorer/download-ie">mettre à jour</a> pour profiter au mieux de ce site, et du web en général ! ;-)
+        </div>
+      <![endif]-->
+      <header class="row">
+        <h1 class="col-xs-12 col-sm-6">
+          <a href="." title="Page d'accueil">
+            <span class="back-icon fa fa-chevron-left" ng-class="{enabled: !isHomePage}"></span>Thomas Di'Meco
+          </a>
+        </h1>
+        <aside class="col-xs-12 col-sm-6">
+          <ul>
+            <li><a href="https://twitter.com/thomasdimeco" title="Twitter" class="twitter-icon"><span class="fa fa-twitter"></span></a></li>
+            <li><a href="https://www.flickr.com/photos/tdimeco/" title="Flickr" class="flickr-icon"><span class="fa fa-flickr"></span></a></li>
+            <li><a href="https://www.linkedin.com/pub/thomas-di-meco/60/329/500" title="LinkedIn" class="linkedin-icon"><span class="fa fa-linkedin"></span></a></li>
+            <li><a href="https://github.com/tdimeco" title="GitHub" class="github-icon"><span class="fa fa-github"></span></a></li>
+            <li><a href="about#contact" title="E-Mail" class="email-icon"><span class="fa fa-envelope"></span></a></li>
+          </ul>
+        </aside>
+      </header>
+      <main ng-view></main>
+      <footer>
+        <a href="about#contact">Me contacter</a>
+        &nbsp;&nbsp;&mdash;&nbsp;&nbsp;
+        <a href="terms">Mentions légales</a>
+      </footer>
+    </div>
+
   </div>
 
   <!-- build:js(.) scripts/oldieshim.js -->

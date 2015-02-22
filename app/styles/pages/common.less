@@ -6,7 +6,14 @@
 
 body {
   font-weight: @tdm-font-weight;
-  background: url('../images/background.jpg') repeat;
+  .at2x('../images/background.jpg', 540px, 540px);
+  background-repeat: repeat;
+  background-position: center top;
+  background-color: #373433;
+}
+
+#top-gradient {
+  background: none;
 }
 
 a:hover, a:focus {
@@ -125,6 +132,11 @@ a:hover, a:focus {
 
 // For tablet and desktop
 @media (min-width: @screen-sm-min) {
+  #top-gradient {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), transparent) repeat-x;
+    background-size: 200px 200px;
+  }
+
   #main-container {
     > header {
       @header-height: 100px;
