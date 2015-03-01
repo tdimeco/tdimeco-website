@@ -13,15 +13,15 @@
   app.factory('database', function () {
 
     var homeItems = [
-      {color: '#999', height: 210},
-      {color: '#888', height: 340},
-      {color: '#777', height: 95 },
-      {color: '#666', height: 240},
-      {color: '#555', height: 170},
-      {color: '#444', height: 230},
-      {color: '#333', height: 80 },
-      {color: '#222', height: 120},
-      {color: '#111', height: 160}
+      {title: 'Titre de mon projet', color: 'darkcyan', height: 210},
+      {title: 'Titre de mon projet', color: 'darkorange',  height: 340},
+      {title: 'Titre de mon projet', color: 'darkred',  height: 95 },
+      {title: 'Titre de mon projet', color: 'lightblue',  height: 240},
+      {title: 'Titre de mon projet', color: 'green',  height: 170},
+      {title: 'Titre de mon projet', color: 'yellow',  height: 230},
+      {title: 'Titre de mon projet', color: 'blueviolet',  height: 80 },
+      {title: 'Titre de mon projet', color: 'darkslateblue',  height: 120},
+      {title: 'Titre de mon projet', color: 'indianred',  height: 160}
     ];
 
     return {
