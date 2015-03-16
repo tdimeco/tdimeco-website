@@ -9,7 +9,6 @@
 *.Trash
 *.Trashes
 *$RECYCLE.BIN/
-*Icon?
 eh[Tt]humbs.db
 Thumbs.db
 Desktop.ini
