@@ -9,9 +9,16 @@
             <span ng-bind-html="item.title"></span>
           </span>
         </div>
-        <div class="item-description">
-          <p>{{$index + 1}}. ({{item.year}}) <span ng-bind-html="item.description"></span></p>
-          <p><a ng-href="{{item.link}}">En savoir plus...</a></p>
+        <div class="item-content clearfix">
+          <div class="item-description" ng-bind-html="item.description"></div>
+          <div class="item-year">{{item.year}}</div>
+          <ul class="item-links">
+            <li ng-repeat="link in item.links">
+              <a ng-href="{{link.url}}" class="btn btn-xs btn-{{link.style ? link.style : 'default'}}">
+                {{link.label ? link.label : 'En savoir plus...'}}
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
 
