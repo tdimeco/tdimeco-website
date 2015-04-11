@@ -16,7 +16,7 @@
 
     // Page title change event
     $scope.$on('changePageTitle', function (event, title) {
-      $scope.pageTitle = (title ? 'Thomas Di\'Meco - ' + title : '');
+      $scope.pageTitle = (title ? 'Thomas Di Meco - ' + title : '');
     });
 
     // Route change event
