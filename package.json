@@ -1,6 +1,6 @@
 {
   "name": "tdimeco",
-  "version": "3.0.0-dev",
+  "version": "3.0.0",
   "author": "Thomas Di Meco",
   "description": "tdimeco.fr website",
   "dependencies": {},
