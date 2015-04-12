@@ -53,7 +53,7 @@
         key: 'myrmes',
         color: '#aa771a',
         title: 'Myrmes Arena',
-        description: 'Myrmes Arena est une application que j\'ai réalisé avec trois de mes collègues et qui permet d\'avoir un rendu visuel automatisé d\'une partie du jeu de société <a href="https://www.google.fr/search?q=Myrmes">Myrmes</a>. Les données brutes des parties proviennent de l\'intelligence artificielle créée dans le cadre des projets de SI3 à Polytech\'Nice-Sophia.',
+        description: 'Myrmes Arena est une application que j\'ai réalisée avec trois de mes collègues et qui permet d\'avoir un rendu visuel automatisé d\'une partie du jeu de société <a href="https://www.google.fr/search?q=Myrmes">Myrmes</a>. Les données brutes des parties proviennent de l\'intelligence artificielle créée dans le cadre des projets de SI3 à Polytech\'Nice-Sophia.',
         year: 2013,
         links: [
           {label: 'GitHub', url: 'https://github.com/tdimeco/MyrmesArena'}
@@ -98,7 +98,7 @@
         key: 'sdz',
         color: '#e7542f',
         title: 'Site du Zéro',
-        description: 'Ancien validateur et membre actif sur le Site du Zéro (maintenant OpenClassrooms) et auteur de plusieurs tutoriels.',
+        description: 'Ancien validateur et membre actif sur le Site du Zéro (maintenant OpenClassrooms) et auteur de plusieurs tutoriaux.',
         year: 2011,
         links: [
           {label: 'Site web', url: 'http://fr.openclassrooms.com/membres/tdimeco'}
