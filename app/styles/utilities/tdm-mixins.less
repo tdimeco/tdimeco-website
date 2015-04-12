@@ -1,0 +1,60 @@
+//
+// Application LESS mixins
+// ==============================================================
+//
+
+
+.default-text-shadow () {
+  text-shadow: 2px 2px 10px #333333;
+  &:hover, &:focus {
+    text-shadow: 2px 2px 8px black;
+  }
+}
+
+
+.default-box-shadow () {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+
+.default-animation (@duration: 0.2s) {
+  transition: all @duration ease;
+}
+
+
+.hover-to-color (@hoverColor) {
+  .default-animation();
+  &:hover, &:focus {
+    color: @hoverColor;
+    text-decoration: none;
+  }
+}
+
+
+.items-organizer (@item-space) {
+  .item-column {
+    &.column-n-1 {
+      padding: 0;
+    }
+
+    &.column-n-2 {
+      &.first-column {
+        padding: 0 (@item-space / 2) 0 0;
+      }
+      &.last-column {
+        padding: 0 0 0 (@item-space / 2);
+      }
+    }
+
+    &.column-n-3 {
+      padding: 0 (@item-space / 3);
+
+      &.first-column {
+        padding: 0 (@item-space / 3 * 2) 0 0;
+      }
+      &.last-column {
+        padding: 0 0 0 (@item-space / 3 * 2);
+      }
+    }
+  }
+}

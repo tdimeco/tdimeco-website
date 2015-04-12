@@ -1,0 +1,45 @@
+//
+// Terms page style
+// ==============================================================
+//
+
+
+@terms-cell-space: 15px;
+
+#terms-container {
+  background-color: white;
+
+  .terms-cell {
+    margin-bottom: @terms-cell-space;
+    padding: 0;
+
+    .cell-content {
+      padding: @terms-cell-space;
+      background: #dddddd;
+      text-align: center;
+
+      .cell-title {
+        font-size: @font-size-small;
+        color: #666666;
+      }
+
+      .cell-text {
+        margin: 0;
+      }
+    }
+  }
+}
+
+
+// For tablet and desktop
+@media (min-width: @screen-sm-min) {
+  #terms-container {
+    .terms-cell-left {
+      padding-right: @terms-cell-space / 2;
+    }
+
+    .terms-cell-right {
+      padding-left: @terms-cell-space / 2;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+//
+// About page style
+// ==============================================================
+//
+
+
+#about-container {
+  background-color: white;
+  text-align: justify;
+
+  .avatar {
+    text-align: center;
+    margin-bottom: 15px;
+
+    img {
+      width: 128px;
+    }
+  }
+
+  .contact-me {
+    margin: 25px 0;
+    text-align: center;
+  }
+}
+
+
+// For tablet and desktop
+@media (min-width: @screen-sm-min) {
+  #about-container {
+    .avatar {
+      float: left;
+      margin: 0 15px 15px 0;
+    }
+  }
+}

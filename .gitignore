@@ -1,13 +1,20 @@
-#IDE
+###### IDEA ######
 *.idea/workspace.xml
 *.idea/tasks.xml
 
-# System files
-*.DS_Store
-*.DS_Store?
+###### System files ######
 *._*
+*.DS_Store*
 *.Spotlight-V100
+*.Trash
 *.Trashes
-*Icon?
-*ehthumbs.db
-*Thumbs.db
+*$RECYCLE.BIN/
+eh[Tt]humbs.db
+Thumbs.db
+Desktop.ini
+
+###### Project ######
+node_modules
+bower_components
+dist
+.tmp
