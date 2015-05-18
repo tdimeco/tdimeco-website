@@ -61,7 +61,7 @@
       }, {
         key: 'be',
         color: '#ce0e69',
-        title: 'Éditeur de looks de Be.com',
+        title: 'Éditeur de looks Be.com',
         description: 'Refonte du module web de création de moodboards et de streestyles du site de mode Be.com dans le cadre d\'un stage de trois mois.',
         year: 2013,
         links: [
@@ -70,8 +70,8 @@
       }, {
         key: 'nebula',
         color: '#71a3bd',
-        title: 'Nebula &mdash; Jeu pour déficients visuels',
-        description: 'Nebula est un jeu vidéo adapté pour les malvoyants que mes amis et moi avons créé dans le cadre des projets DeViNT à Polytech\'Nice-Sophia. Nous avons gagné le prix <em>spécial créativité</em> lors du concours organisé cette année là.',
+        title: 'Nebula',
+        description: 'Nebula est un jeu vidéo adapté pour les déficients visuels que mes amis et moi avons créé dans le cadre des projets DeViNT à Polytech\'Nice-Sophia. Nous avons gagné le prix <em>spécial créativité</em> lors du concours organisé cette année là.',
         year: 2012,
         links: [
           {label: 'Google Code', url: 'https://code.google.com/p/epu-nebula/'}
@@ -79,7 +79,7 @@
       }, {
         key: 'procsi',
         color: '#664534',
-        title: 'Émulateur d\'assembleur PROCSI',
+        title: 'Émulateur PROCSI',
         description: 'PROCSI est un langage assembleur bas niveau. Mon collègue et moi avons créé un émulateur programmé en C capable d\'interpréter et d’exécuter une liste d\'instructions en assembleur PROCSI.',
         year: 2012,
         links: [
@@ -88,7 +88,7 @@
       }, {
         key: 'portal',
         color: '#c397aa',
-        title: 'Portal &mdash; Animation typographique',
+        title: 'Animation typographique',
         description: 'Très fan de la série des jeux vidéo Portal, j\'ai réalisé une vidéo d\'animation typographique mettant en scène les paroles de la célèbre chanson <em>Still Alive</em> du jeu.',
         year: 2010,
         links: [
