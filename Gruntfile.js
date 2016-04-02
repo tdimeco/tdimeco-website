@@ -17,6 +17,7 @@ module.exports = function (grunt) {
 
   // Other dependencies
   var modRewrite = require('connect-modrewrite');
+  var serveStatic = require('serve-static');
 
   // Configurable paths for the application
   var appConfig = {
@@ -80,17 +81,17 @@ module.exports = function (grunt) {
           open: true,
           middleware: function (connect) {
             return [
-              connect.static('.tmp'),
+              serveStatic('.tmp'),
               connect().use(
                 '/bower_components',
-                connect.static('./bower_components')
+                serveStatic('./bower_components')
               ),
               connect().use(
-                  '/styles/fonts',
-                  connect.static('./bower_components/bootstrap/fonts')
+                '/styles/fonts',
+                serveStatic('./bower_components/bootstrap/fonts')
               ),
               modRewrite(['^[^\\.]*$ / [L]']),
-              connect.static(appConfig.app)
+              serveStatic(appConfig.app)
             ];
           }
         }
@@ -99,10 +100,10 @@ module.exports = function (grunt) {
         options: {
           open: true,
           base: '<%= yeoman.dist %>',
-          middleware: function (connect) {
+          middleware: function () {
             return [
               modRewrite(['^[^\\.]*$ / [L]']),
-              connect.static(appConfig.dist)
+              serveStatic(appConfig.dist)
             ];
           }
         }
