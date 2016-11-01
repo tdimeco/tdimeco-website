@@ -14,13 +14,33 @@
 
     var homeItems = [
       {
-        key: 'touchram',
-        color: '#7271be',
-        title: 'TouchRAM',
-        description: 'TouchRAM est un projet de recherche de l\'université McGill à Montréal. C\'est un logiciel de modélisation orientée aspects, tactile et collaboratif, basé sur le langage de modélisation RAM. J\'ai collaboré dans l\'équipe pendant six mois à la conception et à l\'implémentation du générateur de code.',
-        year: 2014,
+        key: 'wims',
+        color: '#1cb3b4',
+        title: 'WIMS',
+        description: 'Where Is My Stuff? est une application iOS qui permet de répertorier les objets prêtés et empruntés à ses amis. Elle permet également de contacter directement la personne par téléphone ou SMS, et de régler une alarme de rappel. Cette application est entièrement codée en Swift et utilise Core Data comme stockage local. N\'hésitez pas à nous soutenir et à noter ou déverrouiler l\'application ! ;)',
+        year: 2016,
         links: [
-          {label: 'Site web', url: 'http://www.cs.mcgill.ca/~joerg/SEL/TouchRAM.html'}
+          {label: 'App Store', url: 'https://itunes.apple.com/app/wims-where-is-my-stuff/id321910676'}
+        ]
+      }, {
+        key: 'unleashxcode',
+        color: '#1d7ee2',
+        title: 'UnleashXcode',
+        description: 'UnleashXcode est une extension pour Xcode 8+ qui permet d\'ajouter des fonctions pratiques à Xcode, comme la possibilité de dupliquer ou supprimer rapidement une ou plusieurs lignes de code.',
+        year: 2016,
+        links: [
+          {label: 'Télécharger', url: 'https://github.com/tdimeco/UnleashXcode/releases'},
+          {label: 'GitHub', url: 'https://github.com/tdimeco/UnleashXcode'}
+        ]
+      }, {
+        key: 'quicksound',
+        color: '#2ec5db',
+        title: 'QuickSound',
+        description: 'QuickSound est une application pour macOS qui permet de jouer des sons rapidement depuis la barre de menu en haut à droite. Cette application est open source, n\'hésitez pas à aller faire un tour sur GitHub et à y contribuer !',
+        year: 2016,
+        links: [
+          {label: 'Télécharger', url: 'https://github.com/tdimeco/QuickSound/releases'},
+          {label: 'GitHub', url: 'https://github.com/tdimeco/QuickSound'}
         ]
       }, {
         key: 'smartcampus',
@@ -33,10 +53,19 @@
           {label: 'GitHub', url: 'https://github.com/SmartCampus'}
         ]
       }, {
+        key: 'touchram',
+        color: '#7271be',
+        title: 'TouchRAM',
+        description: 'TouchRAM est un projet de recherche de l\'université McGill à Montréal. C\'est un logiciel de modélisation orientée aspects, tactile et collaboratif, basé sur le langage de modélisation RAM. J\'ai collaboré dans l\'équipe pendant six mois à la conception et à l\'implémentation du générateur de code.',
+        year: 2014,
+        links: [
+          {label: 'Site web', url: 'http://www.cs.mcgill.ca/~joerg/SEL/TouchRAM.html'}
+        ]
+      }, {
         key: 'photos',
         color: '#b22d32',
         title: 'Photographie',
-        description: 'La photo est une récente passion que je pratique régulièrement. J\'aime particulièrement la photo de mise en scène, de portrait, mais aussi l\'astrophotographie. Ce site et ma page Flickr regroupent certaines photos que je trouve intéressantes à partager.',
+        description: 'La photo est une récente passion que je pratique régulièrement. J\'aime particulièrement la pratique de l\'astrophotographie, mais aussi la photo de mise en scène et de portrait. Ce site et ma page Flickr regroupent certaines photos que je trouve intéressantes à partager.',
         links: [
           {label: 'Galerie photo', url: 'photos'}
         ]
@@ -44,7 +73,7 @@
         key: 'cubosphere',
         color: '#fda428',
         title: 'Cubosphere',
-        description: 'Cubosphere est un jeu allemand indépendant et innovant très proche de <a href="http://fr.wikipedia.org/wiki/Kula_World">Kula World</a>. J\'ai collaboré pendant plusieurs semaines avec les auteurs pour porter le jeu sous Mac, le traduire en français et concevoir certains niveaux du jeu.',
+        description: 'Cubosphere est un jeu allemand indépendant et innovant très proche de <a href="http://fr.wikipedia.org/wiki/Kula_World">Kula World</a>. J\'ai collaboré pendant plusieurs semaines avec les auteurs pour porter le jeu sous macOS, le traduire en français et concevoir certains niveaux du jeu.',
         year: 2012,
         links: [
           {label: 'SourceForge', url: 'http://sourceforge.net/projects/cubosphere/'}
@@ -57,15 +86,6 @@
         year: 2013,
         links: [
           {label: 'GitHub', url: 'https://github.com/tdimeco/MyrmesArena'}
-        ]
-      }, {
-        key: 'be',
-        color: '#ce0e69',
-        title: 'Éditeur de looks Be.com',
-        description: 'Refonte du module web de création de moodboards et de streestyles du site de mode Be.com dans le cadre d\'un stage de trois mois.',
-        year: 2013,
-        links: [
-          {label: 'Site web', url: 'http://www.be.com'}
         ]
       }, {
         key: 'nebula',
