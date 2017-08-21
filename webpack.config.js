@@ -1,27 +1,27 @@
-const path = require('path');
-const webpack = require('webpack');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
+const path = require('path')
+const webpack = require('webpack')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin')
 
 /* Plugins */
 
 const cleanPlugin = new CleanWebpackPlugin([
   'dist'
-]);
+])
 
 const htmlPlugin = new HtmlWebpackPlugin({
   template: './src/index.html'
-});
+})
 
 const extractStylesPlugin = new ExtractTextWebpackPlugin({
   filename: './styles/[name].bundle.[hash].css'
-});
+})
 
 const providePlugin = new webpack.ProvidePlugin({
   $: 'jquery',
   jQuery: 'jquery'
-});
+})
 
 /* Configuration */
 
@@ -43,6 +43,7 @@ module.exports = {
       test: /\.less$/,
       use: extractStylesPlugin.extract([
         'css-loader',
+        'postcss-loader',
         'less-loader'
       ])
     }, {
@@ -72,4 +73,4 @@ module.exports = {
     extractStylesPlugin,
     providePlugin
   ]
-};
+}

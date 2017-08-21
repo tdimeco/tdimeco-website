@@ -3,7 +3,6 @@ import 'bootstrap/dist/js/bootstrap'
 import 'bootstrap/less/bootstrap.less'
 
 import './.htaccess'
-//import './main.less'
 
 import Vue from 'vue'
 import VueRouter from 'vue-router'
