@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+@import '~font-awesome/less/font-awesome.less';
+@import '~bootstrap/less/bootstrap.less';
+@import 'variables-mixins.less';
+
+// Global syles
+
+a {
+  color: @accent-color;
+  .animate-hover-to-color(@darken-accent-color);
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+}

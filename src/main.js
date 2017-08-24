@@ -1,17 +1,17 @@
 import 'jquery'
 import 'bootstrap/dist/js/bootstrap'
-import 'bootstrap/less/bootstrap.less'
-
+import './styles/main.less'
 import './.htaccess'
 
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 import App from './components/app/app.vue'
-import Home from './components/home/home.vue'
-import About from './components/about/about.vue'
+import HomePage from './components/home-page/home-page.vue'
+import AboutPage from './components/about-page/about-page.vue'
 
 // Router
+
 Vue.use(VueRouter)
 var router = new VueRouter({
   mode: 'history',
@@ -19,16 +19,20 @@ var router = new VueRouter({
     {
       name: 'home',
       path: '/',
-      component: Home
+      component: HomePage
     }, {
       name: 'about',
       path: '/about',
-      component: About
+      component: AboutPage
+    }, {
+      path: '*',
+      redirect: '/'
     }
   ]
 })
 
 // Render the app
+
 new Vue({
   el: '#app',
   render: (function(h) { return h(App) }),

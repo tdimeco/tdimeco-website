@@ -4,7 +4,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin')
 
-/* Plugins */
+// Plugins
 
 const cleanPlugin = new CleanWebpackPlugin([
   'dist'
@@ -23,7 +23,7 @@ const providePlugin = new webpack.ProvidePlugin({
   jQuery: 'jquery'
 })
 
-/* Configuration */
+// Configuration
 
 module.exports = {
   entry: {

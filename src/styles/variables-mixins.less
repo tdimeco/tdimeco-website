@@ -1,0 +1,28 @@
+@import '~bootstrap/less/variables.less';
+@import '~bootstrap/less/mixins.less';
+
+// Override bootstrap variables
+
+@font-family-sans-serif:  "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-size-base: 18px;
+@body-bg: #fafafa;
+
+// Custom global variables
+
+@accent-color: #1F5E8B;
+@darken-accent-color: darken(@accent-color, 20%);
+@secondary-color: #CE8A56;
+@darken-secondary-color: darken(@secondary-color, 20%);
+
+// Custom global mixins
+
+.default-animation (@duration: 0.3s) {
+  transition: all @duration ease;
+}
+
+.animate-hover-to-color (@hoverColor) {
+  .default-animation();
+  &:hover, &:focus {
+    color: @hoverColor;
+  }
+}
