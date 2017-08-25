@@ -46,7 +46,7 @@
             <p class="footer-title">Liens externes</p>
             <ul>
               <li v-for="social in socials">
-                <a :href="social.url"><span :class="social.iconClasses"> {{social.name}}</span></a>
+                <a :href="social.url"><span :class="social.iconClasses"></span> {{social.name}}</a>
               </li>
             </ul>
           </aside>
