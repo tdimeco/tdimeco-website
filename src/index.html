@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr">
+<html lang="fr" class="no-js">
 <head>
 
   <meta charset="utf-8">
@@ -18,8 +18,24 @@
 
   <title>Thomas Di&nbsp;Meco</title>
 
+  <script>
+    /* Remove the no-js class from the html tag */
+    var e = document.getElementsByTagName('html')[0]
+    e.className = e.className.replace(new RegExp('(?:^|s)' + 'no-js' + '(?!S)'), '')
+  </script>
+
 </head>
 <body>
+
+  <!--[if lt IE 9]>
+    <div class="top-error">
+      Vous utilisez une version affreusement ancienne de Internet Explorer. Envisagez de le mettre à jour pour profiter de ce site, et du web en général ! ;-)
+    </div>
+  <![endif]-->
+
+  <div class="top-error no-js-visible">
+    Vous devez activer le JavaScript pour le bon fonctionnement de ce site web.
+  </div>
 
   <div id="app"></div>
 
