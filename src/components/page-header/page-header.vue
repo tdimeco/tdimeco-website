@@ -20,7 +20,7 @@ header {
   background-color: @secondary-color;
   background-image: url('../../images/swift-background.svg');
   background-size: 260px 100px;
-  background-position: center;
+  background-position: center 0;
   background-attachment: fixed;
   background-repeat: repeat;
 
