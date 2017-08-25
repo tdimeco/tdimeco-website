@@ -31,6 +31,11 @@ var router = new VueRouter({
   ]
 })
 
+router.beforeEach(function (to, from, next) {
+  window.scrollTo(0, 0)
+  next()
+})
+
 // Render the app
 
 new Vue({
