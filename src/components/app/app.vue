@@ -9,18 +9,16 @@
         </h1>
         <nav>
           <ul>
-            <li><router-link :to="{ name: 'apps' }">Apps</router-link></li>
-            <li><router-link :to="{ name: 'freelance' }">Freelance</router-link></li>
-            <li><router-link :to="{ name: 'about' }">À propos</router-link></li>
+            <li v-for="section in mainSections">
+              <router-link :to="{ name: section.routerName }">{{section.name}}</router-link>
+            </li>
           </ul>
         </nav>
         <aside class="hidden-xs">
           <ul>
-            <li><a href="https://twitter.com/thomasdimeco" title="Voir Twitter"><span class="fa fa-twitter"></span></a></li>
-            <li><a href="https://github.com/tdimeco" title="Voir GitHub"><span class="fa fa-github"></span></a></li>
-            <li><a href="https://www.linkedin.com/pub/thomas-di-meco/60/329/500" title="Voir LinkedIn"><span class="fa fa-linkedin"></span></a></li>
-            <li><a href="https://www.flickr.com/photos/tdimeco/" title="Voir Flickr"><span class="fa fa-flickr"></span></a></li>
-            <li><router-link :to="{ name: 'about' }" title="Envoyer un email"><span class="fa fa-envelope"></span></router-link></li>
+            <li v-for="social in socials">
+              <a :href="social.url" :title="'Voir ' + social.name"><span :class="social.iconClasses"></span></a>
+            </li>
           </ul>
         </aside>
       </div>
@@ -30,11 +28,46 @@
     </main>
     <footer class="main-footer">
       <div class="container">
-        FOOTER
+        <div class="row">
+          <div class="footer-block col-xs-12 col-sm-4">
+            <p class="footer-title">tdimeco.fr</strong></p>
+            <p>Site web personnel</p>
+          </div>
+          <nav class="footer-block col-xs-12 col-sm-4">
+            <p class="footer-title">Navigation</p>
+            <ul>
+              <li v-for="section in mainSections">
+                <router-link :to="{ name: section.routerName }">{{section.name}}</router-link>
+              </li>
+              <li><router-link :to="{ name: 'terms' }">Mentions légales</router-link></li>
+            </ul>
+          </nav>
+          <aside class="footer-block col-xs-12 col-sm-4">
+            <p class="footer-title">Liens externes</p>
+            <ul>
+              <li v-for="social in socials">
+                <a :href="social.url"><span :class="social.iconClasses"> {{social.name}}</span></a>
+              </li>
+            </ul>
+          </aside>
+        </div>
       </div>
     </footer>
   </div>
 </template>
+
+<script>
+import Socials from '../../data/socials'
+import MainSections from '../../data/main-sections'
+export default {
+  data: function () {
+    return {
+      socials: Socials,
+      mainSections: MainSections
+    }
+  }
+}
+</script>
 
 <style lang="less" scoped>
 @import '../../styles/variables-mixins.less';
@@ -120,6 +153,7 @@
     }
     h1 {
       margin: 20px 0 10px 0;
+      font-size: 1.5em;
     }
     nav {
       margin: 10px 0 20px 0;
@@ -128,9 +162,36 @@
 }
 main {
 }
-footer {
-  padding: 20px 15px;
+.main-footer {
+  padding: 20px 0;
   background: #eeeeee;
-  text-align: justify;
+  font-size: 0.9em;
+  .footer-block {
+    margin: 0;
+  }
+  .footer-title {
+    margin: 0 0 8px 0;
+    font-weight: bold;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    color: @light-text-color;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  p {
+    margin: 0;
+  }
+  @media (max-width: @screen-xs-max) {
+    text-align: center;
+    .footer-block {
+      margin-bottom: 20px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 </style>
