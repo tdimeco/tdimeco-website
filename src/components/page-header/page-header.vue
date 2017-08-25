@@ -17,7 +17,13 @@ export default {
 @import '../../styles/variables-mixins.less';
 header {
   color: white;
-  background: @secondary-color;
+  background-color: @secondary-color;
+  background-image: url('../../images/swift-background.svg');
+  background-size: 260px 100px;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: repeat;
+
   h2 {
     margin: 30px 0 20px 0;
     font-weight: 600;
