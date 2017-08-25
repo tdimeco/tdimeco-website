@@ -2,6 +2,7 @@ const path = require('path')
 const webpack = require('webpack')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin')
 
 // Plugins
@@ -12,6 +13,25 @@ const cleanPlugin = new CleanWebpackPlugin([
 
 const htmlPlugin = new HtmlWebpackPlugin({
   template: './src/index.html'
+})
+
+const faviconsPlugin = new FaviconsWebpackPlugin({
+  logo: './src/images/favicon.svg',
+  background: '#CE8A56',
+  prefix: './assets/favicons.[hash]/',
+  persistentCache: false,
+  icons: {
+    android: false,
+    appleIcon: true,
+    appleStartup: false,
+    coast: false,
+    favicons: true,
+    firefox: false,
+    opengraph: false,
+    twitter: false,
+    yandex: false,
+    windows: false
+  }
 })
 
 const extractStylesPlugin = new ExtractTextWebpackPlugin({
@@ -70,6 +90,7 @@ module.exports = {
   plugins: [
     cleanPlugin,
     htmlPlugin,
+    faviconsPlugin,
     extractStylesPlugin,
     providePlugin
   ]
