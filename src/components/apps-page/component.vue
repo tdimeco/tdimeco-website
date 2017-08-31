@@ -14,9 +14,9 @@
 
 <script>
 var Masonry = require('masonry-layout')
-import Apps from '../../data/apps'
-import PageHeader from '../page-header/page-header.vue'
-import CardItem from '../card-item/card-item.vue'
+import Apps from './apps'
+import PageHeader from '../page-header/component.vue'
+import CardItem from '../card-item/component.vue'
 export default {
   components: {PageHeader, CardItem},
   data: function () {

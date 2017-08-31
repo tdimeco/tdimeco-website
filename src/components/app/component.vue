@@ -9,8 +9,8 @@
         </h1>
         <nav>
           <ul>
-            <li v-for="section in mainSections">
-              <router-link :to="{ name: section.routerName }">{{section.name}}</router-link>
+            <li v-for="page in mainPages">
+              <router-link :to="{ name: page.routerName }">{{page.name}}</router-link>
             </li>
           </ul>
         </nav>
@@ -36,8 +36,9 @@
           <nav class="footer-block col-xs-12 col-sm-4">
             <p class="footer-title">Navigation</p>
             <ul>
-              <li v-for="section in mainSections">
-                <router-link :to="{ name: section.routerName }">{{section.name}}</router-link>
+              <li><router-link :to="{ name: 'home' }">Page d'accueil</router-link></li>
+              <li v-for="page in mainPages">
+                <router-link :to="{ name: page.routerName }">{{page.name}}</router-link>
               </li>
               <li><router-link :to="{ name: 'terms' }">Mentions légales</router-link></li>
             </ul>
@@ -57,13 +58,13 @@
 </template>
 
 <script>
-import Socials from '../../data/socials'
-import MainSections from '../../data/main-sections'
+import Socials from './socials'
+import MainPages from './main-pages'
 export default {
   data: function () {
     return {
       socials: Socials,
-      mainSections: MainSections
+      mainPages: MainPages
     }
   }
 }
@@ -129,7 +130,7 @@ export default {
       }
     }
     ul li {
-      margin: 0 8px 0 0;
+      margin: 0 10px 0 0;
       &:last-child {
         margin: 0;
       }
