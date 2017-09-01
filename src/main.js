@@ -21,23 +21,28 @@ var router = new VueRouter({
   routes: [{
     name: 'home',
     path: '/',
-    component: HomePage
+    component: HomePage,
+    title: 'Site web personnel'
   }, {
     name: 'apps',
     path: '/apps',
-    component: AppsPage
+    component: AppsPage,
+    title: 'Apps'
   }, {
     name: 'freelance',
     path: '/freelance',
-    component: FreelancePage
+    component: FreelancePage,
+    title: 'Freelance'
   }, {
     name: 'about',
     path: '/about',
-    component: AboutPage
+    component: AboutPage,
+    title: 'À propos'
   }, {
     name: 'terms',
     path: '/terms',
-    component: TermsPage
+    component: TermsPage,
+    title: 'Mentions légales'
   }, {
     path: '*',
     redirect: '/'
@@ -45,7 +50,18 @@ var router = new VueRouter({
 })
 
 router.beforeEach(function (to, from, next) {
+
+  // Scroll to top
   window.scrollTo(0, 0)
+
+  // Update window title
+  var infos = $.grep(router.options.routes, function(e) { return e.name === to.name })
+  if (infos.length >= 1 && typeof(infos[0].title) === 'string') {
+    document.title = 'Thomas Di Meco - ' + infos[0].title
+  } else {
+    document.title = 'Thomas Di Meco'
+  }
+
   next()
 })
 
