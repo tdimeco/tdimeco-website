@@ -1,5 +1,3 @@
-import 'jquery'
-import 'bootstrap/dist/js/bootstrap'
 import './styles/main.less'
 import './.htaccess'
 
@@ -62,7 +60,7 @@ router.beforeEach(function (to, from, next) {
   window.scrollTo(0, 0)
 
   // Update window title
-  var infos = $.grep(router.options.routes, function(e) { return e.name === to.name })
+  var infos = router.options.routes.filter(function(e) { return e.name === to.name })
   if (infos.length >= 1 && typeof(infos[0].title) === 'string') {
     document.title = 'Thomas Di Meco - ' + infos[0].title
   } else {

@@ -1,5 +1,4 @@
 const path = require('path')
-const webpack = require('webpack')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
@@ -36,11 +35,6 @@ const faviconsPlugin = new FaviconsWebpackPlugin({
 
 const extractStylesPlugin = new ExtractTextWebpackPlugin({
   filename: './styles/[name].bundle.[hash].css'
-})
-
-const providePlugin = new webpack.ProvidePlugin({
-  $: 'jquery',
-  jQuery: 'jquery'
 })
 
 // Configuration
@@ -84,14 +78,15 @@ module.exports = {
     }
   },
   devServer: {
+    //host: '0.0.0.0',
     contentBase: './dist',
     historyApiFallback: true
   },
+  //devtool: 'inline-source-map',
   plugins: [
     cleanPlugin,
     htmlPlugin,
     faviconsPlugin,
-    extractStylesPlugin,
-    providePlugin
+    extractStylesPlugin
   ]
 }
