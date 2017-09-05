@@ -99,6 +99,7 @@ export default {
     left: 0;
     bottom: -100%;
     text-align: center;
+    font-weight: 600;
     color: #ffffff;
     background: rgba(0, 0, 0, .5);
     padding: 10px;

@@ -5,7 +5,7 @@
       <div class="row">
         <section class="col-xs-12 col-sm-6 col-md-5 col-md-offset-1 col-lg-4 col-lg-offset-2">
           <div>
-            <header>Auteur et publication</header>
+            <header><span class="fa fa-pencil-square"></span> Auteur et publication</header>
             <router-link :to="{ name: 'about' }">Thomas Di&nbsp;Meco</router-link><br>
             Auto entrepreneur<br>
             SIREN : 822 835 781
@@ -13,7 +13,7 @@
         </section>
         <section class="col-xs-12 col-sm-6 col-md-5 col-lg-4">
           <div>
-            <header>Hébergement</header>
+            <header><span class="fa fa-globe"></span> Hébergement</header>
             <a href="https://www.ovh.com/">OVH</a><br>
             2 rue Kellermann<br>
             59100 Roubaix &mdash; France
