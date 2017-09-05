@@ -3,11 +3,11 @@
 <svg version="1.1" id="Favicon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 128 128" style="enable-background:new 0 0 128 128;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#1F5E8B;}
+	.st0{fill:#D8915A;}
 </style>
 <g>
-	<path class="st0" d="M40,84.4V49.3H27.1v-5.8h32v5.8H46.3v35.1H40z"/>
-	<path class="st0" d="M81.7,43.6c12.1,0,19.2,7.4,19.2,20.3c0,13.1-7.1,20.6-19.2,20.6H66.9V43.6H81.7z M73.2,78.7h7.7
-		c8.6,0,13.5-5.3,13.5-14.7c0-9.2-5-14.6-13.5-14.6h-7.7V78.7z"/>
+	<path class="st0" d="M32.1,91.1V44.5H15v-7.7h42.5v7.7h-17v46.6C40.5,91.1,32.1,91.1,32.1,91.1z"/>
+	<path class="st0" d="M87.5,36.9c16.1,0,25.5,9.8,25.5,27c0,17.4-9.4,27.4-25.5,27.4H67.9V36.9H87.5z M76.2,83.5h10.2
+		c11.4,0,17.9-7,17.9-19.5c0-12.2-6.6-19.4-17.9-19.4H76.2V83.5z"/>
 </g>
 </svg>
