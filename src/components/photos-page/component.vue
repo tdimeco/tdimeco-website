@@ -1,6 +1,6 @@
 <template>
   <div>
-    <page-header title="Photos" subtitle="Ma galerie de photos Flickr"></page-header>
+    <page-header title="Photos" subtitle="Ma galerie photos Flickr"></page-header>
     <div class="container">
       <div class="message" v-html="message" v-if="message"></div>
       <div class="grid row" v-if="photos.length > 0">
@@ -77,7 +77,7 @@ export default {
   font-size: 1.2em;
   font-weight: 600;
   text-align: center;
-  margin: 60px 0;
+  margin: 80px 0;
   color: @light-text-color;
 }
 .photo {
@@ -90,7 +90,7 @@ export default {
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: #dddddd;
+    background-color: @light-background-color;
   }
   .photo-title {
     display: block;
@@ -100,10 +100,10 @@ export default {
     bottom: -100%;
     text-align: center;
     font-weight: 600;
-    color: #ffffff;
+    color: white;
     background: rgba(0, 0, 0, .5);
     padding: 10px;
-    .default-animation();
+    .animate(bottom);
   }
   &:hover {
     .photo-title {

@@ -34,6 +34,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
+@import '../../styles/variables-mixins.less';
 section {
   border-radius: 6px;
   overflow: hidden;
@@ -65,7 +66,7 @@ section {
     padding: 15px;
     font-size: 0.9em;
     text-align: justify;
-    background: #eeeeee;
+    background: @light-background-color;
   }
   footer {
     ul {
@@ -76,10 +77,10 @@ section {
         display: block;
         margin-top: 3px;
         padding: 12px 15px;
-        background: #eeeeee;
         font-weight: 600;
+        background: @light-background-color;
         &:hover, &:focus {
-          background: #dddddd;
+          background: darken(@light-background-color, 5%);
         }
         &.secondary {
           font-weight: inherit;

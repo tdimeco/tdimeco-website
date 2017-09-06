@@ -38,7 +38,7 @@ section {
   > div {
     margin: @grid-gutter-width 0;
     padding: 15px;
-    background: #e2e2e2;
+    background: darken(@light-background-color, 5%);
     border-radius: 6px;
     text-align: center;
   }

@@ -6,24 +6,21 @@
 @font-family-sans-serif:  "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-size-base: 18px;
 @body-bg: #fafafa;
+@brand-primary: @primary-color;
 
 // Custom global variables
 
 @light-text-color: lighten(@text-color, 15%);
-@accent-color: #226697;
-@darken-accent-color: darken(@accent-color, 20%);
+@primary-color: #226697;
+@dark-primary-color: darken(@primary-color, 20%);
 @secondary-color: #d8915a;
-@darken-secondary-color: darken(@secondary-color, 20%);
+@dark-secondary-color: darken(@secondary-color, 20%);
+@light-background-color: #eeeeee;
 
 // Custom global mixins
 
-.default-animation (@duration: 0.3s) {
-  transition: all @duration ease;
-}
-
-.animate-hover-to-color (@hoverColor) {
-  .default-animation();
-  &:hover, &:focus {
-    color: @hoverColor;
-  }
+.animate (@properties: all, @duration: 0.3s, @timing-function: ease) {
+  transition-duration: @duration;
+  transition-timing-function: @timing-function;
+  transition-property: @properties;
 }

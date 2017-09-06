@@ -87,9 +87,8 @@ export default {
     font-size: 1.3em;
     font-weight: 600;
     letter-spacing: -1px;
-    color: @accent-color;
+    color: @primary-color;
     a {
-      .default-animation();
       .back-icon {
         display: inline-block;
         visibility: visible;
@@ -97,8 +96,7 @@ export default {
         width: 1em;
         font-size: 1.1em;
         font-weight: bold;
-        .default-animation();
-        transition-property: width, visibility, opacity;
+        .animate(width, visibility, opacity;);
       }
       &.router-link-exact-active .back-icon {
         visibility: hidden;
@@ -116,19 +114,13 @@ export default {
     a {
       color: @secondary-color;
       &:hover, &:focus, &.router-link-exact-active {
-        color: @darken-secondary-color;
+        color: @dark-secondary-color;
       }
     }
   }
   aside {
     float: right;
-    a {
-      color: @accent-color;
-      font-size: 1.2em;
-      &:hover, &:focus {
-        color: @darken-accent-color;
-      }
-    }
+    font-size: 1.2em;
     ul li {
       margin: 0 10px 0 0;
       &:last-child {
@@ -165,7 +157,7 @@ main {
 }
 .main-footer {
   padding: 20px 0;
-  background: #eeeeee;
+  background: @light-background-color;
   font-size: 0.9em;
   .footer-block {
     margin: 0;
