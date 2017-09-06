@@ -8,7 +8,7 @@ export default [{
   iconClasses: 'fa fa-github'
 }, {
   name: 'LinkedIn',
-  url: 'https://www.linkedin.com/pub/thomas-di-meco/60/329/500',
+  url: 'https://www.linkedin.com/in/thomas-di-meco-50032960/',
   iconClasses: 'fa fa-linkedin'
 }, {
   name: 'Flickr',
