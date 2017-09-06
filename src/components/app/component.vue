@@ -31,7 +31,8 @@
         <div class="row">
           <div class="footer-block col-xs-12 col-sm-4">
             <p class="footer-title">tdimeco.fr</strong></p>
-            <p>Site web personnel</p>
+            <p>Site web personnel <span class="fa fa-smile-o"></span></p>
+            <p><router-link :to="{ name: 'terms' }">Mentions légales</router-link></p>
           </div>
           <nav class="footer-block col-xs-12 col-sm-4">
             <p class="footer-title">Navigation</p>
@@ -40,7 +41,6 @@
               <li v-for="page in mainPages">
                 <router-link :to="{ name: page.routerName }">{{page.name}}</router-link>
               </li>
-              <li><router-link :to="{ name: 'terms' }">Mentions légales</router-link></li>
             </ul>
           </nav>
           <aside class="footer-block col-xs-12 col-sm-4">
