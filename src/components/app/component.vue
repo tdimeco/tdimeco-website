@@ -141,7 +141,7 @@ export default {
     h1, nav, aside {
       float: none;
       height: auto;
-      line-height: 2em;
+      line-height: 1.5em;
       text-align: center;
     }
     h1 {
@@ -158,7 +158,8 @@ main {
 .main-footer {
   padding: 20px 0;
   background: @light-background-color;
-  font-size: 0.9em;
+  font-size: 0.95em;
+  line-height: 1.5em;
   .footer-block {
     margin: 0;
   }

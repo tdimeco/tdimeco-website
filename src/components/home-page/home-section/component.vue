@@ -2,8 +2,8 @@
   <section :style="{ 'background-color': color || 'black' }">
     <div class="container">
       <div class="content">
-        <div class="column icon" v-if="iconClasses" :style="{ 'font-size': iconSize || '8em' }">
-          <span :class="iconClasses"></span>
+        <div class="column icon" v-if="iconClasses">
+          <span :class="iconClasses" :style="{ 'font-size': iconSize || '1em' }"></span>
         </div>
         <div class="column">
           <div class="title" v-if="title">{{title}}</div>
@@ -35,7 +35,7 @@ section {
   background-position: center 0;
   background-attachment: fixed;
   background-repeat: repeat;
-  padding: 25px 0 35px 0;
+  padding: 20px 0 30px 0;
   overflow: hidden;
   .content {
     display: table-row;
@@ -46,24 +46,25 @@ section {
   }
   .icon {
     padding-right: 30px;
-    line-height: 1.1em;
+    font-size: 6em;
+    line-height: 0;
   }
   .title {
     margin: 0;
-    font-size: 2em;
+    font-size: 1.7em;
     font-weight: 600;
   }
   .subtitle {
-    margin-top: 10px;
-    font-size: 1.5em;
+    margin-top: 8px;
+    font-size: 1.3em;
     font-weight: 400;
   }
   .button {
     margin-top: 20px;
-    font-size: 1.3em;
+    font-size: 1.2em;
     a {
       display: inline-block;
-      padding: 15px 20px;
+      padding: 10px 15px;
       border-radius: 6px;
       background: white;
       &:hover, &:focus {

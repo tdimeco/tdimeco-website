@@ -54,6 +54,9 @@ section {
         font-weight: 600;
         color: white;
       }
+      .subtitle {
+        font-size: 1.05em
+      }
       img {
         width: 2.8em;
         height: 2.8em;
@@ -64,7 +67,7 @@ section {
   }
   > div {
     padding: 15px;
-    font-size: 0.9em;
+    font-size: 0.95em;
     text-align: justify;
     background: @light-background-color;
   }
