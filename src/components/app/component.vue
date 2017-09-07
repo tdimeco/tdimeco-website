@@ -58,7 +58,7 @@
 </template>
 
 <script>
-import Socials from './socials'
+import Socials from '../../scripts/socials'
 import MainPages from './main-pages'
 export default {
   data: function () {
