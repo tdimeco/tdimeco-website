@@ -25,7 +25,7 @@
           <router-link class="btn btn-primary" :to="{ name: 'photos' }"><span class="fa fa-camera"></span> Mes photos</router-link>
           <a class="btn btn-primary" href="https://www.flickr.com/photos/tdimeco/"><span class="fa fa-flickr"></span> Flickr</a>
         </p>
-        <h4>Contact</h4>
+        <h4>Me contacter</h4>
         <p>La parole est à vous. Si vous avez la moindre question ou simplement pour discuter de la pluie et du beau temps, vous pouvez m'envoyer un email ou me tweeter. À bientôt !</p>
         <p class="text-center">
           <a class="btn btn-primary" @click="sendEmail()"><span class="fa fa-envelope"></span> Envoyer un email</a>

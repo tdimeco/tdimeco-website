@@ -31,7 +31,7 @@
         <div class="row">
           <div class="footer-block col-xs-12 col-sm-4">
             <p class="footer-title">tdimeco.fr</strong></p>
-            <p>Site web personnel <span class="fa fa-smile-o"></span></p>
+            <p><router-link :to="{ name: 'about' }">Me contacter</router-link></p>
             <p><router-link :to="{ name: 'terms' }">Mentions légales</router-link></p>
           </div>
           <nav class="footer-block col-xs-12 col-sm-4">
