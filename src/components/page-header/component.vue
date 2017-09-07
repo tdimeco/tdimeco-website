@@ -1,8 +1,8 @@
 <template>
   <header>
     <div class="container">
-      <h2>{{title}}</h2>
-      <h3>{{subtitle}}</h3>
+      <h2 v-if="title">{{title}}</h2>
+      <h3 v-if="subtitle">{{subtitle}}</h3>
     </div>
   </header>
 </template>
@@ -23,13 +23,15 @@ header {
   background-position: center 0;
   background-attachment: fixed;
   background-repeat: repeat;
+  padding: 30px 0;
+  overflow: hidden;
   h2 {
-    margin: 30px 0 20px 0;
+    margin: 0;
     font-size: 2em;
     font-weight: 600;
   }
   h3 {
-    margin: 20px 0 30px 0;
+    margin: 15px 0 0 0;
     font-size: 1.5em;
     font-weight: 400;
   }

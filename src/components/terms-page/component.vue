@@ -1,6 +1,6 @@
 <template>
   <div>
-    <page-header title="Mentions légales" subtitle=""></page-header>
+    <page-header title="Mentions légales"></page-header>
     <div class="container">
       <div class="row">
         <section class="col-xs-12 col-sm-6 col-md-5 col-md-offset-1 col-lg-4 col-lg-offset-2">

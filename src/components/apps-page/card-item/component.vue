@@ -34,7 +34,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-@import '../../styles/variables-mixins.less';
+@import '../../../styles/variables-mixins.less';
 section {
   border-radius: 6px;
   overflow: hidden;
