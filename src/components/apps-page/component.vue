@@ -1,6 +1,6 @@
 <template>
   <div>
-    <page-header title="Apps" subtitle="Mes principales applications iOS / macOS / watchOS"></page-header>
+    <page-header title="Apps" subtitle="Mes principales applications iOS &amp; macOS"></page-header>
     <div class="container">
       <div class="grid row">
         <div class="grid-sizer col-xs-12 col-sm-6 col-md-4"></div>
