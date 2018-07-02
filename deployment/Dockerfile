@@ -26,7 +26,7 @@ RUN git clone -b master --depth 1 https://github.com/tdimeco/tdimeco.fr.git /tmp
     yarn run build && \
     rm -rf /usr/local/apache2/htdocs && \
     mv ./dist /usr/local/apache2/htdocs && \
-    rm -rf /tmp/tdimeco/*
+    rm -rf /tmp/tdimeco
 
 # Configure container
 EXPOSE 80
