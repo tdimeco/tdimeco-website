@@ -4,10 +4,10 @@
     <div class="container">
       <div class="text-container">
         <p>Vous avez l'idée du siècle et vous souhaitez une application mobile native iOS (iPhone et/ou iPad) pour la concrétiser ? Vous souhaitez également une app Apple Watch ou Mac ? Alors vous êtes au bon endroit, allons-y. <span class="fa fa-smile-o"></span></p>
-        <h4>À propos de moi</h4>
+        <h4><span class="fa fa-user"></span>&nbsp; À propos de moi</h4>
         <p>Je vais tout d'abord me présenter de manière succincte : je m'appelle Thomas, je suis ingénieur développeur iOS &amp; macOS natif et auto-entrepreneur. Je suis passionné par mon métier et particulièrement par le développement mobile. Je trouve ce domaine très intéressant par sa richesse, son évolution rapide, la diversité des technologies utilisées (réseau, bluetooth, géolocalisation, navigation, mouvements dans l'espace, réalité augmentée, machine-learning, 3D...) ainsi que par les challenges soulevés (autonomie, puissance, perte de réseau, synchronisation...). Chaque application possède ses propres problématiques qu'il faut résoudre et c'est ça qui m'intéresse.</p>
         <p>Pour en savoir plus, je vous invite à lire la page <router-link :to="{ name: 'about' }">À propos</router-link>, qui est bien plus complète.</p>
-        <h4>Mes compétences</h4>
+        <h4><span class="fa fa-star"></span>&nbsp; Mes compétences</h4>
         <p>Mon rôle en tant que développeur ne se limite pas à programmer votre application. Je peux vous accompagner sur une grande partie de votre projet, dont voici une liste non exhaustive :</p>
         <ul>
           <li><strong>Conception fonctionnelle</strong> : Si vous avez besoin d'assistance pour penser et concevoir votre produit, je peux vous aider à la rédaction du cahier des charges.</li>
@@ -20,14 +20,14 @@
         </ul>
         <p>Concernant mes compétences techniques, je programme principalement en <strong>Swift (1, 2, 3, 4, 12, 42...)</strong>. Je sais utiliser une grande partie des frameworks principaux d'Apple (Foundation, UIKit, Core Data/Location/Motion, CloudKit, libdispatch...). Je ne vais pas déballer la liste de tous les frameworks que j'ai utilisés, mais sachez que ça ne sera jamais un problème ou un frein si je dois en apprendre un. Concernant mon workflow, il est composé en général de <strong>Git</strong>, <strong>CocoaPods</strong>, <strong>Fastlane</strong>..., ainsi que des outils comme <strong>POEditor</strong> ou <strong>Zeplin</strong>. Mais je sais m'adapter. Je fais de la veille technologique en permanence et je me penche régulièrement sur les tendances du moment (Fastlane, Realm, RxSwift...) par curiosité, mais aussi pour voir le potentiel d'amélioration de mon workflow.</p>
         <p>Si vous souhaitez en savoir plus, le mieux est encore de me contacter pour en discuter ensemble.</p>
-        <h4>Mes expériences</h4>
+        <h4><span class="fa fa-road"></span>&nbsp; Mes expériences</h4>
         <p>J'ai plusieurs expériences en développement iOS &amp; macOS, en voici certaines :</p>
         <ul>
           <li><strong>Freelance (2016-Maintenant)</strong> : J'ai créé quelques applications, dont quelques-unes sont visibles sur la page <router-link :to="{ name: 'apps' }">Apps</router-link>.</li>
           <li><strong>Pôle mobile chez AUSY (2015-2017)</strong> : Avec mon équipe, nous avons créé et maintenu une dizaine d'applications iOS. Nous avons utilisé plusieurs technos intéressantes comme les Beacons (pour faire de la cartographie en intérieur), de la connectivité Bluetooth, du traitement algorithmique en temps réel à l'aide du framework Accelerate...</li>
           <li><strong>Expériences personnelles (2011-Maintenant)</strong> : Sur mon temps personnel, je crée aussi des applications, dont certaines sont disponibles sur la page <router-link :to="{ name: 'apps' }">Apps</router-link> ou sur <a href="https://github.com/tdimeco">GitHub</a>.</li>
         </ul>
-        <h4>Me contacter</h4>
+        <h4><span class="fa fa-paper-plane"></span>&nbsp; Me contacter</h4>
         <p>Je suis à votre écoute si vous souhaitez discuter, poser des questions ou demander un devis. N'hésitez pas.</p>
         <ul class="bottom-links">
           <li>
