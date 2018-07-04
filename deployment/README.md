@@ -1,2 +1,2 @@
 # Deployment
-Run `docker build -t tdimeco .` to create the docker image.
+Run `docker build --pull --no-cache -t tdimeco .` to create the docker image.
