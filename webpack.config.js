@@ -16,7 +16,7 @@ const htmlPlugin = new HtmlWebpackPlugin({
 
 const faviconsPlugin = new FaviconsWebpackPlugin({
   logo: './src/images/favicon.svg',
-  background: '#226697',
+  background: '#0d507f',
   prefix: './assets/favicons.[hash]/',
   persistentCache: false,
   icons: {

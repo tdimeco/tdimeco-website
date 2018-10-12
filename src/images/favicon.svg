@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Favicon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 128 128" style="enable-background:new 0 0 128 128;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#D8915A;}
 </style>
 <g>
-	<path class="st0" d="M32.1,91.1V44.5H15v-7.7h42.5v7.7h-17v46.6C40.5,91.1,32.1,91.1,32.1,91.1z"/>
-	<path class="st0" d="M87.5,36.9c16.1,0,25.5,9.8,25.5,27c0,17.4-9.4,27.4-25.5,27.4H67.9V36.9H87.5z M76.2,83.5h10.2
-		c11.4,0,17.9-7,17.9-19.5c0-12.2-6.6-19.4-17.9-19.4H76.2V83.5z"/>
+	<path class="st0" d="M29.2,92.7V46.4H12.3V36.3h45.6v10.1H41v46.3H29.2z"/>
+	<path class="st0" d="M90.5,36.3c16.8,0,26.4,10.2,26.4,27.8c0,18.3-9.6,28.6-26.4,28.6H68.3V36.3H90.5z M80.1,82.6h8.5
+		c10.4,0,16.3-6.4,16.3-18.3c0-11.4-6.1-17.9-16.3-17.9h-8.5V82.6z"/>
 </g>
 </svg>
