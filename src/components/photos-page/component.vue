@@ -85,6 +85,7 @@ export default {
   position: relative;
   overflow: hidden;
   padding: 0;
+  border-radius: @standard-border-radius;
   .photo-image {
     display: block;
     width: 100%;

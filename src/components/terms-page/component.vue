@@ -1,6 +1,6 @@
 <template>
   <div>
-    <page-header title="Mentions légales"></page-header>
+    <page-header title="Mentions légales" subtitle="Vous êtes perdu ?"></page-header>
     <div class="container">
       <div class="row">
         <section class="col-xs-12 col-sm-6 col-md-5 col-md-offset-1 col-lg-4 col-lg-offset-2">
@@ -39,7 +39,7 @@ section {
     margin: @grid-gutter-width 0;
     padding: 15px;
     background: darken(@light-background-color, 5%);
-    border-radius: 6px;
+    border-radius: @standard-border-radius;
     text-align: center;
   }
   header {

@@ -1,20 +1,16 @@
 <template>
-  <section :style="{ 'background-color': color || 'black' }">
-    <div class="container">
-      <div class="content">
-        <div class="column icon" v-if="iconClasses">
-          <span :class="iconClasses" :style="{ 'font-size': iconSize || '1em' }"></span>
-        </div>
-        <div class="column">
-          <div class="title" v-if="title">{{title}}</div>
-          <div class="subtitle" v-if="subtitle">{{subtitle}}</div>
-          <div class="button" v-if="buttonLabel">
-            <router-link :to="{ name: buttonPageName }" :style="{ 'color': color || 'black' }">
-              <span class="fa fa-arrow-circle-right"></span>
-              {{buttonLabel}}
-            </router-link>
-          </div>
-        </div>
+  <section :style="{ 'background-color': section.color || 'black' }">
+    <div class="column icon" v-if="section.iconClasses">
+      <span :class="section.iconClasses" :style="{ 'font-size': section.iconSize || '1em' }"></span>
+    </div>
+    <div class="column">
+      <div class="title" v-if="section.title">{{section.title}}</div>
+      <div class="subtitle" v-if="section.subtitle">{{section.subtitle}}</div>
+      <div class="button" v-if="section.buttonLabel">
+        <router-link :to="{ name: section.buttonPageName }" :style="{ 'color': section.color || 'black' }">
+          <span class="fa fa-arrow-circle-right"></span>
+          {{section.buttonLabel}}
+        </router-link>
       </div>
     </div>
   </section>
@@ -22,7 +18,7 @@
 
 <script>
 export default {
-  props: ['title', 'subtitle', 'color', 'icon-classes', 'icon-size', 'button-label', 'button-page-name']
+  props: ['section']
 }
 </script>
 
@@ -30,55 +26,45 @@ export default {
 @import '../../../styles/variables-mixins.less';
 section {
   color: white;
-  background-image: url('swift-background.svg');
-  background-size: 260px 100px;
-  background-position: center 0;
-  background-attachment: fixed;
-  background-repeat: repeat;
-  padding: 20px 0 30px 0;
+  padding: 20px;
+  border-radius: @standard-border-radius;
   overflow: hidden;
-  .content {
-    display: table-row;
-    .column {
-      display: table-cell;
-      vertical-align: middle;
-    }
+  .column {
+    display: table-cell;
+    vertical-align: middle;
   }
   .icon {
     padding-right: 30px;
-    font-size: 6em;
+    font-size: 4em;
     line-height: 0;
   }
   .title {
     margin: 0;
-    font-size: 1.7em;
+    font-size: 1.5em;
     font-weight: 600;
   }
   .subtitle {
     margin-top: 8px;
-    font-size: 1.3em;
+    font-size: 1.1em;
     font-weight: 400;
   }
   .button {
     margin-top: 20px;
-    font-size: 1.2em;
+    font-size: 1.1em;
     a {
       display: inline-block;
-      padding: 10px 15px;
+      padding: 5px 10px;
       border-radius: 6px;
       background: white;
       &:hover, &:focus {
-        background: rgba(255, 255, 255, 0.85);
+        background: rgba(255, 255, 255, 0.8);
       }
     }
   }
   @media (max-width: @screen-xs-max) {
-    .content {
+    text-align: center;
+    .column {
       display: block;
-      text-align: center;
-      .column {
-        display: block;
-      }
     }
     .icon {
       padding-right: 0;

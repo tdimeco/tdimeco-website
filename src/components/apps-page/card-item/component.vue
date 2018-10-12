@@ -36,7 +36,7 @@ export default {
 <style lang="less" scoped>
 @import '../../../styles/variables-mixins.less';
 section {
-  border-radius: 6px;
+  border-radius: @standard-border-radius;
   overflow: hidden;
   header {
     padding: 15px;
