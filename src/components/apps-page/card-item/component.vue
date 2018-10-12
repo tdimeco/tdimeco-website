@@ -55,7 +55,8 @@ section {
         color: white;
       }
       .subtitle {
-        font-size: 1.05em
+        font-size: 1.05em;
+        color: rgba(255, 255, 255, 0.8);
       }
       img {
         width: 2.8em;

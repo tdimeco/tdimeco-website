@@ -1,4 +1,14 @@
 export default [{
+  title: 'Movin\'Smart',
+  subtitle: 'L\'équitation connectée',
+  color: '#6d5ba9',
+  icon: require('./movin-smart.png'),
+  description: 'Movin\'Smart est une application de coaching en équitation. À l\'aide de capteurs Bluetooth sur le cavalier et le cheval, les moindres mouvements sont enregistrés et analysés pour fournir de multiples indicateurs intéressants en temps réel. L\'application vous assiste pendant vos courses à l\'aide de l\'app companion Apple Watch, mais aussi après la course avec un historique détaillé.',
+  links: [
+    /*{label: 'App Store', url: 'https://itunes.apple.com/app/movin-smart/id1406803696', iconClasses: 'fa fa-apple'},*/
+    {label: 'Site web', url: 'https://movinsmart.com', secondary: true}
+  ]
+}, {
   title: 'Pass to Corsica',
   subtitle: 'Les bons plans Corse',
   color: '#db3c4f',
@@ -23,7 +33,7 @@ export default [{
   subtitle: 'Améliorez Xcode',
   color: '#378de2',
   icon: require('./unleashxcode.png'),
-  description: 'UnleashXcode est une extension pour Xcode 8+ qui permet d\'ajouter des fonctions utiles à Xcode, comme la possibilité de dupliquer ou supprimer rapidement une ou plusieurs lignes de code.',
+  description: 'UnleashXcode est une extension native pour Xcode qui permet d\'ajouter des fonctions utiles, comme la possibilité de dupliquer ou supprimer rapidement une ou plusieurs lignes de code.',
   links: [
     {label: 'Télécharger', url: 'https://github.com/tdimeco/UnleashXcode/releases', iconClasses: 'fa fa-arrow-circle-down'},
     {label: 'Sources', url: 'https://github.com/tdimeco/UnleashXcode', iconClasses: 'fa fa-github', secondary: true}
