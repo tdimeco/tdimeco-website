@@ -7,21 +7,21 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 // Plugins
 
-const cleanPlugin = new CleanWebpackPlugin([
+const cleanWebpackPlugin = new CleanWebpackPlugin([
   'dist'
 ])
 
-const htmlPlugin = new HtmlWebpackPlugin({
+const htmlWebpackPlugin = new HtmlWebpackPlugin({
   template: './src/index.html'
 })
 
 const vueLoaderPlugin = new VueLoaderPlugin()
 
 const miniCssExtractPlugin = new MiniCssExtractPlugin({
-  filename: './styles/[name].bundle.[hash].css'
+  filename: './assets/styles.[hash].css'
 })
 
-const faviconsPlugin = new FaviconsWebpackPlugin({
+const faviconsWebpackPlugin = new FaviconsWebpackPlugin({
   logo: './src/images/favicon.svg',
   background: '#0d507f',
   prefix: './assets/favicons.[hash]/',
@@ -47,7 +47,7 @@ module.exports = {
     main: './src/main.js'
   },
   output: {
-    filename: './scripts/[name].bundle.[hash].js',
+    filename: './assets/scripts.[hash].js',
     path: path.resolve(__dirname, 'dist')
   },
   module: {
@@ -59,10 +59,7 @@ module.exports = {
     }, {
       test: /\.less$/,
       use: [
-        {
-          loader: MiniCssExtractPlugin.loader,
-          options: {}
-        },
+        MiniCssExtractPlugin.loader,
         'css-loader',
         'postcss-loader',
         'less-loader'
@@ -81,7 +78,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      'vue$': 'vue/dist/vue.esm.js'
+      'vue$': 'vue/dist/vue.runtime.esm.js'
     }
   },
   devServer: {
@@ -91,10 +88,10 @@ module.exports = {
   },
   //devtool: 'inline-source-map',
   plugins: [
-    cleanPlugin,
-    htmlPlugin,
+    cleanWebpackPlugin,
+    htmlWebpackPlugin,
     vueLoaderPlugin,
     miniCssExtractPlugin,
-    faviconsPlugin
+    faviconsWebpackPlugin
   ]
 }

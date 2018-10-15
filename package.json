@@ -5,8 +5,8 @@
   "author": "Thomas Di Meco",
   "license": "UNLICENSED",
   "scripts": {
-    "server": "webpack-dev-server --open",
-    "build": "webpack -p"
+    "server": "webpack-dev-server --open --mode development",
+    "build": "webpack -p --mode production"
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
