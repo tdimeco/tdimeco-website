@@ -1,8 +1,9 @@
 const path = require('path')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
-const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin')
 
 // Plugins
 
@@ -12,6 +13,12 @@ const cleanPlugin = new CleanWebpackPlugin([
 
 const htmlPlugin = new HtmlWebpackPlugin({
   template: './src/index.html'
+})
+
+const vueLoaderPlugin = new VueLoaderPlugin()
+
+const miniCssExtractPlugin = new MiniCssExtractPlugin({
+  filename: './styles/[name].bundle.[hash].css'
 })
 
 const faviconsPlugin = new FaviconsWebpackPlugin({
@@ -33,10 +40,6 @@ const faviconsPlugin = new FaviconsWebpackPlugin({
   }
 })
 
-const extractStylesPlugin = new ExtractTextWebpackPlugin({
-  filename: './styles/[name].bundle.[hash].css'
-})
-
 // Configuration
 
 module.exports = {
@@ -55,15 +58,19 @@ module.exports = {
       ]
     }, {
       test: /\.less$/,
-      use: extractStylesPlugin.extract([
+      use: [
+        {
+          loader: MiniCssExtractPlugin.loader,
+          options: {}
+        },
         'css-loader',
         'postcss-loader',
         'less-loader'
-      ])
+      ]
     }, {
       test: /\.(png|jpe?g|gif|svg|woff|woff2|eot|ttf|otf)$/,
       use: [
-        'file-loader?name=[name].[hash].[ext]&outputPath=assets/&publicPath=../'
+        'file-loader?name=[name].[hash].[ext]&outputPath=assets/&publicPath=../assets/'
       ]
     }, {
       test: /\.htaccess$/,
@@ -86,7 +93,8 @@ module.exports = {
   plugins: [
     cleanPlugin,
     htmlPlugin,
-    faviconsPlugin,
-    extractStylesPlugin
+    vueLoaderPlugin,
+    miniCssExtractPlugin,
+    faviconsPlugin
   ]
 }
