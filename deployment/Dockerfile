@@ -21,7 +21,7 @@ RUN apt-get update && \
 # Clone and build the app
 RUN mkdir -p /tmp/tdimeco
 WORKDIR /tmp/tdimeco
-RUN git clone -b master --depth 1 https://github.com/tdimeco/tdimeco.fr.git /tmp/tdimeco && \
+RUN git clone -b master --depth 1 https://github.com/tdimeco/tdimeco-website.git /tmp/tdimeco && \
     yarn install && \
     yarn run build && \
     rm -rf /usr/local/apache2/htdocs && \

@@ -1,7 +1,7 @@
 {
-  "name": "tdimeco.fr",
+  "name": "tdimeco-website",
   "version": "4.1.0",
-  "description": "tdimeco.fr website",
+  "description": "Personal website",
   "author": "Thomas Di Meco",
   "license": "UNLICENSED",
   "scripts": {
