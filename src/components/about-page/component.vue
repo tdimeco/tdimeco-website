@@ -15,7 +15,7 @@
         <p>J'aime la photographie. Je suis passionné par l'astronomie depuis mon enfance. Quoi de mieux que combiner les deux et être astrophotographe amateur ?</p>
         <p>En réalité, l'astrophotographie n'a presque plus rien à voir avec la photographie. Là où je cherche la spontanéité et la créativité en photographie, l'astrophotographie est l'exact opposé. Cela demande de la précision, de la réflexion et beaucoup de patience ! Oui, beaucoup ! Il n'est pas rare de devoir attendre 6 mois pour pouvoir enfin prendre un objet céleste en photo. Il n'est pas rare de faire 2h de trajet pour se perdre dans les Alpes et avoir le moins de pollution lumineuse possible, et ainsi passer la nuit entière à faire des poses longues du même objet, avec l'appareil posé sur une monture motorisée et qui menace de bouger à chaque instant au risque de foirer la nuit entière ! Il n'est pas rare de passer une journée entière à traiter, calibrer et retoucher une seule photo. Mais le résultat est souvent gratifiant et la beauté de certains objets célestes me laisse rêveur.</p>
         <p>Vous pouvez consulter quelques-unes de ces photos sur la page <router-link :to="{ name: 'photos' }">Photos</router-link>.
-        <h4><span class="fa fa-paper-plane"></span>&nbsp; Me contacter</h4>
+        <h4 id="contact"><span class="fa fa-paper-plane"></span>&nbsp; Me contacter</h4>
         <p>La parole est à vous. Si vous avez la moindre question ou simplement pour discuter de la pluie et du beau temps, vous pouvez m'envoyer un email ou me contacter sur le réseau social adéquat. À bientôt !</p>
         <ul class="bottom-links">
           <li>
