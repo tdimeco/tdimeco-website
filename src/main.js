@@ -4,6 +4,7 @@ import './.htaccess'
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
+import VueMatomo from 'vue-matomo'
 
 import App from './components/app/component.vue'
 import HomePage from './components/home-page/component.vue'
@@ -73,6 +74,14 @@ router.beforeEach(function (to, from, next) {
 // Vue Resource
 
 Vue.use(VueResource)
+
+// Vue Matomo
+
+Vue.use(VueMatomo, {
+  host: 'https://analytics.tdimeco.fr',
+  siteId: 1,
+  router: router
+})
 
 // Render the app
 
