@@ -93,8 +93,7 @@ export default {
         display: inline-block;
         visibility: visible;
         opacity: 1;
-        width: 1em;
-        font-size: 1.1em;
+        width: 0.9em;
         font-weight: bold;
         .animate(width, visibility, opacity;);
       }
