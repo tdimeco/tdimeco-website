@@ -5,8 +5,8 @@ export default [{
   icon: require('./movin-smart.png'),
   description: 'Movin\'Smart est une application de coaching en équitation. À l\'aide de capteurs Bluetooth sur le cavalier et le cheval, les moindres mouvements sont enregistrés et analysés pour fournir de multiples indicateurs intéressants en temps réel. L\'application vous assiste pendant vos courses à l\'aide de l\'app companion Apple Watch, mais aussi après la course avec un historique détaillé.',
   links: [
-    /*{label: 'App Store', url: 'https://itunes.apple.com/app/movin-smart/id1406803696', iconClasses: 'fa fa-apple'},*/
-    {label: 'Site web', url: 'https://movinsmart.com', secondary: true}
+    {label: 'App Store', url: 'https://itunes.apple.com/app/id1447124839', iconClasses: 'fa fa-apple'},
+    {label: 'Site web', url: 'https://www.movinsmart.com', secondary: true}
   ]
 }, {
   title: 'Pass to Corsica',
@@ -15,7 +15,7 @@ export default [{
   icon: require('./pass-to-corsica.png'),
   description: 'Pass to Corsica est une application qui regroupe les bons plans des partenaires en Corse. Le pass permet de profiter de tous les avantages et réductions proposés par la plateforme.',
   links: [
-    {label: 'App Store', url: 'https://itunes.apple.com/app/pass-to-corsica/id1248037834', iconClasses: 'fa fa-apple'},
+    {label: 'App Store', url: 'https://itunes.apple.com/app/id1248037834', iconClasses: 'fa fa-apple'},
     {label: 'Site web', url: 'https://passtocorsica.com', secondary: true}
   ]
 }, {
@@ -25,7 +25,7 @@ export default [{
   icon: require('./wims.png'),
   description: 'Where is my stuff? est une application iOS qui permet de répertorier les objets prêtés et empruntés à ses amis. Elle permet également de contacter directement la personne par téléphone ou SMS, et de régler des alarmes de rappel. J\'ai participé à la refonte de l\'app en Swift, créée à l\'origine par <a href="https://roxypony.fr">Roxy Pony</a>. N\'hésitez pas à nous soutenir et à noter ou déverrouiler l\'application ! ;)',
   links: [
-    {label: 'App Store', url: 'https://itunes.apple.com/app/wims-where-is-my-stuff/id321910676', iconClasses: 'fa fa-apple'},
+    {label: 'App Store', url: 'https://itunes.apple.com/app/id321910676', iconClasses: 'fa fa-apple'},
     {label: 'Site web', url: 'https://roxypony.fr/apps/wims.html', secondary: true}
   ]
 }, {
