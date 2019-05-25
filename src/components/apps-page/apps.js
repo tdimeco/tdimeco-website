@@ -1,4 +1,13 @@
 export default [{
+  title: 'Wake Me Up',
+  subtitle: 'Compagnon Wake-on-LAN',
+  color: '#73c327',
+  icon: require('./wake-me-up.png'),
+  description: 'Wake Me Up permet de démarrer un ordinateur à distance en envoyant une requête réseau Wake-on-LAN. L\'ordinateur peut être démarré de plusieurs manières : en appuyant sur le gros bouton dans l\'application, en utilisant le widget "Aujourd\'hui" disponible sur l\'écran d\'accueil de l\'iPhone ou iPad, en demandant directement à Siri depuis l\'iPhone, iPad ou Apple Watch.',
+  links: [
+    {label: 'App Store', url: 'https://itunes.apple.com/app/id1465416032', iconClasses: 'fa fa-apple'}
+  ]
+}, {
   title: 'Movin\'Smart',
   subtitle: 'L\'équitation connectée',
   color: '#6d5ba9',
