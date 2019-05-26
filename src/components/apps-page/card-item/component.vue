@@ -27,10 +27,9 @@
   </section>
 </template>
 
-<script>
-export default {
+<script lang="coffee">
+export default
   props: ['item']
-}
 </script>
 
 <style lang="less" scoped>

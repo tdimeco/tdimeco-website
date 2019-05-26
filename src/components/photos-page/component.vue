@@ -16,46 +16,42 @@
   </div>
 </template>
 
-<script>
-var Masonry = require('masonry-layout')
+<script lang="coffee">
+Masonry = require('masonry-layout')
 import PageHeader from '../page-header/component.vue'
-import Flickr from './flickr'
-export default {
-  components: {PageHeader},
-  data: function () {
-    return {
-      photos: [],
-      message: '<span class="fa fa-circle-o-notch fa-spin"></span> Chargement des photos...'
-    }
-  },
-  mounted: function () {
-    var self = this
+import Flickr from './flickr.coffee'
+export default
+  components: {PageHeader: PageHeader}
+  data: ->
+    photos: []
+    message: '<span class="fa fa-circle-o-notch fa-spin"></span> Chargement des photos...'
+  mounted: ->
 
-    // Callbacks
-    function onSuccess (data) {
+    self = @
+
+    # Callbacks
+    onSuccess = (data) ->
       self.photos = data
       self.message = ''
-    }
 
-    function onError (errorMessage) {
+    onError = (errorMessage) ->
       self.photos = []
       self.message = errorMessage
-    }
 
-    // Load Flickr photos
+    # Load Flickr photos
     Flickr.getPublicPhotos(onSuccess, onError)
-  },
-  updated: function () {
-    if (this.photos.length > 0) {
-      new Masonry('.grid', {
-        itemSelector: '.grid-item',
-        columnWidth: '.grid-sizer',
-        percentPosition: true,
+
+    return
+
+  updated: ->
+    if @photos.length > 0
+      new Masonry('.grid',
+        itemSelector: '.grid-item'
+        columnWidth: '.grid-sizer'
+        percentPosition: true
         transitionDuration: 0
-      })
-    }
-  }
-}
+      )
+    return
 </script>
 
 <style lang="less" scoped>

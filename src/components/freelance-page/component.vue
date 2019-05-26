@@ -41,23 +41,18 @@
   </div>
 </template>
 
-<script>
+<script lang="coffee">
 import PageHeader from '../page-header/component.vue'
-import Email from '../../scripts/email'
-import Socials from '../../scripts/socials'
-export default {
-  components: {PageHeader},
-  data: function () {
-    return {
-      socials: Socials
-    }
-  },
-  methods: {
-    sendEmail: function () {
+import Email from '../../scripts/email.coffee'
+import Socials from '../../scripts/socials.coffee'
+export default
+  components: {PageHeader: PageHeader}
+  data: ->
+    socials: Socials
+  methods:
+    sendEmail: ->
       Email.openContactEmail()
-    }
-  }
-}
+      return
 </script>
 
 <style lang="less" scoped>

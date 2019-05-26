@@ -24,11 +24,10 @@
   </div>
 </template>
 
-<script>
+<script lang="coffee">
 import PageHeader from '../page-header/component.vue'
-export default {
-  components: {PageHeader}
-}
+export default
+  components: {PageHeader: PageHeader}
 </script>
 
 <style lang="less" scoped>

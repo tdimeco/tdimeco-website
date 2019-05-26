@@ -7,10 +7,9 @@
   </header>
 </template>
 
-<script>
-export default {
+<script lang="coffee">
+export default
   props: ['title', 'subtitle']
-}
 </script>
 
 <style lang="less" scoped>

@@ -12,27 +12,23 @@
   </div>
 </template>
 
-<script>
-var Masonry = require('masonry-layout')
-import Apps from './apps'
+<script lang="coffee">
+Masonry = require('masonry-layout')
+import Apps from './apps.coffee'
 import PageHeader from '../page-header/component.vue'
 import CardItem from './card-item/component.vue'
-export default {
-  components: {PageHeader, CardItem},
-  data: function () {
-    return {
-      apps: Apps
-    }
-  },
-  mounted: function () {
-    new Masonry('.grid', {
-      itemSelector: '.grid-item',
-      columnWidth: '.grid-sizer',
-      percentPosition: true,
+export default
+  components: {PageHeader: PageHeader, CardItem: CardItem}
+  data: ->
+    apps: Apps
+  mounted: ->
+    new Masonry('.grid',
+      itemSelector: '.grid-item'
+      columnWidth: '.grid-sizer'
+      percentPosition: true
       transitionDuration: 0
-    })
-  }
-}
+    )
+    return
 </script>
 
 <style lang="less" scoped>

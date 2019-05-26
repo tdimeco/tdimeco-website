@@ -57,17 +57,13 @@
   </div>
 </template>
 
-<script>
-import Socials from '../../scripts/socials'
-import MainPages from './main-pages'
-export default {
-  data: function () {
-    return {
-      socials: Socials,
-      mainPages: MainPages
-    }
-  }
-}
+<script lang="coffee">
+import Socials from '../../scripts/socials.coffee'
+import MainPages from './main-pages.coffee'
+export default
+  data: ->
+    socials: Socials,
+    mainPages: MainPages
 </script>
 
 <style lang="less" scoped>
