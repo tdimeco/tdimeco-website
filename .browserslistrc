@@ -1,5 +1,4 @@
-# Browsers support
-
 last 2 major versions
-not ie <= 9
-> 1%
+not < 0.2%
+not dead
+not ie <= 11
