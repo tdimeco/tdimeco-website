@@ -1,7 +1,7 @@
 export default [
   {
     title: 'Apps'
-    subtitle: 'Mes principales applications iOS & macOS'
+    subtitle: 'Mes principales applications iOS et macOS'
     color: '#db3c4f'
     iconClasses: 'fa fa-apple'
     iconSize: '1em'
@@ -9,7 +9,7 @@ export default [
     buttonPageName: 'apps'
   }, {
     title: 'Freelance'
-    subtitle: 'Ingénieur développeur iOS & macOS natif'
+    subtitle: 'Ingénieur développeur iOS et macOS natif'
     color: '#1aa8a8'
     iconClasses: 'fa fa-address-card'
     iconSize: '0.68em'
