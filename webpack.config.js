@@ -7,9 +7,7 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 // Plugins
 
-const cleanWebpackPlugin = new CleanWebpackPlugin([
-  'dist'
-])
+const cleanWebpackPlugin = new CleanWebpackPlugin()
 
 const htmlWebpackPlugin = new HtmlWebpackPlugin({
   template: './src/index.html'
