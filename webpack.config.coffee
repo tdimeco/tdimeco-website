@@ -5,7 +5,9 @@ VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 module.exports =
   entry: main: './src/main.coffee'
-  output: filename: './assets/scripts.[hash].js'
+  output:
+    filename: './assets/scripts.[hash].js'
+    publicPath: '/'
   module: rules: [
     {
       test: /\.coffee$/
@@ -21,7 +23,7 @@ module.exports =
       use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'less-loader' ]
     }, {
       test: /\.(png|jpe?g|gif|svg|ico|woff|woff2|eot|ttf|otf)$/
-      use: [ 'file-loader?name=[name].[hash].[ext]&outputPath=assets/&publicPath=../assets/' ]
+      use: [ 'file-loader?name=[name].[hash].[ext]&outputPath=assets/' ]
     }, {
       test: /\.htaccess$/
       use: [ 'file-loader?name=[name]' ]
