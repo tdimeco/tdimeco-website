@@ -2,7 +2,6 @@ CleanPlugin = require('clean-webpack-plugin')
 HtmlPlugin = require('html-webpack-plugin')
 MiniCssExtractPlugin = require('mini-css-extract-plugin')
 VueLoaderPlugin = require('vue-loader/lib/plugin')
-FaviconsPlugin = require('favicons-webpack-plugin')
 
 module.exports =
   entry: main: './src/main.coffee'
@@ -21,7 +20,7 @@ module.exports =
       test: /\.less$/
       use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'less-loader' ]
     }, {
-      test: /\.(png|jpe?g|gif|svg|woff|woff2|eot|ttf|otf)$/
+      test: /\.(png|jpe?g|gif|svg|ico|woff|woff2|eot|ttf|otf)$/
       use: [ 'file-loader?name=[name].[hash].[ext]&outputPath=assets/&publicPath=../assets/' ]
     }, {
       test: /\.htaccess$/
@@ -42,21 +41,4 @@ module.exports =
       filename: './assets/styles.[hash].css'
     )
     new VueLoaderPlugin
-    new FaviconsPlugin(
-      logo: './src/images/favicon.svg'
-      background: '#0d507f'
-      prefix: './assets/favicons.[hash]/'
-      persistentCache: false
-      icons:
-        android: false
-        appleIcon: true
-        appleStartup: false
-        coast: false
-        favicons: true
-        firefox: false
-        opengraph: false
-        twitter: false
-        yandex: false
-        windows: false
-    )
   ]
