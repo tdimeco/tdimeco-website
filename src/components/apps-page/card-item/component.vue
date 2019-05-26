@@ -1,30 +1,19 @@
-<template>
-  <section>
-    <header :style="'background-color:' + item.color">
-      <div class="content">
-        <div class="column">
-          <img :src="item.icon" alt="">
-        </div>
-        <div class="column">
-          <div class="title">{{item.title}}</div>
-          <div class="subtitle">{{item.subtitle}}</div>
-        </div>
-      </div>
-    </header>
-    <div>
-      <div v-html="item.description"></div>
-    </div>
-    <footer>
-      <ul>
-        <li v-for="link in item.links">
-          <a :href="link.url" :class="{secondary: link.secondary === true}">
-            <span :class="typeof link.iconClasses === 'string' ? link.iconClasses : 'fa fa-link'"></span>
-            {{link.label}}
-          </a>
-        </li>
-      </ul>
-    </footer>
-  </section>
+<template lang="pug">
+section
+  header(:style="'background-color:' + item.color")
+    .content
+      .column
+        img(:src='item.icon' alt='')
+      .column
+        .title {{item.title}}
+        .subtitle {{item.subtitle}}
+  div
+    div(v-html='item.description')
+  footer
+    ul
+      li(v-for='link in item.links')
+        a(:href='link.url' :class='{secondary: link.secondary === true}')
+          | #[span(:class="typeof link.iconClasses === 'string' ? link.iconClasses : 'fa fa-link'")]&nbsp; {{link.label}}
 </template>
 
 <script lang="coffee">
@@ -87,9 +76,6 @@ section {
         }
         &.secondary {
           font-weight: inherit;
-        }
-        span {
-          margin-right: 8px;
         }
       }
     }

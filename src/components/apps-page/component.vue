@@ -1,15 +1,11 @@
-<template>
-  <div>
-    <page-header title="Apps" subtitle="Mes principales applications iOS &amp; macOS"></page-header>
-    <div class="container">
-      <div class="grid row">
-        <div class="grid-sizer col-xs-12 col-sm-6 col-md-4"></div>
-        <div v-for="app in apps" class="grid-item col-xs-12 col-sm-6 col-md-4">
-          <card-item :item="app"></card-item>
-        </div>
-      </div>
-    </div>
-  </div>
+<template lang="pug">
+div
+  page-header(title='Apps' subtitle='Mes principales applications iOS et macOS')
+  .container
+    .grid.row
+      .grid-sizer.col-xs-12.col-sm-6.col-md-4
+      .grid-item.col-xs-12.col-sm-6.col-md-4(v-for='app in apps')
+        card-item(:item='app')
 </template>
 
 <script lang="coffee">

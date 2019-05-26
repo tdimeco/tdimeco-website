@@ -12,6 +12,9 @@ module.exports =
       test: /\.coffee$/
       use: [ 'coffee-loader' ]
     }, {
+      test: /\.pug$/
+      use: [ 'pug-plain-loader' ]
+    }, {
       test: /\.vue$/
       use: [ 'vue-loader' ]
     }, {

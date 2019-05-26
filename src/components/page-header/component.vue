@@ -1,10 +1,8 @@
-<template>
-  <header>
-    <div class="container">
-      <h2 v-if="title">{{title}}</h2>
-      <h3 v-if="subtitle">{{subtitle}}</h3>
-    </div>
-  </header>
+<template lang="pug">
+header
+  .container
+    h2(v-if='title') {{title}}
+    h3(v-if='subtitle') {{subtitle}}
 </template>
 
 <script lang="coffee">

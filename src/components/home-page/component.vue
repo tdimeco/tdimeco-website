@@ -1,15 +1,11 @@
-<template>
-  <div>
-    <page-header title="Site web personnel" subtitle="Je vous souhaite la bienvenue sur mon site web personnel !"></page-header>
-    <div class="container">
-      <div class="grid row">
-        <div class="grid-sizer col-xs-12 col-md-6"></div>
-        <div v-for="section in sections" class="grid-item col-xs-12 col-md-6">
-          <home-section :section="section"></home-section>
-        </div>
-      </div>
-    </div>
-  </div>
+<template lang="pug">
+div
+  page-header(title='Site web personnel' subtitle='Je vous souhaite la bienvenue sur mon site web personnel !')
+  .container
+    .grid.row
+      .grid-sizer.col-xs-12.col-md-6
+      .grid-item.col-xs-12.col-md-6(v-for='section in sections')
+        home-section(:section='section')
 </template>
 
 <script lang="coffee">

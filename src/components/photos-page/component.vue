@@ -1,19 +1,14 @@
-<template>
-  <div>
-    <page-header title="Photos" subtitle="Ma galerie photos Flickr"></page-header>
-    <div class="container">
-      <div class="message" v-html="message" v-if="message"></div>
-      <div class="grid row" v-if="photos.length > 0">
-        <div class="grid-sizer col-xs-12 col-sm-6 col-md-4"></div>
-        <div v-for="photo in photos" class="grid-item col-xs-12 col-sm-6 col-md-4">
-          <a class="photo" :href="photo.pageUrl">
-            <span class="photo-image" role="img" :title="photo.title" :style="{'background-image': 'url(' + photo.imageUrl + ')', 'padding-top': (photo.height / photo.width * 100) + '%'}"></span>
-            <span class="photo-title">{{photo.title}}</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
+<template lang="pug">
+div
+  page-header(title='Photos' subtitle='Ma galerie photos Flickr')
+  .container
+    .message(v-html='message' v-if='message')
+    .grid.row(v-if='photos.length > 0')
+      .grid-sizer.col-xs-12.col-sm-6.col-md-4
+      .grid-item.col-xs-12.col-sm-6.col-md-4(v-for='photo in photos')
+        a.photo(:href='photo.pageUrl')
+          span.photo-image(role='img' :title='photo.title' :style="{'background-image': 'url(' + photo.imageUrl + ')', 'padding-top': (photo.height / photo.width * 100) + '%'}")
+          span.photo-title {{photo.title}}
 </template>
 
 <script lang="coffee">

@@ -1,60 +1,44 @@
-<template>
-  <div id="app">
-    <header class="main-header">
-      <div class="container">
-        <h1>
-          <router-link :to="{ name: 'home' }">
-            <span class="back-icon fa fa-angle-left"></span>Thomas Di&nbsp;Meco
-          </router-link>
-        </h1>
-        <nav>
-          <ul>
-            <li v-for="page in mainPages">
-              <router-link :to="{ name: page.routerName }">{{page.name}}</router-link>
-            </li>
-          </ul>
-        </nav>
-        <aside class="hidden-xs">
-          <ul>
-            <li v-for="social in socials">
-              <a :href="social.url" :title="'Voir ' + social.name"><span :class="social.iconClasses"></span></a>
-            </li>
-          </ul>
-        </aside>
-      </div>
-    </header>
-    <main>
-      <router-view></router-view>
-    </main>
-    <footer class="main-footer">
-      <div class="container">
-        <div class="row">
-          <div class="footer-block col-xs-12 col-sm-4">
-            <p class="footer-title">tdimeco.fr</strong></p>
-            <p><router-link :to="{ name: 'about' }">Me contacter</router-link></p>
-            <p><router-link :to="{ name: 'terms' }">Mentions légales</router-link></p>
-          </div>
-          <nav class="footer-block col-xs-12 col-sm-4">
-            <p class="footer-title">Navigation</p>
-            <ul>
-              <li><router-link :to="{ name: 'home' }">Page d'accueil</router-link></li>
-              <li v-for="page in mainPages">
-                <router-link :to="{ name: page.routerName }">{{page.name}}</router-link>
-              </li>
-            </ul>
-          </nav>
-          <aside class="footer-block col-xs-12 col-sm-4">
-            <p class="footer-title">Liens externes</p>
-            <ul>
-              <li v-for="social in socials">
-                <a :href="social.url"><span :class="social.iconClasses"></span> {{social.name}}</a>
-              </li>
-            </ul>
-          </aside>
-        </div>
-      </div>
-    </footer>
-  </div>
+<template lang="pug">
+#app
+  header.main-header
+    .container
+      h1
+        router-link(:to="{ name: 'home' }")
+          span.back-icon.fa.fa-angle-left
+          | Thomas Di&nbsp;Meco
+      nav
+        ul
+          li(v-for='page in mainPages')
+            router-link(:to='{ name: page.routerName }') {{page.name}}
+      aside.hidden-xs
+        ul
+          li(v-for='social in socials')
+            a(:href='social.url' :title="'Voir ' + social.name")
+              span(:class='social.iconClasses')
+  main
+    router-view
+  footer.main-footer
+    .container
+      .row
+        .footer-block.col-xs-12.col-sm-4
+          p.footer-title tdimeco.fr
+          p
+            router-link(:to="{ name: 'about' }") Me contacter
+          p
+            router-link(:to="{ name: 'terms' }") Mentions légales
+        nav.footer-block.col-xs-12.col-sm-4
+          p.footer-title Navigation
+          ul
+            li
+              router-link(:to="{ name: 'home' }") Page d'accueil
+            li(v-for='page in mainPages')
+              router-link(:to='{ name: page.routerName }') {{page.name}}
+        aside.footer-block.col-xs-12.col-sm-4
+          p.footer-title Liens externes
+          ul
+            li(v-for='social in socials')
+              a(:href='social.url')
+                | #[span(:class='social.iconClasses')] {{social.name}}
 </template>
 
 <script lang="coffee">

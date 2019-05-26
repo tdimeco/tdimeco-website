@@ -1,19 +1,13 @@
-<template>
-  <section :style="{ 'background-color': section.color || 'black' }">
-    <div class="column icon" v-if="section.iconClasses">
-      <span :class="section.iconClasses" :style="{ 'font-size': section.iconSize || '1em' }"></span>
-    </div>
-    <div class="column">
-      <div class="title" v-if="section.title">{{section.title}}</div>
-      <div class="subtitle" v-if="section.subtitle">{{section.subtitle}}</div>
-      <div class="button" v-if="section.buttonLabel">
-        <router-link :to="{ name: section.buttonPageName }" :style="{ 'color': section.color || 'black' }">
-          <span class="fa fa-arrow-circle-right"></span>
-          {{section.buttonLabel}}
-        </router-link>
-      </div>
-    </div>
-  </section>
+<template lang="pug">
+section(:style="{ 'background-color': section.color || 'black' }")
+  .column.icon(v-if='section.iconClasses')
+    span(:class='section.iconClasses' :style="{ 'font-size': section.iconSize || '1em' }")
+  .column
+    .title(v-if='section.title') {{section.title}}
+    .subtitle(v-if='section.subtitle') {{section.subtitle}}
+    .button(v-if='section.buttonLabel')
+      router-link(:to='{ name: section.buttonPageName }' :style="{ 'color': section.color || 'black' }")
+        | #[span.fa.fa-arrow-circle-right] {{section.buttonLabel}}
 </template>
 
 <script lang="coffee">
