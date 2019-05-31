@@ -1,5 +1,5 @@
-CleanPlugin = require('clean-webpack-plugin')
-HtmlPlugin = require('html-webpack-plugin')
+{ CleanWebpackPlugin } = require('clean-webpack-plugin')
+HtmlWebpackPlugin = require('html-webpack-plugin')
 MiniCssExtractPlugin = require('mini-css-extract-plugin')
 VueLoaderPlugin = require('vue-loader/lib/plugin')
 
@@ -31,12 +31,11 @@ module.exports =
   ]
   devServer:
     # host: '0.0.0.0'
-    contentBase: './dist'
     historyApiFallback: true
   # devtool: 'inline-source-map'
   plugins: [
-    new CleanPlugin
-    new HtmlPlugin(
+    new CleanWebpackPlugin
+    new HtmlWebpackPlugin(
       template: './src/index.html'
     )
     new MiniCssExtractPlugin(
