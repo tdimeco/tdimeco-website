@@ -62,7 +62,7 @@ import PageHeader from '../page-header/component.vue'
 import Email from '../../scripts/email.coffee'
 import Socials from '../../scripts/socials.coffee'
 export default
-  components: {PageHeader: PageHeader}
+  components: {PageHeader}
   data: ->
     socials: Socials
   methods:

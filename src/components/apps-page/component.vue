@@ -14,7 +14,7 @@ import Apps from './apps.coffee'
 import PageHeader from '../page-header/component.vue'
 import CardItem from './card-item/component.vue'
 export default
-  components: {PageHeader: PageHeader, CardItem: CardItem}
+  components: {PageHeader, CardItem}
   data: ->
     apps: Apps
   mounted: ->

@@ -26,7 +26,7 @@ div
 <script lang="coffee">
 import PageHeader from '../page-header/component.vue'
 export default
-  components: {PageHeader: PageHeader}
+  components: {PageHeader}
 </script>
 
 <style lang="less" scoped>

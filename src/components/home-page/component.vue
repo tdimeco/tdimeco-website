@@ -14,7 +14,7 @@ import Sections from './sections.coffee'
 import PageHeader from '../page-header/component.vue'
 import HomeSection from './home-section/component.vue'
 export default
-  components: {PageHeader: PageHeader, HomeSection: HomeSection}
+  components: {PageHeader, HomeSection}
   data: ->
     sections: Sections
   mounted: ->

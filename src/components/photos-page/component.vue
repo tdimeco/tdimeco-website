@@ -16,7 +16,7 @@ Masonry = require('masonry-layout')
 import PageHeader from '../page-header/component.vue'
 import Flickr from './flickr.coffee'
 export default
-  components: {PageHeader: PageHeader}
+  components: {PageHeader}
   data: ->
     photos: []
     message: '<span class="fa fa-circle-o-notch fa-spin"></span> Chargement des photos...'
