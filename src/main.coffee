@@ -57,7 +57,7 @@ router = new VueRouter(
   ]
 )
 
-router.beforeEach (to, from, next) ->
+router.afterEach (to, from) ->
 
   # Scroll to top
   window.scrollTo(0, 0)
@@ -69,7 +69,6 @@ router.beforeEach (to, from, next) ->
   else
     document.title = 'Thomas Di Meco'
 
-  next()
   return
 
 # Vue Resource
