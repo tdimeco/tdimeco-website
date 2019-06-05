@@ -17,7 +17,7 @@ div
       p
         | Je code essentiellement en Swift pour mes applications iOS et macOS. C'est un langage que j'affectionne particulièrement et qui évolue rapidement. Je suis de très près son évolution, j'essaie de contribuer au langage et j'apprends à m'en servir à son maximum.
       p
-        | C'est donc pour cela que je suis développeur iOS natif, et que j'en ai fait mon activité principale en tant que freelance. Pour en savoir plus sur mon activité ou si vous souhaitez un devis ou une prestation, la page #[router-link(:to="{ name: 'freelance' }") Freelance] est à votre disposition. Pour en savoir plus sur mon parcours et mes compétences, je vous invite à visiter mon profil #[a(href="https://www.linkedin.com/in/tdimeco") LinkedIn]. Et si vous souhaitez voir quelques-unes des apps que j'ai faites ou aider à faire, il y a la page #[router-link(:to="{ name: 'apps' }") Apps].
+        | C'est donc pour cela que je suis développeur iOS natif, et que j'en ai fait mon activité principale en tant que freelance. Pour en savoir plus sur mon activité ou si vous souhaitez un devis ou une prestation, la page #[router-link(:to="{ name: 'freelance' }") Freelance] est à votre disposition. Pour en savoir plus sur mon parcours et mes compétences, je vous invite à visiter mon profil #[a(:href="socials.linkedin.url") LinkedIn]. Et si vous souhaitez voir quelques-unes des apps que j'ai faites ou aider à faire, il y a la page #[router-link(:to="{ name: 'apps' }") Apps].
       h4
         | #[span.fa.fa-camera]&nbsp; Astrophotographie
       p
@@ -34,7 +34,7 @@ div
         li
           a.btn.btn-primary(@click="sendEmail()")
             | #[span.fa.fa-envelope] Envoyer un email
-        li(v-for="social in socials")
+        li(v-for="social in socials.all")
           a.btn.btn-primary(:href="social.url")
             | #[span(:class="social.iconClasses")] {{social.name}}
 </template>
