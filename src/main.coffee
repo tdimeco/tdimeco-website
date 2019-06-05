@@ -6,55 +6,15 @@ import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
 import VueMatomo from 'vue-matomo'
 
-import App from './components/app/component.vue'
-import HomePage from './components/home-page/component.vue'
-import AppsPage from './components/apps-page/component.vue'
-import FreelancePage from './components/freelance-page/component.vue'
-import PhotosPage from './components/photos-page/component.vue'
-import AboutPage from './components/about-page/component.vue'
-import TermsPage from './components/terms-page/component.vue'
+import App from './components/app.vue'
+import Routes from './data/routes.coffee'
 
 # Vue Router
 Vue.use(VueRouter)
 
 router = new VueRouter(
   mode: 'history'
-  routes: [
-    {
-      name: 'home'
-      path: '/'
-      component: HomePage
-      title: 'Site web personnel'
-    }, {
-      name: 'apps'
-      path: '/apps'
-      component: AppsPage
-      title: 'Apps'
-    }, {
-      name: 'freelance'
-      path: '/freelance'
-      component: FreelancePage
-      title: 'Freelance'
-    }, {
-      name: 'photos'
-      path: '/photos'
-      component: PhotosPage
-      title: 'Photos'
-    }, {
-      name: 'about'
-      path: '/about'
-      component: AboutPage
-      title: 'À propos'
-    }, {
-      name: 'terms'
-      path: '/terms'
-      component: TermsPage
-      title: 'Mentions légales'
-    }, {
-      path: '*'
-      redirect: '/'
-    }
-  ]
+  routes: Routes
 )
 
 router.afterEach (to, from) ->

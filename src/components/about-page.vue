@@ -1,9 +1,9 @@
 <template lang="pug">
 div
-  page-header(title='À propos' subtitle='Qui suis-je, que fais-je ?')
+  page-header(title="À propos" subtitle="Qui suis-je, que fais-je ?")
   .container
     .text-container
-      img.avatar(src='https://www.gravatar.com/avatar/7fa7d412736b54b102f5ef6274a62130?s=256' alt='Thomas Di Meco' title='Thomas Di Meco')
+      img.avatar(src="https://www.gravatar.com/avatar/7fa7d412736b54b102f5ef6274a62130?s=256" alt="Thomas Di Meco" title="Thomas Di Meco")
       p
         | Bien le bonjour ! Je vous souhaite la bienvenue sur mon site qui a pour but de centraliser mes activités personnelles et professionnelles. Si vous êtes sur cette page, c'est que vous souhaitez en savoir un peu plus sur moi (n'est-ce pas ?). Comme tout bon site vitrine qui se respecte, je vais donc vous donner quelques informations triées sur le volet par mes soins, parler de moi à la première personne, présenter mes qualités sans évoquer mes défauts et être égocentrique le reste de cette page. #[span.fa.fa-smile-o]
       p
@@ -17,7 +17,7 @@ div
       p
         | Je code essentiellement en Swift pour mes applications iOS et macOS. C'est un langage que j'affectionne particulièrement et qui évolue rapidement. Je suis de très près son évolution, j'essaie de contribuer au langage et j'apprends à m'en servir à son maximum.
       p
-        | C'est donc pour cela que je suis développeur iOS natif, et que j'en ai fait mon activité principale en tant que freelance. Pour en savoir plus sur mon activité ou si vous souhaitez un devis ou une prestation, la page #[router-link(:to="{ name: 'freelance' }") Freelance] est à votre disposition. Pour en savoir plus sur mon parcours et mes compétences, je vous invite à visiter mon profil #[a(href='https://www.linkedin.com/in/tdimeco') LinkedIn]. Et si vous souhaitez voir quelques-unes des apps que j'ai faites ou aider à faire, il y a la page #[router-link(:to="{ name: 'apps' }") Apps].
+        | C'est donc pour cela que je suis développeur iOS natif, et que j'en ai fait mon activité principale en tant que freelance. Pour en savoir plus sur mon activité ou si vous souhaitez un devis ou une prestation, la page #[router-link(:to="{ name: 'freelance' }") Freelance] est à votre disposition. Pour en savoir plus sur mon parcours et mes compétences, je vous invite à visiter mon profil #[a(href="https://www.linkedin.com/in/tdimeco") LinkedIn]. Et si vous souhaitez voir quelques-unes des apps que j'ai faites ou aider à faire, il y a la page #[router-link(:to="{ name: 'apps' }") Apps].
       h4
         | #[span.fa.fa-camera]&nbsp; Astrophotographie
       p
@@ -32,17 +32,17 @@ div
         | La parole est à vous. Si vous avez la moindre question ou simplement pour discuter de la pluie et du beau temps, vous pouvez m'envoyer un email ou me contacter sur le réseau social adéquat. À bientôt !
       ul.bottom-links
         li
-          a.btn.btn-primary(@click='sendEmail()')
+          a.btn.btn-primary(@click="sendEmail()")
             | #[span.fa.fa-envelope] Envoyer un email
-        li(v-for='social in socials')
-          a.btn.btn-primary(:href='social.url')
-            | #[span(:class='social.iconClasses')] {{social.name}}
+        li(v-for="social in socials")
+          a.btn.btn-primary(:href="social.url")
+            | #[span(:class="social.iconClasses")] {{social.name}}
 </template>
 
 <script lang="coffee">
-import PageHeader from '../page-header/component.vue'
-import Email from '../../scripts/email.coffee'
-import Socials from '../../scripts/socials.coffee'
+import PageHeader from './page-header.vue'
+import Email from '../scripts/email.coffee'
+import Socials from '../data/socials.coffee'
 export default
   components: {PageHeader}
   data: ->
@@ -62,7 +62,7 @@ export default
 </script>
 
 <style lang="less" scoped>
-@import '../../styles/variables-mixins.less';
+@import '../styles/variables-mixins.less';
 .text-container {
   margin: @grid-gutter-width 0;
   text-align: justify;

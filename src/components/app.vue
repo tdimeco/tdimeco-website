@@ -8,13 +8,13 @@
           | Thomas Di&nbsp;Meco
       nav
         ul
-          li(v-for='page in mainPages')
-            router-link(:to='{ name: page.routerName }') {{page.name}}
+          li(v-for="page in mainPages")
+            router-link(:to="{ name: page.routerName }") {{page.name}}
       aside.hidden-xs
         ul
-          li(v-for='social in socials')
-            a(:href='social.url' :title="'Voir ' + social.name")
-              span(:class='social.iconClasses')
+          li(v-for="social in socials")
+            a(:href="social.url" :title="'Voir ' + social.name")
+              span(:class="social.iconClasses")
   main
     router-view
   footer.main-footer
@@ -31,19 +31,19 @@
           ul
             li
               router-link(:to="{ name: 'home' }") Page d'accueil
-            li(v-for='page in mainPages')
-              router-link(:to='{ name: page.routerName }') {{page.name}}
+            li(v-for="page in mainPages")
+              router-link(:to="{ name: page.routerName }") {{page.name}}
         aside.footer-block.col-xs-12.col-sm-4
           p.footer-title Liens externes
           ul
-            li(v-for='social in socials')
-              a(:href='social.url')
-                | #[span(:class='social.iconClasses')] {{social.name}}
+            li(v-for="social in socials")
+              a(:href="social.url")
+                | #[span(:class="social.iconClasses")] {{social.name}}
 </template>
 
 <script lang="coffee">
-import Socials from '../../scripts/socials.coffee'
-import MainPages from './main-pages.coffee'
+import MainPages from '../data/main-pages.coffee'
+import Socials from '../data/socials.coffee'
 export default
   data: ->
     socials: Socials,
@@ -51,7 +51,7 @@ export default
 </script>
 
 <style lang="less" scoped>
-@import '../../styles/variables-mixins.less';
+@import '../styles/variables-mixins.less';
 @header-height: 70px;
 .main-header {
   h1, nav, aside {

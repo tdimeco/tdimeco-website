@@ -1,6 +1,6 @@
 <template lang="pug">
 div
-  page-header(title='Freelance' subtitle='Ingénieur développeur iOS et macOS natif')
+  page-header(title="Freelance" subtitle="Ingénieur développeur iOS et macOS natif")
   .container
     .text-container
       p
@@ -50,17 +50,17 @@ div
         | Je suis à votre écoute si vous souhaitez discuter, poser des questions ou demander un devis. N'hésitez pas.
       ul.bottom-links
         li
-          a.btn.btn-primary(@click='sendEmail()')
+          a.btn.btn-primary(@click="sendEmail()")
             | #[span.fa.fa-envelope] Envoyer un email
-        li(v-for='social in socials' v-if='social.relatedToFreelance')
-          a.btn.btn-primary(:href='social.url')
-            | #[span(:class='social.iconClasses')] {{social.name}}
+        li(v-for="social in socials" v-if="social.relatedToFreelance")
+          a.btn.btn-primary(:href="social.url")
+            | #[span(:class="social.iconClasses")] {{social.name}}
 </template>
 
 <script lang="coffee">
-import PageHeader from '../page-header/component.vue'
-import Email from '../../scripts/email.coffee'
-import Socials from '../../scripts/socials.coffee'
+import PageHeader from './page-header.vue'
+import Email from '../scripts/email.coffee'
+import Socials from '../data/socials.coffee'
 export default
   components: {PageHeader}
   data: ->
@@ -72,7 +72,7 @@ export default
 </script>
 
 <style lang="less" scoped>
-@import '../../styles/variables-mixins.less';
+@import '../styles/variables-mixins.less';
 .text-container {
   margin: @grid-gutter-width 0;
   text-align: justify;

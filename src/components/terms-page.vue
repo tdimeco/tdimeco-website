@@ -1,6 +1,6 @@
 <template lang="pug">
 div
-  page-header(title='Mentions légales' subtitle='Vous êtes perdu ?')
+  page-header(title="Mentions légales" subtitle="Vous êtes perdu ?")
   .container
     .row
       section.col-xs-12.col-sm-6.col-md-5.col-md-offset-1.col-lg-4.col-lg-offset-2
@@ -16,7 +16,7 @@ div
         div
           header
             | #[span.fa.fa-globe] Hébergement
-          a(href='https://www.ovh.com/') OVH
+          a(href="https://www.ovh.com/") OVH
           br
           | 2 rue Kellermann
           br
@@ -24,13 +24,13 @@ div
 </template>
 
 <script lang="coffee">
-import PageHeader from '../page-header/component.vue'
+import PageHeader from './page-header.vue'
 export default
   components: {PageHeader}
 </script>
 
 <style lang="less" scoped>
-@import '../../styles/variables-mixins.less';
+@import '../styles/variables-mixins.less';
 section {
   font-size: 0.95em;
   > div {

@@ -1,18 +1,18 @@
 <template lang="pug">
 div
-  page-header(title='Site web personnel' subtitle='Je vous souhaite la bienvenue sur mon site web personnel !')
+  page-header(title="Site web personnel" subtitle="Je vous souhaite la bienvenue sur mon site web personnel !")
   .container
     .grid.row
       .grid-sizer.col-xs-12.col-md-6
-      .grid-item.col-xs-12.col-md-6(v-for='section in sections')
-        home-section(:section='section')
+      .grid-item.col-xs-12.col-md-6(v-for="section in sections")
+        home-section(:section="section")
 </template>
 
 <script lang="coffee">
 Masonry = require('masonry-layout')
-import Sections from './sections.coffee'
-import PageHeader from '../page-header/component.vue'
-import HomeSection from './home-section/component.vue'
+import Sections from '../data/home-sections.coffee'
+import PageHeader from './page-header.vue'
+import HomeSection from './home-section.vue'
 export default
   components: {PageHeader, HomeSection}
   data: ->
@@ -28,7 +28,7 @@ export default
 </script>
 
 <style lang="less" scoped>
-@import '../../styles/variables-mixins.less';
+@import '../styles/variables-mixins.less';
 @grid-padding: @grid-gutter-width / 2;
 .grid {
   padding: @grid-padding 0;

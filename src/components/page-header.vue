@@ -1,8 +1,8 @@
 <template lang="pug">
 header
   .container
-    h2(v-if='title') {{title}}
-    h3(v-if='subtitle') {{subtitle}}
+    h2(v-if="title") {{title}}
+    h3(v-if="subtitle") {{subtitle}}
 </template>
 
 <script lang="coffee">
@@ -11,11 +11,11 @@ export default
 </script>
 
 <style lang="less" scoped>
-@import '../../styles/variables-mixins.less';
+@import '../styles/variables-mixins.less';
 header {
   color: white;
   background-color: @secondary-color;
-  background-image: url('swift-background.svg');
+  background-image: url('../images/swift-background.svg');
   background-size: 260px 100px;
   background-position: center 0;
   background-attachment: fixed;

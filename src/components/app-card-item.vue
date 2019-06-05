@@ -3,16 +3,16 @@ section
   header(:style="'background-color:' + item.color")
     .content
       .column
-        img(:src='item.icon' alt='')
+        img(:src="item.icon" alt="")
       .column
         .title {{item.title}}
         .subtitle {{item.subtitle}}
   div
-    div(v-html='item.description')
+    div(v-html="item.description")
   footer
     ul
-      li(v-for='link in item.links')
-        a(:href='link.url' :class='{secondary: link.secondary === true}')
+      li(v-for="link in item.links")
+        a(:href="link.url" :class="{secondary: link.secondary === true}")
           | #[span(:class="typeof link.iconClasses === 'string' ? link.iconClasses : 'fa fa-link'")]&nbsp; {{link.label}}
 </template>
 
@@ -22,7 +22,7 @@ export default
 </script>
 
 <style lang="less" scoped>
-@import '../../../styles/variables-mixins.less';
+@import '../styles/variables-mixins.less';
 section {
   border-radius: @standard-border-radius;
   overflow: hidden;

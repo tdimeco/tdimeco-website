@@ -1,12 +1,12 @@
 <template lang="pug">
 section(:style="{ 'background-color': section.color || 'black' }")
-  .column.icon(v-if='section.iconClasses')
-    span(:class='section.iconClasses' :style="{ 'font-size': section.iconSize || '1em' }")
+  .column.icon(v-if="section.iconClasses")
+    span(:class="section.iconClasses" :style="{ 'font-size': section.iconSize || '1em' }")
   .column
-    .title(v-if='section.title') {{section.title}}
-    .subtitle(v-if='section.subtitle') {{section.subtitle}}
-    .button(v-if='section.buttonLabel')
-      router-link(:to='{ name: section.buttonPageName }' :style="{ 'color': section.color || 'black' }")
+    .title(v-if="section.title") {{section.title}}
+    .subtitle(v-if="section.subtitle") {{section.subtitle}}
+    .button(v-if="section.buttonLabel")
+      router-link(:to="{ name: section.buttonPageName }" :style="{ 'color': section.color || 'black' }")
         | #[span.fa.fa-arrow-circle-right] {{section.buttonLabel}}
 </template>
 
@@ -16,7 +16,7 @@ export default
 </script>
 
 <style lang="less" scoped>
-@import '../../../styles/variables-mixins.less';
+@import '../styles/variables-mixins.less';
 section {
   color: white;
   padding: 20px;
