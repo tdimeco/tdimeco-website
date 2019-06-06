@@ -87,12 +87,13 @@ export default
   nav {
     float: left;
     margin-left: 40px;
+    font-weight: 600;
     ul li {
       margin: 0 8px;
     }
     a {
       color: @secondary-color;
-      &:hover, &:focus, &.router-link-exact-active {
+      &:hover, &:focus, &.router-link-active {
         color: @dark-secondary-color;
       }
     }
