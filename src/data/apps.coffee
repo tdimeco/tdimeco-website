@@ -37,7 +37,7 @@ export default [
     subtitle: "Where is my stuff?"
     color: '#1aa8a8'
     icon: require('../images/apps/wims.png')
-    shortDescription: "Where is my stuff? est une application iOS qui permet de répertorier les objets prêtés et empruntés à ses amis. Elle permet également de contacter directement la personne par téléphone ou SMS, et de régler des alarmes de rappel. J'ai participé à la refonte de l'app en Swift, créée à l'origine par <em>Roxy Pony</em>. N'hésitez pas à nous soutenir et à noter ou déverrouiler l'application ! ;)"
+    shortDescription: "Where is my stuff? est une application iOS qui permet de répertorier les objets prêtés et empruntés à ses amis. Elle permet également de contacter directement la personne par téléphone ou SMS, et de régler des alarmes de rappel. J'ai participé à la refonte de l'app en Swift, créée à l'origine par <em>Roxy Pony</em>. N'hésitez pas à nous soutenir et à noter ou déverrouiller l'application ! ;)"
     links: [
       {label: "App Store", url: 'https://apps.apple.com/app/id321910676', iconClasses: 'fa fa-apple'}
       {label: "Site web", url: 'https://roxypony.fr/apps/wims.html', secondary: true}
