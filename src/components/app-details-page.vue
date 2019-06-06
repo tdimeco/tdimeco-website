@@ -1,6 +1,6 @@
 <template lang="pug">
 div
-  page-header(:title="app.title" :subtitle="app.subtitle")
+  page-header(:title="app.title" :subtitle="app.subtitle" :color="app.color" :icon="app.icon")
   .container
     .text-container
       p(v-html="app.shortDescription")
