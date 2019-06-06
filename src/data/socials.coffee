@@ -1,4 +1,4 @@
-socialsObject =
+socials =
   twitter:
     title: "Twitter"
     url: 'https://twitter.com/thomasdimeco'
@@ -20,7 +20,6 @@ socialsObject =
     iconClasses: 'fa fa-flickr'
     isRelatedToFreelance: false
 
-allObject =
-  all: Object.keys(socialsObject).map (e) => socialsObject[e]
-
-export default Object.assign({}, socialsObject, allObject)
+export default
+  named: socials
+  all: Object.keys(socials).map (e) => socials[e]

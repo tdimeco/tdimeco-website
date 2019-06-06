@@ -43,7 +43,7 @@ div
         li
           | #[strong Pôle mobile chez AUSY (2015-2017)] : Avec mon équipe, nous avons créé et maintenu une dizaine d'applications iOS. Nous avons utilisé plusieurs technos intéressantes comme les Beacons (pour faire de la cartographie en intérieur), de la connectivité Bluetooth, du traitement algorithmique en temps réel à l'aide du framework Accelerate...
         li
-          | #[strong Expériences personnelles (2011-Maintenant)] : Sur mon temps personnel, je crée aussi des applications, dont certaines sont disponibles sur la page #[router-link(:to="{ name: 'apps' }") Apps] ou sur #[a(:href="socials.github.url") GitHub].
+          | #[strong Expériences personnelles (2011-Maintenant)] : Sur mon temps personnel, je crée aussi des applications, dont certaines sont disponibles sur la page #[router-link(:to="{ name: 'apps' }") Apps] ou sur #[a(:href="socials.named.github.url") GitHub].
       h4
         | #[span.fa.fa-paper-plane.leading-icon] Me contacter
       p
