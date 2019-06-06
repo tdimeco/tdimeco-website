@@ -6,6 +6,8 @@ import PhotosPage from '../components/photos-page.vue'
 import AboutPage from '../components/about-page.vue'
 import TermsPage from '../components/terms-page.vue'
 
+import Apps from './apps.coffee'
+
 export default [
   {
     name: 'home'
@@ -22,7 +24,7 @@ export default [
     path: '/apps/:id'
     component: AppDetailsPage
     props: true
-    title: "App"
+    title: (params) -> Apps.named[params.id]?.title
   }, {
     name: 'freelance'
     path: '/freelance'

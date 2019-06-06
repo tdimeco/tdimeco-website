@@ -24,8 +24,10 @@ router.afterEach (to, from) ->
 
   # Update window title
   infos = router.options.routes.filter((e) -> e.name == to.name)
-  if infos.length >= 1 and typeof infos[0].title == 'string'
-    document.title = "Thomas Di Meco - #{infos[0].title}"
+  title = infos?[0]?.title
+  title = title(to.params) if typeof title is 'function'
+  if typeof title is 'string'
+    document.title = "Thomas Di Meco - #{title}"
   else
     document.title = 'Thomas Di Meco'
 

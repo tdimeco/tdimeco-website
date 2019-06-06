@@ -4,7 +4,7 @@ div
   .container
     .grid.row
       .grid-sizer.col-xs-12.col-sm-6.col-lg-4
-      .grid-item.col-xs-12.col-sm-6.col-lg-4(v-for="app in apps")
+      .grid-item.col-xs-12.col-sm-6.col-lg-4(v-for="app in apps.all")
         card-item(:item="app")
 </template>
 

@@ -19,11 +19,11 @@ export default
   data: ->
     app: {}
   mounted: ->
-    results = Apps.filter (e) => e.id is @id
-    if results?[0]?
-      @app = results[0]
+    if Apps.named[@id]?
+      @app = Apps.named[@id]
     else
       @$router.replace({name: 'apps'})
+    return
 </script>
 
 <style lang="less" scoped>

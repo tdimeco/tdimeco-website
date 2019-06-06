@@ -1,5 +1,5 @@
-export default [
-  {
+apps =
+  'wake-me-up':
     id: 'wake-me-up'
     title: "Wake Me Up"
     subtitle: "Compagnon Wake-on-LAN"
@@ -9,7 +9,7 @@ export default [
     links: [
       {label: "App Store", url: 'https://apps.apple.com/app/id1465416032', iconClasses: 'fa fa-apple'}
     ]
-  }, {
+  'movin-smart':
     id: 'movin-smart'
     title: "Movin'Smart"
     subtitle: "L'équitation connectée"
@@ -20,7 +20,7 @@ export default [
       {label: "App Store", url: 'https://apps.apple.com/app/id1447124839', iconClasses: 'fa fa-apple'}
       {label: "Site web", url: 'https://www.movinsmart.com', secondary: true}
     ]
-  }, {
+  'pass-to-corsica':
     id: 'pass-to-corsica'
     title: "Pass to Corsica"
     subtitle: "Les bons plans Corse"
@@ -31,7 +31,7 @@ export default [
       {label: "App Store", url: 'https://apps.apple.com/app/id1248037834', iconClasses: 'fa fa-apple'}
       {label: "Site web", url: 'https://passtocorsica.com', secondary: true}
     ]
-  }, {
+  'wims':
     id: 'wims'
     title: "WIMS"
     subtitle: "Where is my stuff?"
@@ -42,7 +42,7 @@ export default [
       {label: "App Store", url: 'https://apps.apple.com/app/id321910676', iconClasses: 'fa fa-apple'}
       {label: "Site web", url: 'https://roxypony.fr/apps/wims.html', secondary: true}
     ]
-  }, {
+  'unleashxcode':
     id: 'unleashxcode'
     title: "UnleashXcode"
     subtitle: "Améliorez Xcode"
@@ -53,7 +53,7 @@ export default [
       {label: "Télécharger", url: 'https://github.com/tdimeco/UnleashXcode/releases', iconClasses: 'fa fa-arrow-circle-down'}
       {label: "Sources", url: 'https://github.com/tdimeco/UnleashXcode', iconClasses: 'fa fa-github', secondary: true}
     ]
-  }, {
+  'quicksound':
     id: 'quicksound'
     title: "QuickSound"
     subtitle: "Jouez des sons rapidement"
@@ -64,5 +64,7 @@ export default [
       {label: "Télécharger", url: 'https://github.com/tdimeco/QuickSound/releases', iconClasses: 'fa fa-arrow-circle-down'}
       {label: "Sources", url: 'https://github.com/tdimeco/QuickSound', iconClasses: 'fa fa-github', secondary: true}
     ]
-  }
-]
+
+export default
+  named: apps
+  all: Object.keys(apps).map (e) => apps[e]
