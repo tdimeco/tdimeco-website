@@ -1,8 +1,8 @@
 <template lang="pug">
 section(:style="{ 'background-color': section.color || 'black' }")
-  .column.icon(v-if="section.iconClasses")
+  .icon(v-if="section.iconClasses")
     span(:class="section.iconClasses" :style="{ 'font-size': section.iconSize || '1em' }")
-  .column
+  .content
     .title(v-if="section.title") {{section.title}}
     .subtitle(v-if="section.subtitle") {{section.subtitle}}
     .button
@@ -18,16 +18,15 @@ export default
 <style lang="less" scoped>
 @import '../styles/variables-mixins.less';
 section {
+  display: flex;
+  align-items: center;
   color: white;
   padding: 20px;
   border-radius: @standard-border-radius;
   overflow: hidden;
-  .column {
-    display: table-cell;
-    vertical-align: middle;
-  }
   .icon {
-    padding-right: 30px;
+    flex-shrink: 0;
+    margin-right: 30px;
     font-size: 4em;
     line-height: 0;
   }
@@ -54,13 +53,13 @@ section {
       }
     }
   }
-  @media (max-width: @screen-xs-max) {
+}
+@media (max-width: @screen-xs-max) {
+  section {
+    display: block;
     text-align: center;
-    .column {
-      display: block;
-    }
     .icon {
-      padding-right: 0;
+      margin-right: 0;
     }
   }
 }
