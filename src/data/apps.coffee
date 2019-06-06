@@ -3,7 +3,7 @@ export default [
     id: 'wake-me-up'
     title: "Wake Me Up"
     subtitle: "Compagnon Wake-on-LAN"
-    color: '#73c327'
+    color: '#69b224'
     icon: require('../images/apps/wake-me-up.png')
     shortDescription: "Wake Me Up permet de démarrer un ordinateur à distance en envoyant une requête réseau Wake-on-LAN. L'ordinateur peut être démarré de plusieurs manières : en appuyant sur le gros bouton dans l'application, en utilisant le widget <em>Aujourd'hui</em> disponible sur l'écran d'accueil de l'iPhone ou iPad, en demandant directement à Siri depuis l'iPhone, iPad ou Apple Watch."
     links: [
@@ -57,7 +57,7 @@ export default [
     id: 'quicksound'
     title: "QuickSound"
     subtitle: "Jouez des sons rapidement"
-    color: '#3fc5d9'
+    color: '#28b3c8'
     icon: require('../images/apps/quicksound.png')
     shortDescription: "QuickSound est une application pour macOS qui permet de jouer des petits sons rapidement depuis la barre de menus en haut à droite. Cette application est open source, n'hésitez pas à aller faire un tour sur GitHub et à y contribuer !"
     links: [
