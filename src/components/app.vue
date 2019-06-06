@@ -9,11 +9,11 @@
       nav
         ul
           li(v-for="page in mainPages")
-            router-link(:to="{ name: page.routerName }") {{page.name}}
+            router-link(:to="{ name: page.pageName }") {{page.title}}
       aside.hidden-xs
         ul
           li(v-for="social in socials")
-            a(:href="social.url" :title="'Voir ' + social.name")
+            a(:href="social.url" :title="'Voir ' + social.title")
               span(:class="social.iconClasses")
   main
     router-view
@@ -32,13 +32,13 @@
             li
               router-link(:to="{ name: 'home' }") Page d'accueil
             li(v-for="page in mainPages")
-              router-link(:to="{ name: page.routerName }") {{page.name}}
+              router-link(:to="{ name: page.pageName }") {{page.title}}
         aside.footer-block.col-xs-12.col-sm-4
           p.footer-title Liens externes
           ul
             li(v-for="social in socials")
               a(:href="social.url")
-                | #[span(:class="social.iconClasses")] {{social.name}}
+                | #[span.leading-icon(:class="social.iconClasses")] {{social.title}}
 </template>
 
 <script lang="coffee">

@@ -1,21 +1,21 @@
 socialsObject =
   twitter:
-    name: 'Twitter'
+    title: "Twitter"
     url: 'https://twitter.com/thomasdimeco'
     iconClasses: 'fa fa-twitter'
     isRelatedToFreelance: false
   github:
-    name: 'GitHub'
+    title: "GitHub"
     url: 'https://github.com/tdimeco'
     iconClasses: 'fa fa-github'
     isRelatedToFreelance: true
   linkedin:
-    name: 'LinkedIn'
+    title: "LinkedIn"
     url: 'https://www.linkedin.com/in/tdimeco'
     iconClasses: 'fa fa-linkedin'
     isRelatedToFreelance: true
   flickr:
-    name: 'Flickr'
+    title: "Flickr"
     url: 'https://www.flickr.com/photos/tdimeco/'
     iconClasses: 'fa fa-flickr'
     isRelatedToFreelance: false

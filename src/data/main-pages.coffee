@@ -1,15 +1,15 @@
 export default [
   {
-    name: 'Apps'
-    routerName: 'apps'
+    title: "Apps"
+    pageName: 'apps'
   }, {
-    name: 'Freelance'
-    routerName: 'freelance'
+    title: "Freelance"
+    pageName: 'freelance'
   }, {
-    name: 'Photos'
-    routerName: 'photos'
+    title: "Photos"
+    pageName: 'photos'
   }, {
-    name: 'À propos'
-    routerName: 'about'
+    title: "À propos"
+    pageName: 'about'
   }
 ]

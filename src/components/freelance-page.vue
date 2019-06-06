@@ -6,13 +6,13 @@ div
       p
         | Vous avez l'idée du siècle et vous souhaitez une application mobile native iOS (iPhone et/ou iPad) pour la concrétiser ? Vous souhaitez également une app Apple Watch ou Mac ? Alors vous êtes au bon endroit, allons-y. #[span.fa.fa-smile-o]
       h4
-        | #[span.fa.fa-user]&nbsp; À propos de moi
+        | #[span.fa.fa-user.leading-icon] À propos de moi
       p
         | Je vais tout d'abord me présenter de manière succincte : je m'appelle Thomas, je suis ingénieur développeur iOS et macOS natif et auto-entrepreneur. Je suis passionné par mon métier et particulièrement par le développement mobile. Je trouve ce domaine très intéressant par sa richesse, son évolution rapide, la diversité des technologies utilisées (réseau, bluetooth, géolocalisation, navigation, mouvements dans l'espace, réalité augmentée, machine-learning, 3D...) ainsi que par les challenges soulevés (autonomie, puissance, perte de réseau, synchronisation...). Chaque application possède ses propres problématiques qu'il faut résoudre et c'est ça qui m'intéresse.
       p
         | Pour en savoir plus, je vous invite à lire la page #[router-link(:to="{ name: 'about' }") À propos], qui est bien plus complète.
       h4
-        | #[span.fa.fa-star]&nbsp; Mes compétences
+        | #[span.fa.fa-star.leading-icon] Mes compétences
       p
         | Mon rôle en tant que développeur ne se limite pas à programmer votre application. Je peux vous accompagner sur une grande partie de votre projet, dont voici une liste non exhaustive :
       ul
@@ -35,7 +35,7 @@ div
       p
         | Si vous souhaitez en savoir plus, le mieux est encore de me contacter pour en discuter ensemble.
       h4
-        | #[span.fa.fa-road]&nbsp; Mes expériences
+        | #[span.fa.fa-road.leading-icon] Mes expériences
       p J'ai plusieurs expériences en développement iOS et macOS :
       ul
         li
@@ -45,16 +45,16 @@ div
         li
           | #[strong Expériences personnelles (2011-Maintenant)] : Sur mon temps personnel, je crée aussi des applications, dont certaines sont disponibles sur la page #[router-link(:to="{ name: 'apps' }") Apps] ou sur #[a(:href="socials.github.url") GitHub].
       h4
-        | #[span.fa.fa-paper-plane]&nbsp; Me contacter
+        | #[span.fa.fa-paper-plane.leading-icon] Me contacter
       p
         | Je suis à votre écoute si vous souhaitez discuter, poser des questions ou demander un devis. N'hésitez pas.
       ul.bottom-links
         li
           a.btn.btn-primary(@click="sendEmail()")
-            | #[span.fa.fa-envelope] Envoyer un email
+            | #[span.fa.fa-envelope.leading-icon] Envoyer un email
         li(v-for="social in socials.all" v-if="social.isRelatedToFreelance")
           a.btn.btn-primary(:href="social.url")
-            | #[span(:class="social.iconClasses")] {{social.name}}
+            | #[span.leading-icon(:class="social.iconClasses")] {{social.title}}
 </template>
 
 <script lang="coffee">

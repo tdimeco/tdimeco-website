@@ -5,9 +5,9 @@ section(:style="{ 'background-color': section.color || 'black' }")
   .column
     .title(v-if="section.title") {{section.title}}
     .subtitle(v-if="section.subtitle") {{section.subtitle}}
-    .button(v-if="section.buttonLabel")
-      router-link(:to="{ name: section.buttonPageName }" :style="{ 'color': section.color || 'black' }")
-        | #[span.fa.fa-arrow-circle-right] {{section.buttonLabel}}
+    .button
+      router-link(:to="{ name: section.pageName }" :style="{ 'color': section.color || 'black' }")
+        | #[span.fa.fa-arrow-circle-right.leading-icon] En savoir plus
 </template>
 
 <script lang="coffee">
