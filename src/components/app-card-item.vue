@@ -1,5 +1,5 @@
 <template lang="pug">
-section
+router-link(tag="section" :to="{name: 'app-details', params: {id: item.id}}")
   header(:style="'background-color:' + item.color")
     .content
       .column
@@ -7,13 +7,9 @@ section
       .column
         .title {{item.title}}
         .subtitle {{item.subtitle}}
-  div
-    div(v-html="item.description")
+  .description(v-html="item.shortDescription")
   footer
-    ul
-      li(v-for="link in item.links")
-        a(:href="link.url" :class="{secondary: link.secondary === true}")
-          | #[span(:class="typeof link.iconClasses === 'string' ? link.iconClasses : 'fa fa-link'")]&nbsp; {{link.label}}
+    | #[span.fa.fa-arrow-circle-right.leading-icon] Plus de détails
 </template>
 
 <script lang="coffee">
@@ -24,8 +20,14 @@ export default
 <style lang="less" scoped>
 @import '../styles/variables-mixins.less';
 section {
+  .animate(background);
+  background: @light-background-color;
   border-radius: @standard-border-radius;
   overflow: hidden;
+  cursor: pointer;
+  &:hover, &:focus {
+    background: darken(@light-background-color, 5%);
+  }
   header {
     padding: 15px;
     .content {
@@ -54,31 +56,14 @@ section {
       }
     }
   }
-  > div {
+  .description {
     padding: 15px;
     font-size: 0.95em;
     text-align: justify;
-    background: @light-background-color;
   }
   footer {
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      a {
-        display: block;
-        margin-top: 3px;
-        padding: 12px 15px;
-        font-weight: 600;
-        background: @light-background-color;
-        &:hover, &:focus {
-          background: darken(@light-background-color, 5%);
-        }
-        &.secondary {
-          font-weight: inherit;
-        }
-      }
-    }
+    padding: 0 15px 15px 15px;
+    color: @primary-color;
   }
 }
 </style>
