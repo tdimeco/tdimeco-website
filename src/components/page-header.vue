@@ -2,7 +2,7 @@
 header(:style="{ 'background-color': color }")
   .container
     img.icon(v-if="icon" :src="icon" alt="")
-    .text
+    div
       h2(v-if="title") {{title}}
       h3(v-if="subtitle") {{subtitle}}
 </template>
@@ -12,46 +12,46 @@ export default
   props: ['title', 'subtitle', 'color', 'icon']
 </script>
 
-<style lang="less" scoped>
-@import '../styles/variables-mixins.less';
+<style lang="scss" scoped>
+@import "../styles/variables-mixins";
 header {
   color: white;
-  background-color: @secondary-color;
+  background-color: $secondary-color;
   background-image: url('../images/swift-background.svg');
-  background-size: 260px 100px;
+  background-size: 16.25rem 6.25rem;
   background-position: center 0;
   background-attachment: fixed;
   background-repeat: repeat;
-  padding: 30px 0;
+  padding: 1.8rem 0;
   overflow: hidden;
   .container {
     display: flex;
     align-items: center;
     .icon {
       flex-shrink: 0;
-      width: 4em;
-      height: 4em;
-      margin: 0 1.5em 0 0;
+      width: 5rem;
+      height: 5rem;
+      margin: 0 1.9rem 0 0;
       overflow: hidden;
       border-radius: 20%;
     }
     h2 {
       margin: 0;
-      font-size: 2em;
+      font-size: 2.5rem;
       font-weight: 600;
     }
     h3 {
-      margin: 0.4em 0 0 0;
-      font-size: 1.5em;
+      margin: 0.5rem 0 0 0;
+      font-size: 1.9rem;
       font-weight: 400;
     }
   }
-  @media (max-width: @screen-xs-max) {
+  @include media-breakpoint-down(xs) {
     .container {
       display: block;
       text-align: center;
       .icon {
-        margin: 0 0 0.8em 0;
+        margin: 0 0 1rem 0;
       }
     }
   }

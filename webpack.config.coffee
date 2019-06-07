@@ -19,8 +19,8 @@ module.exports =
       test: /\.vue$/
       use: [ 'vue-loader' ]
     }, {
-      test: /\.less$/
-      use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'less-loader' ]
+      test: /\.scss$/
+      use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader' ]
     }, {
       test: /\.(png|jpe?g|gif|svg|ico|woff|woff2|eot|ttf|otf)$/
       use: [ 'file-loader?name=[name].[hash].[ext]&outputPath=assets/' ]

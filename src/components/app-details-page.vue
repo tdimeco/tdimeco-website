@@ -26,20 +26,10 @@ export default
     return
 </script>
 
-<style lang="less" scoped>
-@import '../styles/variables-mixins.less';
+<style lang="scss" scoped>
+@import "../styles/variables-mixins";
 .text-container {
-  margin: @grid-gutter-width 0;
+  margin: $grid-gutter-width 0;
   text-align: justify;
-  .bottom-links {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    li {
-      display: inline-block;
-      margin: 3px;
-    }
-  }
 }
 </style>

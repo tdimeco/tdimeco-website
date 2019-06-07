@@ -18,7 +18,7 @@ export default [
     subtitle: "Ma galerie photos Flickr"
     color: '#378de2'
     iconClasses: 'fas fa-camera'
-    iconSize: '0.71em'
+    iconSize: '0.76em'
     pageName: 'photos'
   }
 ]

@@ -2,12 +2,11 @@
 section(:style="{ 'background-color': section.color || 'black' }")
   .icon(v-if="section.iconClasses")
     span(:class="section.iconClasses" :style="{ 'font-size': section.iconSize || '1em' }")
-  .content
+  div
     .title(v-if="section.title") {{section.title}}
     .subtitle(v-if="section.subtitle") {{section.subtitle}}
-    .button
-      router-link(:to="{ name: section.pageName }" :style="{ 'color': section.color || 'black' }")
-        | #[span.fas.fa-arrow-circle-right.leading-icon] En savoir plus
+    router-link.button(:to="{ name: section.pageName }" :style="{ 'color': section.color || 'black' }")
+      | #[span.fas.fa-arrow-circle-right.leading-icon] En savoir plus
 </template>
 
 <script lang="coffee">
@@ -15,46 +14,44 @@ export default
   props: ['section']
 </script>
 
-<style lang="less" scoped>
-@import '../styles/variables-mixins.less';
+<style lang="scss" scoped>
+@import "../styles/variables-mixins";
 section {
   display: flex;
   align-items: center;
   color: white;
-  padding: 20px;
-  border-radius: @standard-border-radius;
+  padding: 1.3rem;
+  border-radius: $standard-border-radius;
   overflow: hidden;
   .icon {
     flex-shrink: 0;
-    margin-right: 30px;
-    font-size: 4em;
+    margin-right: 1.3rem;
+    font-size: 5rem;
     line-height: 0;
   }
   .title {
     margin: 0;
-    font-size: 1.5em;
+    font-size: 1.9rem;
     font-weight: 600;
   }
   .subtitle {
-    margin-top: 8px;
-    font-size: 1.1em;
+    margin-top: 0.4rem;
+    font-size: 1.4rem;
     font-weight: 400;
   }
   .button {
-    margin-top: 20px;
-    font-size: 1.1em;
-    a {
-      display: inline-block;
-      padding: 5px 10px;
-      border-radius: 6px;
-      background: white;
-      &:hover, &:focus {
-        background: rgba(255, 255, 255, 0.8);
-      }
+    display: inline-block;
+    margin-top: 1.2rem;
+    font-size: 1.3rem;
+    padding: 0.3rem 0.7rem;
+    border-radius: 0.4rem;
+    background: white;
+    &:hover, &:focus {
+      background: rgba(255, 255, 255, 0.8);
     }
   }
 }
-@media (max-width: @screen-xs-max) {
+@include media-breakpoint-down(xs) {
   section {
     display: block;
     text-align: center;

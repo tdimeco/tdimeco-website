@@ -1,0 +1,48 @@
+// Project-wide variables and mixins, including bootstrap ones
+// (!) Do not declare global styles here, use global-styles.scss
+// (!) You may want to import this file inside Vue components
+
+// Override Bootstrap variables
+$font-family-sans-serif: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-size-base: 1.25rem;
+$body-bg: #fafafa;
+$body-color: #333333;
+$primary: #226697;
+$secondary: #d8915a;
+
+// Override FontAwesome variables
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
+
+// Include vendors variables and mixins at the end of the file
+// In order to make them available to Vue components
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import '~@fortawesome/fontawesome-free/scss/variables';
+@import '~@fortawesome/fontawesome-free/scss/mixins';
+
+// App variables
+$primary-color: $primary;
+$secondary-color: $secondary;
+$dark-primary-color: darken($primary-color, 20%);
+$dark-secondary-color: darken($secondary-color, 20%);
+$light-text-color: lighten($body-color, 40%);
+$light-background-color: #f0f0f0;
+$standard-border-radius: 0.7rem;
+
+// App mixins
+@mixin animate($properties: all, $duration: 0.3s, $timing-function: ease) {
+  transition-duration: $duration;
+  transition-timing-function: $timing-function;
+  transition-property: $properties;
+}
+
+@mixin title-divider() {
+  &::before {
+    content: '';
+    display: block;
+    border-top: 0.13rem solid #dddddd;
+    margin: 2rem auto;
+    width: 50%;
+  }
+}

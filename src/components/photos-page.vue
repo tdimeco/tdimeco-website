@@ -4,8 +4,8 @@ div
   .container
     .message(v-html="message" v-if="message")
     .grid.row(v-if="photos.length > 0")
-      .grid-sizer.col-xs-12.col-sm-6.col-md-4
-      .grid-item.col-xs-12.col-sm-6.col-md-4(v-for="photo in photos")
+      .grid-sizer.col-md-6.col-lg-4
+      .grid-item.col-md-6.col-lg-4(v-for="photo in photos")
         a.photo(:href="photo.pageUrl")
           span.photo-image(role="img" :title="photo.title" :style="{'background-image': 'url(' + photo.imageUrl + ')', 'padding-top': (photo.height / photo.width * 100) + '%'}")
           span.photo-title {{photo.title}}
@@ -19,7 +19,7 @@ export default
   components: {PageHeader}
   data: ->
     photos: []
-    message: '<span class="fas fa-circle-notch fa-spin"></span> Chargement des photos...'
+    message: '<span class="fas fa-circle-notch fa-spin leading-icon"></span> Chargement des photos...'
   mounted: ->
 
     # Callbacks
@@ -47,40 +47,40 @@ export default
     return
 </script>
 
-<style lang="less" scoped>
-@import '../styles/variables-mixins.less';
-@grid-padding: @grid-gutter-width / 2;
+<style lang="scss" scoped>
+@import "../styles/variables-mixins";
+$grid-padding: $grid-gutter-width / 2;
 .grid {
-  padding: @grid-padding 0;
+  padding: $grid-padding 0;
   .grid-item {
-    padding: @grid-padding;
+    padding: $grid-padding;
   }
-  @media (max-width: @screen-xs-max) {
-    padding: 0 0 @grid-padding 0;
+  @include media-breakpoint-down(xs) {
+    padding: 0 0 $grid-padding 0;
     .grid-item {
-      padding: @grid-padding @grid-padding 0 @grid-padding;
+      padding: $grid-padding $grid-padding 0 $grid-padding;
     }
   }
 }
 .message {
-  font-size: 1.2em;
+  font-size: 1.5rem;
   font-weight: 600;
   text-align: center;
-  margin: 80px 0;
-  color: @light-text-color;
+  margin: 4rem 0;
+  color: $light-text-color;
 }
 .photo {
   display: block;
   position: relative;
   overflow: hidden;
   padding: 0;
-  border-radius: @standard-border-radius;
+  border-radius: $standard-border-radius;
   .photo-image {
     display: block;
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: @light-background-color;
+    background-color: $light-background-color;
   }
   .photo-title {
     display: block;
@@ -92,8 +92,8 @@ export default
     font-weight: 600;
     color: white;
     background: rgba(0, 0, 0, .5);
-    padding: 10px;
-    .animate(bottom);
+    padding: 0.7rem;
+    @include animate(bottom);
   }
   &:hover {
     .photo-title {

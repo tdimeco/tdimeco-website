@@ -1,0 +1,12 @@
+// Webpack entry point
+// (!) Do not declare anything here, use variables-mixins.scss and global-styles.scss
+// (!) Do not import this file inside Vue components
+
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600");
+
+@import "variables-mixins";
+@import "~bootstrap/scss/bootstrap";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+@import "global-styles";

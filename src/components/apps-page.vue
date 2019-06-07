@@ -3,8 +3,8 @@ div
   page-header(title="Apps" subtitle="Mes principales applications iOS et macOS")
   .container
     .grid.row
-      .grid-sizer.col-xs-12.col-sm-6.col-lg-4
-      .grid-item.col-xs-12.col-sm-6.col-lg-4(v-for="app in apps.all")
+      .grid-sizer.col-md-6.col-xl-4
+      .grid-item.col-md-6.col-xl-4(v-for="app in apps.all")
         card-item(:item="app")
 </template>
 
@@ -27,18 +27,18 @@ export default
     return
 </script>
 
-<style lang="less" scoped>
-@import '../styles/variables-mixins.less';
-@grid-padding: @grid-gutter-width / 2;
+<style lang="scss" scoped>
+@import "../styles/variables-mixins";
+$grid-padding: $grid-gutter-width / 2;
 .grid {
-  padding: @grid-padding 0;
+  padding: $grid-padding 0;
   .grid-item {
-    padding: @grid-padding;
+    padding: $grid-padding;
   }
-  @media (max-width: @screen-xs-max) {
-    padding: 0 0 @grid-padding 0;
+  @include media-breakpoint-down(xs) {
+    padding: 0 0 $grid-padding 0;
     .grid-item {
-      padding: @grid-padding @grid-padding 0 @grid-padding;
+      padding: $grid-padding $grid-padding 0 $grid-padding;
     }
   }
 }

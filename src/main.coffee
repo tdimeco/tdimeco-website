@@ -1,4 +1,4 @@
-import './styles/main.less'
+import './styles/main.scss'
 import './.htaccess'
 
 import Vue from 'vue'

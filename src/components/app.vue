@@ -1,39 +1,37 @@
 <template lang="pug">
 #app
-  header.main-header
+  header
     .container
       h1
         router-link(:to="{ name: 'home' }")
-          span.back-icon.fas.fa-angle-left
-          | Thomas Di&nbsp;Meco
+          span.back-icon.fas.fa-chevron-circle-left
+          span Thomas Di&nbsp;Meco
       nav
         ul
           li(v-for="page in mainPages")
             router-link(:to="{ name: page.pageName }") {{page.title}}
-      aside.hidden-xs
+      aside.d-none.d-md-block
         ul
           li(v-for="social in socials.all")
             a(:href="social.url" :title="'Voir ' + social.title")
               span(:class="social.iconClasses")
   main
     router-view
-  footer.main-footer
+  footer
     .container
       .row
-        .footer-block.col-xs-12.col-sm-4
+        aside.footer-section.col-sm-4
           p.footer-title tdimeco.fr
-          p
-            router-link(:to="{ name: 'about' }") Me contacter
-          p
-            router-link(:to="{ name: 'terms' }") Mentions légales
-        nav.footer-block.col-xs-12.col-sm-4
+          ul
+            li #[router-link(:to="{ name: 'about' }") Me contacter]
+            li #[router-link(:to="{ name: 'terms' }") Mentions légales]
+        nav.footer-section.col-sm-4
           p.footer-title Navigation
           ul
-            li
-              router-link(:to="{ name: 'home' }") Page d'accueil
+            li #[router-link(:to="{ name: 'home' }") Page d'accueil]
             li(v-for="page in mainPages")
               router-link(:to="{ name: page.pageName }") {{page.title}}
-        aside.footer-block.col-xs-12.col-sm-4
+        aside.footer-section.col-sm-4
           p.footer-title Liens externes
           ul
             li(v-for="social in socials.all")
@@ -50,31 +48,30 @@ export default
     mainPages: MainPages
 </script>
 
-<style lang="less" scoped>
-@import '../styles/variables-mixins.less';
-@header-height: 70px;
-.main-header {
+<style lang="scss" scoped>
+@import "../styles/variables-mixins";
+header .container {
+  display: flex;
+  align-items: center;
   h1, nav, aside {
-    display: block;
-    height: @header-height;
-    line-height: @header-height;
-    overflow: hidden;
-    vertical-align: top;
-    margin: 0;
+    display: inline-block;
   }
   h1 {
-    float: left;
-    font-size: 1.3em;
+    flex-shrink: 0;
+    margin: 0;
+    font-size: 1.6rem;
     font-weight: 600;
-    letter-spacing: -1px;
-    color: @primary-color;
+    letter-spacing: -0.06rem;
     a {
+      display: flex;
+      align-items: center;
       .back-icon {
-        display: inline-block;
+        margin-top: 0.05rem;
         visibility: visible;
         opacity: 1;
-        width: 0.9em;
-        .animate(width, visibility, opacity;);
+        font-size: 1.1rem;
+        width: 1.7rem;
+        @include animate((width, visibility, opacity));
       }
       &.router-link-exact-active .back-icon {
         visibility: hidden;
@@ -84,24 +81,24 @@ export default
     }
   }
   nav {
-    float: left;
-    margin-left: 40px;
+    flex-grow: 1;
+    margin: 1.2rem 0 1.1rem 2rem;
     font-weight: 600;
     ul li {
-      margin: 0 8px;
+      margin: 0 0.5rem;
     }
     a {
-      color: @secondary-color;
+      color: $secondary-color;
       &:hover, &:focus, &.router-link-active {
-        color: @dark-secondary-color;
+        color: $dark-secondary-color;
       }
     }
   }
   aside {
-    float: right;
-    font-size: 1.2em;
+    margin: 0.1rem 0 0 0;
+    font-size: 1.4rem;
     ul li {
-      margin: 0 10px 0 0;
+      margin: 0 0.6rem 0 0;
       &:last-child {
         margin: 0;
       }
@@ -116,50 +113,43 @@ export default
       display: inline-block;
     }
   }
-  @media (max-width: @screen-xs-max) {
-    h1, nav, aside {
-      float: none;
-      height: auto;
-      line-height: 1.5em;
-      text-align: center;
-    }
+  @include media-breakpoint-down(sm) {
+    display: block;
+    text-align: center;
     h1 {
-      margin: 20px 0 10px 0;
-      font-size: 1.5em;
+      margin: 1.6rem 0 0.4rem 0;
+      font-size: 1.8rem;
     }
     nav {
-      margin: 10px 0 20px 0;
+      margin: 0.6rem 0 1.3rem 0;
     }
   }
 }
-main {
-}
-.main-footer {
-  padding: 20px 0;
-  background: @light-background-color;
-  font-size: 0.95em;
-  line-height: 1.5em;
-  .footer-block {
+footer {
+  padding: 1.2rem 0;
+  background: $light-background-color;
+  font-size: 1.2rem;
+  .footer-section {
     margin: 0;
   }
   .footer-title {
-    margin: 0 0 8px 0;
+    margin: 0 0 0.5rem 0;
     font-weight: bold;
-    font-size: 0.9em;
+    font-size: 1.05rem;
     text-transform: uppercase;
-    color: @light-text-color;
+    color: $light-text-color;
   }
   ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
   }
-  p {
-    margin: 0;
-  }
-  @media (max-width: @screen-xs-max) {
+  @include media-breakpoint-down(xs) {
     text-align: center;
-    .footer-block {
+    ul li {
+      margin: 0.3rem 0;
+    }
+    .footer-section {
       margin-bottom: 20px;
       &:last-child {
         margin-bottom: 0;

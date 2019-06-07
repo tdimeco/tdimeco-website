@@ -1,0 +1,43 @@
+// Project-wide custom styles, applied to all components
+// (!) Do not declare variables and mixins here, use variables-mixins.scss
+// (!) Do not import this file inside Vue components
+
+a {
+  @include animate((color, background-color));
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+}
+
+h4 {
+  font-size: 1.65rem;
+  margin-bottom: 0.9rem;
+}
+
+.leading-icon {
+  margin-right: 0.25rem;
+}
+
+ul.bottom-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  li {
+    display: inline-block;
+    margin: 0.2rem;
+  }
+}
+
+.top-error {
+  padding: 1rem;
+  background: $red;
+  color: white;
+  text-align: center;
+  &:before {
+    @extend %fa-icon;
+    @extend .fas;
+    content: fa-content($fa-var-exclamation-triangle);
+    margin-right: 0.4rem;
+  }
+}
