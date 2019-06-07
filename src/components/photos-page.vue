@@ -19,7 +19,7 @@ export default
   components: {PageHeader}
   data: ->
     photos: []
-    message: '<span class="fa fa-circle-o-notch fa-spin"></span> Chargement des photos...'
+    message: '<span class="fas fa-circle-notch fa-spin"></span> Chargement des photos...'
   mounted: ->
 
     # Callbacks

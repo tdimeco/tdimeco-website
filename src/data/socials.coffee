@@ -2,22 +2,22 @@ socials =
   twitter:
     title: "Twitter"
     url: 'https://twitter.com/thomasdimeco'
-    iconClasses: 'fa fa-twitter'
+    iconClasses: 'fab fa-twitter'
     isRelatedToFreelance: false
   github:
     title: "GitHub"
     url: 'https://github.com/tdimeco'
-    iconClasses: 'fa fa-github'
+    iconClasses: 'fab fa-github'
     isRelatedToFreelance: true
   linkedin:
     title: "LinkedIn"
     url: 'https://www.linkedin.com/in/tdimeco'
-    iconClasses: 'fa fa-linkedin'
+    iconClasses: 'fab fa-linkedin-in'
     isRelatedToFreelance: true
   flickr:
     title: "Flickr"
     url: 'https://www.flickr.com/photos/tdimeco/'
-    iconClasses: 'fa fa-flickr'
+    iconClasses: 'fab fa-flickr'
     isRelatedToFreelance: false
 
 export default

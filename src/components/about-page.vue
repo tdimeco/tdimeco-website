@@ -5,11 +5,11 @@ div
     .text-container
       img.avatar(src="https://www.gravatar.com/avatar/7fa7d412736b54b102f5ef6274a62130?s=256" alt="Thomas Di Meco" title="Thomas Di Meco")
       p
-        | Bien le bonjour ! Je vous souhaite la bienvenue sur mon site qui a pour but de centraliser mes activités personnelles et professionnelles. Si vous êtes sur cette page, c'est que vous souhaitez en savoir un peu plus sur moi (n'est-ce pas ?). Comme tout bon site vitrine qui se respecte, je vais donc vous donner quelques informations triées sur le volet par mes soins, parler de moi à la première personne, présenter mes qualités sans évoquer mes défauts et être égocentrique le reste de cette page. #[span.fa.fa-smile-o]
+        | Bien le bonjour ! Je vous souhaite la bienvenue sur mon site qui a pour but de centraliser mes activités personnelles et professionnelles. Si vous êtes sur cette page, c'est que vous souhaitez en savoir un peu plus sur moi (n'est-ce pas ?). Comme tout bon site vitrine qui se respecte, je vais donc vous donner quelques informations triées sur le volet par mes soins, parler de moi à la première personne, présenter mes qualités sans évoquer mes défauts et être égocentrique le reste de cette page. #[span.fas.fa-smile-o]
       p
         | Je m'appelle Thomas, j'ai {{age}} ans et je suis ingénieur développeur iOS et macOS freelance. J'habite près de Sophia Antipolis — dans les Alpes-Maritimes — et j'ai fait mes études à l'IUT d'Aix-en-Provence puis à Polytech'Nice-Sophia. Je m'intéresse à beaucoup de choses, j'aime découvrir, j'aime comprendre, j'aime apprendre, j'aime partager et j'aime créer. Je suis passionné par l'informatique en général, mais aussi par les jeux vidéo, la photographie et l'astronomie.
       h4
-        | #[span.fa.fa-desktop.leading-icon] Informatique
+        | #[span.fas.fa-desktop.leading-icon] Informatique
       p
         | L'informatique, c'est vaste. Très vaste. J'aimerais pouvoir tout faire, tout connaître, du hardware au software, de l'assembleur au Swift, du machine-learning à l'ergonomie... Seulement je n'ai qu'une seule vie. J'ai donc choisi de me spécialiser en développement natif iOS et macOS.
       p
@@ -19,7 +19,7 @@ div
       p
         | C'est donc pour cela que je suis développeur iOS natif, et que j'en ai fait mon activité principale en tant que freelance. Pour en savoir plus sur mon activité ou si vous souhaitez un devis ou une prestation, la page #[router-link(:to="{ name: 'freelance' }") Freelance] est à votre disposition. Pour en savoir plus sur mon parcours et mes compétences, je vous invite à visiter mon profil #[a(:href="socials.named.linkedin.url") LinkedIn]. Et si vous souhaitez voir quelques-unes des apps que j'ai faites ou aider à faire, il y a la page #[router-link(:to="{ name: 'apps' }") Apps].
       h4
-        | #[span.fa.fa-camera.leading-icon] Astrophotographie
+        | #[span.fas.fa-camera.leading-icon] Astrophotographie
       p
         | J'aime la photographie. Je suis passionné par l'astronomie depuis mon enfance. Quoi de mieux que combiner les deux et être astrophotographe amateur ?
       p
@@ -27,13 +27,13 @@ div
       p
         | Vous pouvez consulter quelques-unes de ces photos sur la page #[router-link(:to="{ name: 'photos' }") Photos].
       h4#contact
-        | #[span.fa.fa-paper-plane.leading-icon] Me contacter
+        | #[span.fas.fa-paper-plane.leading-icon] Me contacter
       p
         | La parole est à vous. Si vous avez la moindre question ou simplement pour discuter de la pluie et du beau temps, vous pouvez m'envoyer un email ou me contacter sur le réseau social adéquat. À bientôt !
       ul.bottom-links
         li
           a.btn.btn-primary(@click="sendEmail()")
-            | #[span.fa.fa-envelope.leading-icon] Envoyer un email
+            | #[span.fas.fa-envelope.leading-icon] Envoyer un email
         li(v-for="social in socials.all")
           a.btn.btn-primary(:href="social.url")
             | #[span.leading-icon(:class="social.iconClasses")] {{social.title}}

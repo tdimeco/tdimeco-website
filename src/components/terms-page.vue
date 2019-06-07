@@ -5,7 +5,7 @@ div
     .row
       section.col-xs-12.col-sm-6.col-md-5.col-md-offset-1.col-lg-4.col-lg-offset-2
         div
-          header #[span.fa.fa-pencil-square.leading-icon] Auteur et publication
+          header #[span.fas.fa-pen-square.leading-icon] Auteur et publication
           router-link(:to="{ name: 'about' }") Thomas Di&nbsp;Meco
           br
           | Auto-entrepreneur
@@ -13,7 +13,7 @@ div
           | SIREN : 822 835 781
       section.col-xs-12.col-sm-6.col-md-5.col-lg-4
         div
-          header #[span.fa.fa-globe.leading-icon] Hébergement
+          header #[span.fas.fa-globe.leading-icon] Hébergement
           a(href="https://www.ovh.com/") OVH
           br
           | 2 rue Kellermann

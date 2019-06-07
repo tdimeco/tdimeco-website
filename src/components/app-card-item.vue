@@ -7,7 +7,7 @@ router-link(tag="section" :to="{name: 'app-details', params: {id: item.id}}")
       .subtitle {{item.subtitle}}
   .description(v-html="item.shortDescription")
   footer
-    | #[span.fa.fa-arrow-circle-right.leading-icon] Plus de détails
+    | #[span.fas.fa-arrow-circle-right.leading-icon] Plus de détails
 </template>
 
 <script lang="coffee">

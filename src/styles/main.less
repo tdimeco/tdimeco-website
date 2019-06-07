@@ -1,5 +1,7 @@
 @import (css) url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600');
-@import '~font-awesome/less/font-awesome.less';
+@import '~@fortawesome/fontawesome-free/less/fontawesome.less';
+@import '~@fortawesome/fontawesome-free/less/solid.less';
+@import '~@fortawesome/fontawesome-free/less/brands.less';
 @import '~bootstrap/less/bootstrap.less';
 @import 'variables-mixins.less';
 
@@ -22,7 +24,9 @@ a {
   color: white;
   text-align: center;
   &:before {
-    .fa;
+    .fa-icon;
+    .fas;
     content: @fa-var-exclamation-triangle;
+    margin-right: 0.4em;
   }
 }

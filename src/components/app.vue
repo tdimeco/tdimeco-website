@@ -4,7 +4,7 @@
     .container
       h1
         router-link(:to="{ name: 'home' }")
-          span.back-icon.fa.fa-angle-left
+          span.back-icon.fas.fa-angle-left
           | Thomas Di&nbsp;Meco
       nav
         ul
@@ -74,7 +74,6 @@ export default
         visibility: visible;
         opacity: 1;
         width: 0.9em;
-        font-weight: bold;
         .animate(width, visibility, opacity;);
       }
       &.router-link-exact-active .back-icon {

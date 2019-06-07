@@ -7,7 +7,7 @@ section(:style="{ 'background-color': section.color || 'black' }")
     .subtitle(v-if="section.subtitle") {{section.subtitle}}
     .button
       router-link(:to="{ name: section.pageName }" :style="{ 'color': section.color || 'black' }")
-        | #[span.fa.fa-arrow-circle-right.leading-icon] En savoir plus
+        | #[span.fas.fa-arrow-circle-right.leading-icon] En savoir plus
 </template>
 
 <script lang="coffee">

@@ -7,7 +7,7 @@ div
       ul.bottom-links
         li(v-for="link in app.links")
           a.btn.btn-primary(:href="link.url" :class="{secondary: link.secondary === true}")
-            | #[span.leading-icon(:class="typeof link.iconClasses === 'string' ? link.iconClasses : 'fa fa-link'")] {{link.label}}
+            | #[span.leading-icon(:class="typeof link.iconClasses === 'string' ? link.iconClasses : 'fas fa-link'")] {{link.label}}
 </template>
 
 <script lang="coffee">
