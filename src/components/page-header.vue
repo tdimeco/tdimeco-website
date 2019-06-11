@@ -15,8 +15,7 @@ export default
 <style lang="scss" scoped>
 @import "../styles/variables-mixins";
 header {
-  color: white;
-  background-color: $secondary-color;
+  background-color: var(--theme-orange-color);
   background-image: url('../images/swift-background.svg');
   background-size: 16.25rem 6.25rem;
   background-position: center 0;
@@ -39,11 +38,13 @@ header {
       margin: 0;
       font-size: 2.5rem;
       font-weight: 600;
+      color: var(--dark-content-text-1-color);
     }
     h3 {
       margin: 0.5rem 0 0 0;
       font-size: 1.9rem;
       font-weight: 400;
+      color: var(--dark-content-text-2-color);
     }
   }
   @include media-breakpoint-down(xs) {

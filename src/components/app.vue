@@ -88,9 +88,9 @@ header .container {
       margin: 0 0.5rem;
     }
     a {
-      color: $secondary-color;
+      color: var(--secondary-1-color);
       &:hover, &:focus, &.router-link-active {
-        color: $dark-secondary-color;
+        color: var(--secondary-2-color);
       }
     }
   }
@@ -127,7 +127,7 @@ header .container {
 }
 footer {
   padding: 1.2rem 0;
-  background: $light-background-color;
+  background: var(--background-2-color);
   font-size: 1.2rem;
   .footer-section {
     margin: 0;
@@ -137,7 +137,7 @@ footer {
     font-weight: bold;
     font-size: 1.05rem;
     text-transform: uppercase;
-    color: $light-text-color;
+    color: var(--text-2-color);
   }
   ul {
     margin: 0;

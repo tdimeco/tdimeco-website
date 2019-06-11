@@ -2,10 +2,75 @@
 // (!) Do not declare variables and mixins here, use variables-mixins.scss
 // (!) Do not import this file inside Vue components
 
+:root {
+  color-schemes: light dark;
+  --primary-1-color: #2879b2;
+  --primary-2-color: #1d5882;
+  --secondary-1-color: #d8915a;
+  --secondary-2-color: #a55e27;
+  --background-1-color: #fafafa;
+  --background-2-color: #f0f0f0;
+  --background-3-color: #e1e1e1;
+  --text-1-color: #333333;
+  --text-2-color: #999999;
+  --button-text-color: #ffffff;
+  --dark-content-text-1-color: #ffffff;
+  --dark-content-text-2-color: rgba(255, 255, 255, 0.8);
+  --theme-orange-color: #d8915a;
+  --theme-red-color: #db3c4f;
+  --theme-cyan-color: #1aa8a8;
+  --theme-blue-color: #378de2;
+  --theme-violet-color: #6d5ba9;
+  --theme-lime-color: #69b224;
+  --theme-sea-color: #28b3c8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-1-color: #5ea8db;
+    --primary-2-color: #95c5e7;
+    --secondary-1-color: #d8915a;
+    --secondary-2-color: #e8be9d;
+    --background-1-color: #222222;
+    --background-2-color: #303030;
+    --background-3-color: #414141;
+    --text-1-color: #eeeeee;
+    --text-2-color: #7d7d7d;
+    --button-text-color: #222222;
+    --dark-content-text-1-color: #eeeeee;
+    --dark-content-text-2-color: rgba(238, 238, 238, 0.8);
+    --theme-orange-color: #986032;
+    --theme-red-color: #bf2336;
+    --theme-cyan-color: #169191;
+    --theme-blue-color: #1e77cf;
+    --theme-violet-color: #63529c;
+    --theme-lime-color: #5e9f20;
+    --theme-sea-color: #24a1b4;
+  }
+}
+
+body {
+  color: var(--text-1-color);
+  background-color: var(--background-1-color);
+}
+
 a {
+  color: var(--primary-1-color);
   @include animate((color, background-color));
   &:hover, &:focus {
+    color: var(--primary-2-color);
     text-decoration: none;
+  }
+}
+
+.btn-primary {
+  color: var(--button-text-color);
+  background-color: var(--primary-1-color);
+  border-color: var(--primary-1-color);
+  &:hover, &:focus {
+    color: var(--button-text-color);
+    background-color: var(--primary-2-color);
+    border-color: var(--primary-2-color);
   }
 }
 

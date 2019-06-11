@@ -63,7 +63,7 @@ export default
     height: 8rem;
     margin: 0 1rem 0.7rem 0;
     border-radius: 50%;
-    background-color: $light-background-color;
+    background-color: var(--background-2-color);
   }
 }
 @include media-breakpoint-down(xs) {

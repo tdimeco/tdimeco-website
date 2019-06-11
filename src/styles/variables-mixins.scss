@@ -5,10 +5,10 @@
 // Override Bootstrap variables
 $font-family-sans-serif: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-size-base: 1.25rem;
-$body-bg: #fafafa;
-$body-color: #333333;
-$primary: #226697;
-$secondary: #d8915a;
+// $body-bg: var(--primary-background-color);
+// $body-color: var(--primary-text-color);
+// $primary: var(--primary-color);
+// $secondary: var(--secondary-color);
 
 // Override FontAwesome variables
 $fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
@@ -22,12 +22,6 @@ $fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
 @import '~@fortawesome/fontawesome-free/scss/mixins';
 
 // App variables
-$primary-color: $primary;
-$secondary-color: $secondary;
-$dark-primary-color: darken($primary-color, 20%);
-$dark-secondary-color: darken($secondary-color, 20%);
-$light-text-color: lighten($body-color, 40%);
-$light-background-color: #f0f0f0;
 $standard-border-radius: 0.7rem;
 
 // App mixins
@@ -41,7 +35,7 @@ $standard-border-radius: 0.7rem;
   &::before {
     content: '';
     display: block;
-    border-top: 0.13rem solid #dddddd;
+    border-top: 0.13rem solid var(--background-3-color);
     margin: 2rem auto;
     width: 50%;
   }

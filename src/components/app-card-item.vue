@@ -19,12 +19,12 @@ export default
 @import "../styles/variables-mixins";
 section {
   @include animate((background));
-  background: $light-background-color;
+  background: var(--background-2-color);
   border-radius: $standard-border-radius;
   overflow: hidden;
   cursor: pointer;
   &:hover, &:focus {
-    background: darken($light-background-color, 5%);
+    background: var(--background-3-color);
   }
   header {
     display: flex;
@@ -41,11 +41,11 @@ section {
     .title {
       font-size: 1.6rem;
       font-weight: 600;
-      color: white;
+      color: var(--dark-content-text-1-color);
     }
     .subtitle {
       font-size: 1.3rem;
-      color: rgba(255, 255, 255, 0.8);
+      color: var(--dark-content-text-2-color);
     }
   }
   .description {
@@ -55,7 +55,7 @@ section {
   }
   footer {
     padding: 0 1rem 1rem 1rem;
-    color: $primary-color;
+    color: var(--primary-1-color);
     font-size: 1.2rem;
   }
 }

@@ -19,7 +19,7 @@ export default
 section {
   display: flex;
   align-items: center;
-  color: white;
+  color: var(--dark-content-text-1-color);
   padding: 1.3rem;
   border-radius: $standard-border-radius;
   overflow: hidden;
@@ -45,9 +45,9 @@ section {
     font-size: 1.3rem;
     padding: 0.3rem 0.7rem;
     border-radius: 0.4rem;
-    background: white;
+    background: var(--dark-content-text-1-color);
     &:hover, &:focus {
-      background: rgba(255, 255, 255, 0.8);
+      background: var(--dark-content-text-2-color);
     }
   }
 }

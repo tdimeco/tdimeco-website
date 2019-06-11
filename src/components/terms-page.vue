@@ -34,7 +34,7 @@ section {
   > div {
     margin: $grid-gutter-width 0;
     padding: 1rem;
-    background: darken($light-background-color, 5%);
+    background: var(--background-2-color);
     border-radius: $standard-border-radius;
     text-align: center;
   }

@@ -67,7 +67,7 @@ $grid-padding: $grid-gutter-width / 2;
   font-weight: 600;
   text-align: center;
   margin: 4rem 0;
-  color: $light-text-color;
+  color: var(--text-2-color);
 }
 .photo {
   display: block;
@@ -80,7 +80,7 @@ $grid-padding: $grid-gutter-width / 2;
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: $light-background-color;
+    background-color: var(--background-2-color);
   }
   .photo-title {
     display: block;
