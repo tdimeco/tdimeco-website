@@ -9,21 +9,16 @@ div
 </template>
 
 <script lang="coffee">
-Masonry = require('masonry-layout')
 import Sections from '../data/home-sections.coffee'
 import PageHeader from './page-header.vue'
 import HomeSection from './home-section.vue'
+import Masonry from '../scripts/masonry.coffee'
 export default
   components: {PageHeader, HomeSection}
   data: ->
     sections: Sections
   mounted: ->
-    new Masonry('.grid',
-      itemSelector: '.grid-item'
-      columnWidth: '.grid-sizer'
-      percentPosition: true
-      transitionDuration: 0
-    )
+    Masonry.makeMasonryLayout('.grid', '.grid-item', '.grid-sizer')
     return
 </script>
 

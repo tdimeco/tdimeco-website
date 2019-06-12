@@ -12,9 +12,9 @@ div
 </template>
 
 <script lang="coffee">
-Masonry = require('masonry-layout')
 import PageHeader from './page-header.vue'
 import Flickr from '../scripts/flickr.coffee'
+import Masonry from '../scripts/masonry.coffee'
 export default
   components: {PageHeader}
   data: ->
@@ -38,12 +38,7 @@ export default
 
   updated: ->
     if @photos.length > 0
-      new Masonry('.grid',
-        itemSelector: '.grid-item'
-        columnWidth: '.grid-sizer'
-        percentPosition: true
-        transitionDuration: 0
-      )
+      Masonry.makeMasonryLayout('.grid', '.grid-item', '.grid-sizer')
     return
 </script>
 

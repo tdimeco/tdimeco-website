@@ -9,21 +9,16 @@ div
 </template>
 
 <script lang="coffee">
-Masonry = require('masonry-layout')
 import Apps from '../data/apps.coffee'
 import PageHeader from './page-header.vue'
 import CardItem from './app-card-item.vue'
+import Masonry from '../scripts/masonry.coffee'
 export default
   components: {PageHeader, CardItem}
   data: ->
     apps: Apps
   mounted: ->
-    new Masonry('.grid',
-      itemSelector: '.grid-item'
-      columnWidth: '.grid-sizer'
-      percentPosition: true
-      transitionDuration: 0
-    )
+    Masonry.makeMasonryLayout('.grid', '.grid-item', '.grid-sizer')
     return
 </script>
 
