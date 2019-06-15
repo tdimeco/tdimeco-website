@@ -9,6 +9,7 @@ apps =
     images: [
       require('../images/apps/wake-me-up-1.png')
       require('../images/apps/wake-me-up-2.png')
+      require('../images/apps/wake-me-up-3.png')
     ]
     links: [
       {label: "App Store", url: 'https://apps.apple.com/app/id1465416032', iconClasses: 'fab fa-apple'}
