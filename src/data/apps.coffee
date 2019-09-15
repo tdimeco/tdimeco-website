@@ -2,7 +2,7 @@ apps =
   'wake-me-up':
     id: 'wake-me-up'
     title: "Wake Me Up"
-    subtitle: "Compagnon Wake-on-LAN"
+    subtitle: "Réveillez votre ordinateur"
     color: 'var(--theme-lime-color)'
     icon: require('../images/apps/wake-me-up.png')
     shortDescription: "Wake Me Up permet de démarrer un ordinateur à distance en envoyant une requête réseau Wake-on-LAN. L'ordinateur peut être démarré de plusieurs manières : en appuyant sur le gros bouton dans l'application, en utilisant le widget <em>Aujourd'hui</em> disponible sur l'écran d'accueil de l'iPhone ou iPad, en demandant directement à Siri depuis l'iPhone, iPad ou Apple Watch."
