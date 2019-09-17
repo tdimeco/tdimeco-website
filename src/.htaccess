@@ -1083,7 +1083,7 @@ FileETag None
 
   # CSS
 
-    ExpiresByType text/css                              "access plus 1 year"
+    ExpiresByType text/css                              "access plus 1 month"
 
 
   # Data interchange
@@ -1113,9 +1113,9 @@ FileETag None
 
   # JavaScript
 
-    ExpiresByType application/javascript                "access plus 1 year"
-    ExpiresByType application/x-javascript              "access plus 1 year"
-    ExpiresByType text/javascript                       "access plus 1 year"
+    ExpiresByType application/javascript                "access plus 1 month"
+    ExpiresByType application/x-javascript              "access plus 1 month"
+    ExpiresByType text/javascript                       "access plus 1 month"
 
 
   # Manifest files
@@ -1146,7 +1146,7 @@ FileETag None
 
   # WebAssembly
 
-    ExpiresByType application/wasm                      "access plus 1 year"
+    ExpiresByType application/wasm                      "access plus 1 month"
 
 
   # Web fonts
