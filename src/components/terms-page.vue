@@ -7,10 +7,6 @@ div
         div
           header #[span.fas.fa-pen-square.leading-icon] Auteur et publication
           router-link(:to="{ name: 'about' }") Thomas Di&nbsp;Meco
-          br
-          | Auto-entrepreneur
-          br
-          | SIREN : 822 835 781
       section.col-md-6.col-lg-5.col-xl-4
         div
           header #[span.fas.fa-globe.leading-icon] Hébergement
