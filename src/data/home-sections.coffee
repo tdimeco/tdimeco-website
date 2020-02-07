@@ -8,7 +8,7 @@ export default [
     pageName: 'apps'
   }, {
     title: "Freelance"
-    subtitle: "Ingénieur développeur iOS et macOS natif"
+    subtitle: "Ingénieur développeur iOS et macOS"
     color: 'var(--theme-cyan-color)'
     iconClasses: 'fas fa-address-card'
     iconSize: '0.68em'

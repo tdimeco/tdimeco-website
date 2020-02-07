@@ -1,11 +1,11 @@
 <template lang="pug">
 div
-  page-header(title="Freelance" subtitle="Ingénieur développeur iOS et macOS natif")
+  page-header(title="Freelance" subtitle="Ingénieur développeur iOS et macOS")
   .container
     .text-container
-      p Vous avez l'idée du siècle et vous souhaitez une application mobile native iOS (iPhone et/ou iPad) pour la concrétiser ? Vous souhaitez également une app Apple Watch ou Mac ? Alors vous êtes au bon endroit, allons-y. ☺
+      p Vous avez l'idée du siècle et vous souhaitez une application mobile iOS (iPhone et/ou iPad) pour la concrétiser ? Vous souhaitez également une app Apple Watch ou Mac ? Alors vous êtes au bon endroit, allons-y. ☺
       h4 #[span.fas.fa-user.leading-icon] À propos de moi
-      p Je vais tout d'abord me présenter de manière succincte : je m'appelle Thomas, je suis ingénieur développeur iOS et macOS natif et entrepreneur. Je suis passionné par mon métier et particulièrement par le développement mobile. Je trouve ce domaine très intéressant par sa richesse, son évolution rapide, la diversité des technologies utilisées (réseau, Bluetooth, géolocalisation, navigation, mouvements dans l'espace, réalité augmentée, machine-learning, 3D...) ainsi que par les challenges soulevés (autonomie, puissance, perte de réseau, synchronisation...). Chaque application possède ses propres problématiques qu'il faut résoudre et c'est ça qui m'intéresse.
+      p Je vais tout d'abord me présenter de manière succincte : je m'appelle Thomas, je suis ingénieur développeur iOS et macOS et entrepreneur. Je suis passionné par mon métier et particulièrement par le développement mobile. Je trouve ce domaine très intéressant par sa richesse, son évolution rapide, la diversité des technologies utilisées (réseau, Bluetooth, géolocalisation, navigation, mouvements dans l'espace, réalité augmentée, machine-learning, 3D...) ainsi que par les challenges soulevés (autonomie, puissance, perte de réseau, synchronisation...). Chaque application possède ses propres problématiques qu'il faut résoudre et c'est ça qui m'intéresse.
       p Pour en savoir plus, je vous invite à lire la page #[router-link(:to="{ name: 'about' }") À propos], qui est bien plus complète.
       h4 #[span.fas.fa-star.leading-icon] Mes compétences
       p Mon rôle en tant que développeur ne se limite pas à programmer votre application. Je peux vous accompagner sur une grande partie de votre projet, dont voici une liste non exhaustive :
@@ -22,6 +22,7 @@ div
       h4 #[span.fas.fa-road.leading-icon] Mes expériences
       p J'ai plusieurs expériences en développement iOS et macOS :
       ul
+        li #[strong CraftedBits (2019-Maintenant)] : Je suis cofondateur de la société #[a(href="https://www.craftedbits.io") CraftedBits], spécialisée dans le développement de projets orientés mobile et dans la formation et le conseil.
         li #[strong Freelance (2016-Maintenant)] : Je crée des applications pour mes clients, dont quelques-unes sont visibles sur la page #[router-link(:to="{ name: 'apps' }") Apps].
         li #[strong Pôle mobile chez AUSY (2015-2017)] : Avec mon équipe, nous avons créé et maintenu une dizaine d'applications iOS. Nous avons utilisé plusieurs technos intéressantes comme les Beacons (pour faire de la cartographie en intérieur), de la connectivité Bluetooth, du traitement algorithmique en temps réel à l'aide du framework Accelerate...
         li #[strong Expériences personnelles (2011-Maintenant)] : Sur mon temps personnel, je crée aussi des applications, dont certaines sont disponibles sur la page #[router-link(:to="{ name: 'apps' }") Apps] ou sur #[a(:href="socials.named.github.url") GitHub].
