@@ -2,11 +2,10 @@
 EMAIL_INFOS =
   name: 'contact'
   host: 'tdimeco.fr'
-  subject: '[tdimeco.fr]'
 
 # Methods
 openContactEmail = ->
-  url = 'mailto:' + EMAIL_INFOS.name + '@' + EMAIL_INFOS.host + '?subject=' + EMAIL_INFOS.subject
+  url = 'mailto:' + EMAIL_INFOS.name + '@' + EMAIL_INFOS.host
   window.location.href = url
   return
 
