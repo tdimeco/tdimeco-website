@@ -3,7 +3,7 @@ div
   page-header(title="À propos" subtitle="Qui suis-je, que fais-je ?")
   .container
     .text-container
-      img.avatar(src="https://www.gravatar.com/avatar/7fa7d412736b54b102f5ef6274a62130?s=256" alt="Thomas Di Meco" title="Thomas Di Meco")
+      img.avatar(src="https://www.gravatar.com/avatar/7fa7d412736b54b102f5ef6274a62130?s=384" alt="Thomas Di Meco" title="Thomas Di Meco")
       p Bien le bonjour ! Je vous souhaite la bienvenue sur mon site qui a pour but de centraliser mes activités personnelles et professionnelles. Si vous êtes là, c'est que vous souhaitez en savoir un peu plus sur moi (n'est-ce pas ?). Comme tout bon site vitrine qui se respecte, je vais donc vous donner quelques informations triées sur le volet par mes soins, parler de moi à la première personne, présenter mes qualités sans évoquer mes défauts et être égocentrique le reste de cette page. ☺
       p Je m'appelle Thomas, j'ai {{age}} ans et je suis ingénieur développeur iOS et macOS freelance. J'habite près de Sophia Antipolis — dans les Alpes-Maritimes — et j'ai fait mes études à l'IUT d'Aix-en-Provence puis à Polytech'Nice-Sophia. Je m'intéresse à beaucoup de choses, j'aime découvrir, j'aime comprendre, j'aime apprendre, j'aime partager et j'aime créer. Je suis passionné par l'informatique en général, mais aussi par les jeux vidéo, la photographie et l'astronomie.
       h4 #[span.fas.fa-laptop.leading-icon] Informatique
