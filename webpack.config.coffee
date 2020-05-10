@@ -24,9 +24,6 @@ module.exports =
     }, {
       test: /\.(png|jpe?g|gif|svg|ico|woff|woff2|eot|ttf|otf)$/i
       use: [ 'file-loader?name=[name].[hash:8].[ext]&outputPath=assets/&esModule=false' ]
-    }, {
-      test: /\.htaccess$/
-      use: [ 'file-loader?name=[name]' ]
     }
   ]
   devServer:

@@ -1,5 +1,4 @@
 import './styles/main.scss'
-import './.htaccess'
 
 import Vue from 'vue'
 import VueRouter from 'vue-router'
