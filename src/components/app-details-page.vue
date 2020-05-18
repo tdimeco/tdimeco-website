@@ -1,5 +1,5 @@
 <template lang="pug">
-div
+section
   page-header(:title="app.title" :subtitle="app.subtitle" :color="app.color" :icon="app.icon")
   .container
     .text-container

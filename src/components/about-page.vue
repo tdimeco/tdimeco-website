@@ -1,5 +1,5 @@
 <template lang="pug">
-div
+section
   page-header(title="À propos" subtitle="Qui suis-je, que fais-je ?")
   .container
     .text-container

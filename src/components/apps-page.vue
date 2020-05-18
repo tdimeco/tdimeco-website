@@ -1,5 +1,5 @@
 <template lang="pug">
-div
+section
   page-header(title="Apps" subtitle="Mes principales applications iOS et macOS")
   .container
     .grid.row

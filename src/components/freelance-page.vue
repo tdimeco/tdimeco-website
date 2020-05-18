@@ -1,5 +1,5 @@
 <template lang="pug">
-div
+section
   page-header(title="Freelance" subtitle="Ingénieur développeur iOS et macOS")
   .container
     .text-container

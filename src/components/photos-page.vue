@@ -1,5 +1,5 @@
 <template lang="pug">
-div
+section
   page-header(title="Photos" subtitle="Ma galerie photos Flickr")
   .container
     .message(v-html="message" v-if="message")

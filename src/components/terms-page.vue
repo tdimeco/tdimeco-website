@@ -1,13 +1,13 @@
 <template lang="pug">
-div
+section
   page-header(title="Mentions légales" subtitle="Vous êtes perdu ?")
   .container
     .row
-      section.col-md-6.col-lg-5.offset-lg-1.col-xl-4.offset-xl-2
+      section.term-card.col-md-6.col-lg-5.offset-lg-1.col-xl-4.offset-xl-2
         div
           header #[span.fas.fa-pen-square.leading-icon] Auteur et publication
           router-link(:to="{ name: 'about' }") Thomas Di&nbsp;Meco
-      section.col-md-6.col-lg-5.col-xl-4
+      section.term-card.col-md-6.col-lg-5.col-xl-4
         div
           header #[span.fas.fa-globe.leading-icon] Hébergement
           a(href="https://www.ovh.com/") OVH
@@ -25,7 +25,7 @@ export default
 
 <style lang="scss" scoped>
 @import "../styles/variables-mixins";
-section {
+section.term-card {
   font-size: 1.2rem;
   > div {
     margin: $grid-gutter-width 0;
@@ -41,7 +41,7 @@ section {
   }
 }
 @include media-breakpoint-down(sm) {
-  section {
+  section.term-card {
     > div {
       margin: ($grid-gutter-width / 2) 0 0 0;
     }

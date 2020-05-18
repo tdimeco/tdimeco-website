@@ -1,5 +1,5 @@
 <template lang="pug">
-div
+section
   page-header(title="Site web personnel" subtitle="Je vous souhaite la bienvenue sur mon site web personnel !")
   .container
     .grid.row
